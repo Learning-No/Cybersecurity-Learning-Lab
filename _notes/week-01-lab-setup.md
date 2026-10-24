@@ -23,6 +23,9 @@ Build the foundation before using security tools. Understand your environment fi
 - **DNS:** translates names into records such as IP addresses. [Open the DNS resolution diagram and lookup steps →]({{ '/concepts/dns/' | relative_url }})
 - **HTTP/HTTPS:** web communication; HTTPS uses TLS to protect traffic in transit. [Follow the browser request lifecycle →]({{ '/concepts/http-https/' | relative_url }})
 
+## Set up the environment first
+Follow the [step-by-step safe lab setup guide →]({{ '/labs/' | relative_url }}). Start with a local, loopback-only training application or a guided browser lab. Do not bridge vulnerable systems to a college/work network or expose them to the public internet.
+
 ## Guided safe exercise
 1. Draw your lab: host computer, optional virtual machine, and virtual network.
 2. In your own system settings, identify your IP address, gateway, and DNS resolver.
