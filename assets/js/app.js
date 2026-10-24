@@ -1,1 +1,95 @@
-(()=>{const boxes=[...document.querySelectorAll('[data-progress]')];const key='cybersecurity-learning-lab-progress-v1';let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}function update(){let done=boxes.filter(x=>x.checked).length;let p=boxes.length?Math.round(done/boxes.length*100):0;let l=document.getElementById('progress-label'),f=document.getElementById('progress-fill');if(l)l.textContent=p+'% COMPLETE';if(f)f.style.width=p+'%'}boxes.forEach(x=>{x.checked=!!saved[x.dataset.progress];x.addEventListener('change',()=>{saved[x.dataset.progress]=x.checked;try{localStorage.setItem(key,JSON.stringify(saved))}catch(e){}update()})});update();let search=document.getElementById('note-search'),cards=[...document.querySelectorAll('.note-card')],empty=document.getElementById('empty-state');if(search)search.addEventListener('input',()=>{let q=search.value.toLowerCase().trim(),count=0;cards.forEach(c=>{let match=(c.dataset.search||c.textContent).toLowerCase().includes(q);c.hidden=!match;if(match)count++});if(empty)empty.hidden=count>0})})();
+(()=> {
+  const boxes = [...document.querySelectorAll('[data-progress]')];
+  const key = 'cybersecurity-learning-lab-progress-v1';
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}'); } catch (_) {}
+  function updateProgress() {
+    const done = boxes.filter(box => box.checked).length;
+    const percent = boxes.length ? Math.round(done / boxes.length * 100) : 0;
+    const label = document.getElementById('progress-label');
+    const fill = document.getElementById('progress-fill');
+    if (label) label.textContent = percent + '% COMPLETE';
+    if (fill) fill.style.width = percent + '%';
+  }
+  boxes.forEach(box => {
+    box.checked = !!saved[box.dataset.progress];
+    box.addEventListener('change', () => {
+      saved[box.dataset.progress] = box.checked;
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch (_) {}
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  const noteSearch = document.getElementById('note-search');
+  const noteCards = [...document.querySelectorAll('.note-card')];
+  const noteEmpty = document.getElementById('empty-state');
+  if (noteSearch) {
+    const filterNotes = () => {
+      const query = noteSearch.value.toLowerCase().trim();
+      let visible = 0;
+      noteCards.forEach(card => {
+        const match = (card.dataset.search || card.textContent).toLowerCase().includes(query);
+        card.hidden = !match;
+        if (match) visible++;
+      });
+      if (noteEmpty) noteEmpty.hidden = visible > 0;
+    };
+    noteSearch.addEventListener('input', filterNotes);
+    filterNotes();
+  }
+
+  const toolSearch = document.getElementById('tool-search');
+  const toolCards = [...document.querySelectorAll('.tool-entry')];
+  const filterButtons = [...document.querySelectorAll('[data-filter]')];
+  const toolGrid = document.getElementById('tool-grid');
+  let activeCategory = 'all';
+  let toolEmpty = document.getElementById('tool-empty-state');
+  if (toolGrid && toolCards.length) {
+    if (!toolEmpty) {
+      toolEmpty = document.createElement('p');
+      toolEmpty.id = 'tool-empty-state';
+      toolEmpty.className = 'hint';
+      toolEmpty.textContent = 'No tools match those filters. Try another search or choose “All”.';
+      toolEmpty.hidden = true;
+      toolGrid.insertAdjacentElement('afterend', toolEmpty);
+    }
+    const filterTools = () => {
+      const query = toolSearch ? toolSearch.value.toLowerCase().trim() : '';
+      let visible = 0;
+      toolCards.forEach(card => {
+        const text = (card.dataset.search || card.textContent).toLowerCase();
+        const category = (card.dataset.category || '').toLowerCase();
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+        const matchesQuery = !query || text.includes(query);
+        card.hidden = !(matchesCategory && matchesQuery);
+        if (!card.hidden) visible++;
+      });
+      if (toolEmpty) toolEmpty.hidden = visible > 0;
+    };
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        activeCategory = button.dataset.filter || 'all';
+        filterButtons.forEach(item => {
+          const active = item === button;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-pressed', String(active));
+        });
+        filterTools();
+      });
+    });
+    if (toolSearch) toolSearch.addEventListener('input', filterTools);
+    filterButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === 'all')));
+    filterTools();
+  }
+
+  const moreMenus = [...document.querySelectorAll('.nav-more')];
+  document.addEventListener('click', event => {
+    moreMenus.forEach(menu => {
+      if (!menu.contains(event.target)) menu.open = false;
+    });
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') moreMenus.forEach(menu => { menu.open = false; });
+  });
+})();
