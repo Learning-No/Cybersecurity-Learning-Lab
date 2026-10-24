@@ -3,13 +3,13 @@ title: "Week 03 — OWASP Top 10 Concepts"
 week: "WEEK 03"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Learn common classes of web application risk and how secure design and validation reduce them."
+summary: "Learn common web application risk categories and how secure design and validation reduce them."
 date: 2026-10-24
 ---
 ## Learning objectives
 - Recognize common web application risk categories.
-- Explain the difference between authentication and authorization.
-- Describe how to validate a finding and recommend a fix without affecting real users.
+- Explain authentication versus authorization.
+- Describe how to document a finding and recommend a fix safely.
 
 ## Study topics
 - Broken access control
@@ -17,19 +17,19 @@ date: 2026-10-24
 - Injection risks
 - Insecure design
 - Security misconfiguration
-- Authentication and session management failures
+- Authentication and session failures
 - Vulnerable and outdated components
 - Logging and monitoring gaps
 
-Use the official [OWASP Top 10](https://owasp.org/www-project-top-ten/) as a starting point. The list is an awareness document, not a complete testing methodology.
+Read the official [OWASP Top 10](https://owasp.org/www-project-top-ten/). It is an awareness document, not a complete testing methodology.
 
 ## Safe exercise
-For each category, write a short fictional example, the potential impact, and one prevention strategy. Use a deliberately vulnerable local application for hands-on work and follow its scope.
+For each category, write a fictional example, possible impact, and prevention strategy. Use a deliberately vulnerable local app for hands-on practice.
 
 ## Finding template
 - **Category:**
 - **Affected lab component:**
-- **Expected secure behavior:**
+- **Expected behavior:**
 - **Observed behavior:**
 - **Impact:**
 - **Recommended remediation:**
@@ -37,5 +37,5 @@ For each category, write a short fictional example, the potential impact, and on
 
 ## Completion checklist
 - [ ] I can explain authentication versus authorization.
-- [ ] I can give examples of at least three risk categories.
-- [ ] I can describe remediation as well as risk.
+- [ ] I can describe three common risk categories.
+- [ ] I can recommend remediation as well as explain risk.
