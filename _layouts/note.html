@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="note-page">
+  <a class="back-link" href="{{ '/' | relative_url }}#notes">← Back to all notes</a>
+  <div class="eyebrow">{{ page.week | default: "LEARNING NOTE" }} · {{ page.track | default: "CYBERSECURITY FOUNDATIONS" }}</div>
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.summary %}<p class="lead">{{ page.summary | escape }}</p>{% endif %}
+  <div class="note-meta"><span>{{ page.level | default: "Beginner" }}</span><span>Learning notes · Authorized labs only</span></div>
+  <div class="prose">{{ content }}</div>
+  <div class="callout"><strong>Safety reminder</strong><p>Practice only on systems you own or have explicit permission to test. Keep lab targets isolated and never publish credentials, tokens, or sensitive logs.</p></div>
+</article>
