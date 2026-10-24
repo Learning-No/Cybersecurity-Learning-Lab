@@ -54,7 +54,6 @@ permalink: /tools/catalog/
 <tr><td><a href="https://wazuh.com/" target="_blank" rel="noopener">Wazuh</a></td><td>Open-source security monitoring and endpoint telemetry platform</td><td>Plan resource needs and protect the management console.</td></tr>
 <tr><td><a href="https://osquery.io/" target="_blank" rel="noopener">osquery</a></td><td>SQL-like endpoint inventory and state queries</td><td>Start with read-only queries on your own machine.</td></tr>
 <tr><td><a href="https://www.velociraptor.com/" target="_blank" rel="noopener">Velociraptor</a></td><td>Digital forensics and endpoint visibility</td><td>Use a lab endpoint; validate project edition/license.</td></tr>
-<tr><td><a href="https://www.openxcap.org/" target="_blank" rel="noopener">OpenXcap</a></td><td>Not recommended as a default tool without verifying project status</td><td>Check maintenance and suitability before adoption.</td></tr>
 <tr><td><a href="https://www.elastic.co/beats/" target="_blank" rel="noopener">Beats</a></td><td>Telemetry shippers</td><td>Licensing differs across products; check the exact license.</td></tr>
 <tr><td><a href="https://prometheus.io/" target="_blank" rel="noopener">Prometheus</a></td><td>Metrics collection and alerting</td><td>Operational monitoring, not a vulnerability scanner.</td></tr>
 <tr><td><a href="https://grafana.com/oss/" target="_blank" rel="noopener">Grafana OSS</a></td><td>Dashboards and visualization</td><td>Protect dashboards and data sources; verify edition/licensing.</td></tr>
@@ -80,6 +79,39 @@ permalink: /tools/catalog/
 <tr><td><a href="https://man7.org/linux/man-pages/man1/whoami.1.html" target="_blank" rel="noopener">whoami (command)</a></td><td>Standard system utility; open-source implementations are available</td><td>Prints the current effective username; it is not a breach-checking service.</td></tr>
 <tr><td><a href="https://github.com/OWASP/Amass" target="_blank" rel="noopener">Amass</a></td><td>Open-source attack-surface mapping project</td><td>Use only for domains within explicit written scope.</td></tr>
 <tr><td><a href="https://github.com/ffuf/ffuf" target="_blank" rel="noopener">ffuf</a></td><td>Open-source web fuzzer</td><td>Use a local training app; keep request volume modest.</td></tr>
+</tbody></table>
+ 
+<h2>Cloud, infrastructure-as-code, and Kubernetes</h2>
+<table><thead><tr><th>Tool</th><th>Use</th><th>Training note</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/aquasecurity/tfsec" target="_blank" rel="noopener">tfsec</a></td><td>Terraform static security analysis (project status/maintenance may change)</td><td>Check current maintenance and migration guidance; use sample IaC.</td></tr>
+<tr><td><a href="https://github.com/bridgecrewio/checkov" target="_blank" rel="noopener">Checkov</a></td><td>IaC misconfiguration checks</td><td>Check current licensing and edition differences.</td></tr>
+<tr><td><a href="https://github.com/aquasecurity/kube-bench" target="_blank" rel="noopener">kube-bench</a></td><td>Checks Kubernetes configuration against CIS benchmarks</td><td>Use a disposable local cluster and read-only guidance first.</td></tr>
+<tr><td><a href="https://github.com/aquasecurity/kube-hunter" target="_blank" rel="noopener">kube-hunter</a></td><td>Identifies Kubernetes security issues</td><td>Run only against your own intentionally created cluster.</td></tr>
+<tr><td><a href="https://github.com/kubernetes-sigs/kubesec" target="_blank" rel="noopener">kubesec</a></td><td>Static analysis of Kubernetes resource manifests</td><td>Use sanitized manifests; review every recommendation.</td></tr>
+<tr><td><a href="https://github.com/Checkmarx/kics" target="_blank" rel="noopener">KICS</a></td><td>Infrastructure-as-code security checks</td><td>Run against your own sample project.</td></tr>
+<tr><td><a href="https://github.com/containers/podman" target="_blank" rel="noopener">Podman</a></td><td>Daemonless container engine</td><td>Use loopback-only bindings for vulnerable training apps.</td></tr>
+<tr><td><a href="https://github.com/aquasecurity/trivy" target="_blank" rel="noopener">Trivy source</a></td><td>Container, dependency, and configuration scanning</td><td>One project can have multiple scan modes; learn each output separately.</td></tr>
+</tbody></table>
+<h2>Fuzzing, threat modeling, and secure development</h2>
+<table><thead><tr><th>Tool</th><th>Use</th><th>Training note</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/google/atheris" target="_blank" rel="noopener">Atheris</a></td><td>Coverage-guided Python fuzzing</td><td>Fuzz only your own sample code in a disposable environment.</td></tr>
+<tr><td><a href="https://github.com/google/oss-fuzz" target="_blank" rel="noopener">OSS-Fuzz</a></td><td>Continuous fuzzing infrastructure for open-source projects</td><td>Study sample projects and follow contributor guidance.</td></tr>
+<tr><td><a href="https://github.com/google/tsunami-security-scanner" target="_blank" rel="noopener">Tsunami Security Scanner</a></td><td>Extensible vulnerability scanner</td><td>Review scope and plugin behavior carefully; lab-only practice.</td></tr>
+<tr><td><a href="https://owasp.org/www-project-threat-dragon/" target="_blank" rel="noopener">OWASP Threat Dragon</a></td><td>Threat-model diagrams and documentation</td><td>Model assets, trust boundaries, threats, and mitigations.</td></tr>
+<tr><td><a href="https://github.com/OWASP/www-project-threat-dragon" target="_blank" rel="noopener">Threat Dragon source</a></td><td>Open-source threat-modeling application</td><td>Store models without credentials or production-sensitive diagrams.</td></tr>
+<tr><td><a href="https://github.com/OWASP/Dependency-Check" target="_blank" rel="noopener">OWASP Dependency-Check</a></td><td>Dependency vulnerability analysis</td><td>Verify matches and affected versions before reporting.</td></tr>
+<tr><td><a href="https://github.com/securego/gosec" target="_blank" rel="noopener">gosec</a></td><td>Static checks for Go source code</td><td>Use in a project you control and review findings manually.</td></tr>
+<tr><td><a href="https://github.com/returntocorp/semgrep" target="_blank" rel="noopener">Semgrep</a></td><td>Static analysis patterns and rules</td><td>Verify the exact edition/license and avoid assuming every result is exploitable.</td></tr>
+</tbody></table>
+<h2>Digital identity, OSINT, and online services — classification matters</h2>
+<table><thead><tr><th>Name</th><th>What it is</th><th>Privacy and scope</th></tr></thead><tbody>
+<tr><td><a href="https://haveibeenpwned.com/" target="_blank" rel="noopener">Have I Been Pwned</a></td><td>Third-party breach-notification/search service; not open-source software</td><td>Only check an email address you own or have explicit consent to check. Do not upload classmates' lists or private datasets.</td></tr>
+<tr><td><a href="https://who.is/" target="_blank" rel="noopener">who.is</a></td><td>Web WHOIS lookup service; not an open-source tool</td><td>Registration records can be privacy-redacted. Use for legitimate, authorized research.</td></tr>
+<tr><td><a href="https://man7.org/linux/man-pages/man1/whoami.1.html" target="_blank" rel="noopener">whoami</a></td><td>Command-line identity utility; prints the current effective username</td><td>It is not a breach-check service. Keep output private if it reveals personal usernames.</td></tr>
+<tr><td><a href="https://github.com/laramies/theHarvester" target="_blank" rel="noopener">theHarvester</a></td><td>Open-source OSINT collection tool</td><td>Use only on domains and data sources within the assignment's written scope.</td></tr>
+<tr><td><a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener">Sherlock</a></td><td>Username-presence search across sites</td><td>Use only on your own test username or a consenting subject; avoid doxxing and sensitive profiling.</td></tr>
+<tr><td><a href="https://github.com/OWASP/Amass" target="_blank" rel="noopener">OWASP Amass</a></td><td>Open-source attack-surface mapping project</td><td>Use only within explicitly authorized scope.</td></tr>
+<tr><td><a href="https://github.com/SpiderLabs/Findsploit" target="_blank" rel="noopener">Findsploit</a></td><td>Search helper for public exploit references; project status/license must be verified</td><td>Prefer vendor advisories and safe proof-of-concept analysis; do not run exploit code against real systems.</td></tr>
 </tbody></table>
 <h2>Open datasets and vulnerability references</h2>
 <ul>
