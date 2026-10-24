@@ -26,12 +26,25 @@ Build the foundation before using security tools. Understand your environment fi
 ## Set up the environment first
 Follow the [step-by-step safe lab setup guide →]({{ '/labs/' | relative_url }}). Start with a local, loopback-only training application or a guided browser lab. Do not bridge vulnerable systems to a college/work network or expose them to the public internet.
 
+## Network diagram
+
+```text
+Student host
+  ├── Browser → 127.0.0.1:3000 → local training app
+  └── Optional isolated VM network → analyst VM ↔ vulnerable training VM
+                         X
+                no bridge to campus/work LAN
+```
+
 ## Guided safe exercise
 1. Draw your lab: host computer, optional virtual machine, and virtual network.
 2. In your own system settings, identify your IP address, gateway, and DNS resolver.
 3. Look up private IPv4 ranges and mark which addresses your lab is allowed to use.
 4. Write a scope statement covering owner, target, permitted actions, exclusions, and stop conditions.
 5. Explain what happens after entering a website name in a browser.
+
+## What to track and identify
+Record the host/guest roles, private lab addresses, network mode, service bind address, target version, scope, expected result, observed result, and cleanup status. Identify which boundary prevents traffic from reaching unrelated systems. Never record home-network details or credentials in public notes.
 
 ## Deliverable
 Save a one-page network diagram, a glossary of ten terms, and your written lab scope. Do not publish public IPs, credentials, or personal network details.
