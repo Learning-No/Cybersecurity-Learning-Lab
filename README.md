@@ -36,3 +36,16 @@ The intended project URL is `https://learning-no.github.io/Cybersecurity-Learnin
 Only test systems you own or have explicit permission to assess. Follow written scope, use isolated labs, avoid disruption, and never commit passwords, API keys, session tokens, personal data, or sensitive logs.
 
 The existing MIT license is retained.
+
+
+## Learning hub pages
+- **Concept library:** diagrams, definitions, guided steps, and links between networking concepts.
+- **Open-source tool directory:** task-based catalog with descriptions, starter examples, and official documentation.
+- **Roadmaps:** foundations, VAPT, SOC, application security, cloud, and security architecture.
+- **Security architecture:** data-flow diagrams, trust boundaries, threat modelling, controls, and trade-offs.
+- **Practice lab:** safe exercises, free training platforms, and portfolio ideas.
+- **Resources:** free guides and publications, security news, advisories, and vulnerability databases.
+
+Most learning pages include a **Print / Save as PDF** button. Choose “Save as PDF” in your browser's print dialog to keep a personal copy. Respect each source's license and do not redistribute copyrighted material without permission.
+
+The tool directory prioritizes open-source tools. Only use discovery or testing features on systems you own or have explicit authorization to assess.
