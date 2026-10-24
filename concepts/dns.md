@@ -1,0 +1,15 @@
+---
+layout: default
+title: DNS — Domain Name System
+description: Understand DNS records, the resolution path, and open-source lookup tools.
+permalink: /concepts/dns/
+---
+<article class="learning-page"><a class="back-link" href="{{ '/concepts/' | relative_url }}">← Concepts library</a><p class="eyebrow">CONCEPT 04 / NAMING</p><h1>DNS: <em>names to records</em></h1><p class="lead">The Domain Name System is a distributed naming system. It can return different record types; it does not only map a name to one IP address.</p>
+<div class="diagram-panel"><div class="flow-diagram vertical-flow"><div class="flow-node">Browser / application<small>Needs example.com</small></div><div class="flow-arrow">↓</div><div class="flow-node">Local cache / stub resolver<small>Checks cached answer</small></div><div class="flow-arrow">↓</div><div class="flow-node">Recursive resolver<small>May query DNS hierarchy</small></div><div class="flow-arrow">↓</div><div class="flow-node">Authoritative DNS<small>Returns zone records</small></div></div><p class="diagram-caption">Simplified lookup path. Caches, encrypted DNS, local overrides, and network design can change the exact flow.</p></div>
+<h2>Common records</h2><div class="definition-list"><details><summary>A — IPv4 address</summary><p>Returns an IPv4 address associated with a name.</p></details><details><summary>AAAA — IPv6 address</summary><p>Returns an IPv6 address associated with a name.</p></details><details><summary>CNAME — canonical name</summary><p>Aliases one DNS name to another name; resolution can continue through the target.</p></details><details><summary>MX — mail exchanger</summary><p>Identifies mail servers for a domain.</p></details><details><summary>TXT — text data</summary><p>Stores text used for a variety of purposes, including email authentication policies and domain verification.</p></details><details><summary>NS — name server</summary><p>Identifies authoritative name servers for a DNS zone.</p></details></div>
+<h2>Use open-source lookup tools</h2><div class="mini-tool-grid"><article><h3>dig</h3><pre><code>dig example.com A
+dig example.com MX
+dig example.com TXT</code></pre><p>Shows DNS questions, answers, flags, and timing.</p></article><article><h3>host</h3><pre><code>host example.com
+host -t AAAA example.com</code></pre><p>Compact lookup output, suitable for quick checks.</p></article></div>
+<h2>Step-by-step interpretation</h2><ol class="process-list"><li>State the question: address, mail server, or another record type?</li><li>Run a query using <code>dig</code> or <code>host</code> for a domain you are allowed to examine.</li><li>Read the record type, answer, TTL, and responding server.</li><li>Repeat later or query an approved resolver if you need to understand caching or differences.</li><li>Document uncertainty: DNS answers can change and may point to CDN or shared infrastructure.</li></ol>
+<p class="resource-links"><a href="https://bind9.readthedocs.io/" target="_blank" rel="noopener">BIND documentation ↗</a><a href="https://www.rfc-editor.org/rfc/rfc1034" target="_blank" rel="noopener">DNS concepts RFC ↗</a></p></article>

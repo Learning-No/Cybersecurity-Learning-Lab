@@ -16,12 +16,12 @@ Build the foundation before using security tools. Understand your environment fi
 - Write a scope statement and keep practice isolated from systems you do not own.
 
 ## Concepts to learn
-- **IP address:** identifies a network interface.
-- **Subnet and gateway:** a subnet groups addresses; a gateway forwards traffic to other networks.
-- **TCP vs UDP:** TCP provides ordered delivery; UDP sends datagrams without the same connection guarantees.
-- **Port:** a transport-layer endpoint used by a service; a port alone does not prove a vulnerability.
-- **DNS:** translates names into records such as IP addresses.
-- **HTTP/HTTPS:** web communication; HTTPS uses TLS to protect traffic in transit.
+- **IP address:** identifies a network interface. [Open the IP diagram and lookup workflow →]({{ '/concepts/ip-address/' | relative_url }})
+- **Subnet and gateway:** a subnet groups addresses; a gateway forwards traffic to other networks. [Open the network diagram and packet path →]({{ '/concepts/network-basics/' | relative_url }})
+- **TCP vs UDP:** TCP provides ordered delivery; UDP sends datagrams without the same connection guarantees. [Compare protocols with a packet-flow diagram →]({{ '/concepts/tcp-udp/' | relative_url }})
+- **Port:** a transport-layer endpoint used by a service; a port alone does not prove a vulnerability. [Understand ports and services →]({{ '/concepts/ports-and-services/' | relative_url }})
+- **DNS:** translates names into records such as IP addresses. [Open the DNS resolution diagram and lookup steps →]({{ '/concepts/dns/' | relative_url }})
+- **HTTP/HTTPS:** web communication; HTTPS uses TLS to protect traffic in transit. [Follow the browser request lifecycle →]({{ '/concepts/http-https/' | relative_url }})
 
 ## Guided safe exercise
 1. Draw your lab: host computer, optional virtual machine, and virtual network.
