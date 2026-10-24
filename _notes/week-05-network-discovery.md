@@ -26,8 +26,8 @@ Discovery means understanding which assets exist and what they are intended to d
 1. Create an inventory for your own lab: asset name, private lab address, owner, purpose, expected services, and permitted tests.
 2. Review a service list from your own virtual machine or a training dataset.
 3. For each service, record why it exists, who needs it, and what access restriction is appropriate.
-4. Compare the inventory with the lab documentation.
-5. Do not scan public IP ranges, school/work networks, or other people's devices.
+4. Compare the inventory with lab documentation.
+5. Do not scan public IP ranges or systems you do not own or have permission to assess.
 
 ## Deliverable
 Create an asset-and-service inventory and a list of questions for the system owner. Unknown services are items to investigate—not proof of a vulnerability.
