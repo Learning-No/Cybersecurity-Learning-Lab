@@ -1,59 +1,60 @@
 ---
-title: "Week 04 — VAPT Notes"
+title: "Week 04 — Web Testing in an Authorized Lab"
 week: "WEEK 04"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Practice a structured web application testing workflow in an authorized lab and document findings clearly."
+summary: "Follow a structured web testing workflow: confirm scope, map normal behavior, validate safely, and report findings."
 date: 2026-10-24
 ---
+
+## Week overview
+Turn the first three weeks into a repeatable process. Work only in a local deliberately vulnerable application or a training lab that explicitly permits the activity.
+
 ## Learning objectives
-
-- Follow a defined scope and testing checklist.
-- Understand how to observe and document web application behavior.
-- Describe a finding with evidence, impact, and remediation.
-
-## Before you begin
-
-Use only a local training application, a deliberately vulnerable lab, or a system for which you have explicit permission. Confirm the written scope and stop if an activity could disrupt a service or expose real user data.
+- Confirm scope, rules of engagement, and stop conditions before testing.
+- Map normal pages, features, and user roles.
+- Capture sanitized evidence and explain impact and remediation.
 
 ## Testing workflow
+1. **Confirm scope:** record approved hosts, application areas, allowed techniques, test window, and contacts.
+2. **Map the app:** list pages, forms, roles, and important workflows.
+3. **Establish a baseline:** note normal behavior using a lab account and dummy data.
+4. **Form a hypothesis:** state one security question and expected secure behavior.
+5. **Validate safely:** use the lab's intended exercises; avoid destructive tests, real personal data, and denial-of-service activity.
+6. **Document:** record reproducible steps, expected vs observed results, impact, and a practical fix.
+7. **Retest:** repeat the same safe steps after a fix.
 
-1. **Scope:** record the approved target, allowed test types, and time window.
-2. **Understand:** map the application's normal pages, roles, and expected behavior.
-3. **Observe:** use browser Developer Tools to inspect requests and responses in the lab.
-4. **Validate safely:** test one hypothesis at a time without accessing other people's data or disrupting the service.
-5. **Document:** record reproducible steps, sanitized evidence, risk, and a practical fix.
-6. **Retest:** confirm the fix in the authorized environment.
-
-## Finding template
-
-- **Title:**
-- **Affected lab URL/component:**
+## Evidence template
+- **Finding title:**
+- **Affected lab component:**
+- **Scope/permission reference:**
 - **Preconditions:**
 - **Steps to reproduce:**
-- **Expected result:**
-- **Observed result:**
-- **Impact:**
-- **Severity and rationale:**
-- **Recommended remediation:**
+- **Expected behavior:**
+- **Observed behavior:**
+- **Impact and affected users:**
+- **Severity rationale:**
+- **Remediation:**
 - **Retest result:**
 
-## Personal learning log
+## Guided safe exercise
+Use a guided lab with a fictional application and test accounts. Document two normal workflows and one lesson from the lab's built-in challenge. Remove cookies, tokens, personal data, and unrelated headers from screenshots.
 
-- **Concepts learned:**
-- **Tools used:**
-- **What surprised me:**
-- **Questions to revisit:**
+## Deliverable
+Write a practice report with executive summary, scope, methodology, observations, and recommended fixes. Label simulated findings as lab findings.
+
+## Self-check
+- Why do scope and authorization come before tool selection?
+- What makes evidence useful and reproducible?
+- What should you do if sensitive real data appears unexpectedly?
 
 ## Completion checklist
-
-- [ ] I confirmed the lab scope and permission.
-- [ ] I documented observations without including credentials, tokens, or personal data.
-- [ ] I explained impact and remediation, not just the tool used.
-- [ ] I saved sanitized evidence and a short summary.
+- [ ] I wrote down the permitted scope.
+- [ ] I separated observed facts from assumptions.
+- [ ] I included impact and remediation.
+- [ ] I sanitized evidence and recorded a retest plan.
 
 ## Further reading
-
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 
