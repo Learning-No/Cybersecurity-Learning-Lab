@@ -3,39 +3,48 @@ title: "Week 03 — OWASP Top 10 Concepts"
 week: "WEEK 03"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Learn common web application risk categories and how secure design and validation reduce them."
+summary: "Understand common web application risk categories and connect each one to prevention, impact, and secure design."
 date: 2026-10-24
 ---
+
+## Week overview
+The OWASP Top 10 is an awareness resource for discussing common web application risks. It is not a complete checklist or a replacement for a defined testing methodology.
+
 ## Learning objectives
 - Recognize common web application risk categories.
-- Explain authentication versus authorization.
-- Describe how to document a finding and recommend a fix safely.
+- Explain authentication, authorization, least privilege, and input validation.
+- Describe a risk using conditions, impact, evidence, and remediation.
 
-## Study topics
-- Broken access control
-- Cryptographic failures
-- Injection risks
-- Insecure design
-- Security misconfiguration
-- Authentication and session failures
-- Vulnerable and outdated components
-- Logging and monitoring gaps
+## Concepts to learn
+- **Broken access control:** users can perform actions outside their intended permissions.
+- **Cryptographic failures:** sensitive information is not adequately protected.
+- **Injection:** untrusted input is interpreted as part of a command or query.
+- **Insecure design:** risks were not addressed in requirements or architecture.
+- **Security misconfiguration:** unsafe defaults or unnecessary features increase exposure.
+- **Authentication failures:** identity or session handling is weak.
+- **Vulnerable components:** dependencies are outdated or contain known weaknesses.
+- **Logging and monitoring failures:** important security events are not recorded or reviewed.
 
-Read the official [OWASP Top 10](https://owasp.org/www-project-top-ten/). It is an awareness document, not a complete testing methodology.
+## Guided safe exercise
+1. Read the official OWASP Top 10 overview.
+2. Make a table: category, fictional example, impact, prevention, and evidence needed.
+3. Imagine a fictional app with ordinary and administrator roles; describe what each role should be allowed to do.
+4. Choose three categories and explain how secure design or code review could reduce risk.
 
-## Safe exercise
-For each category, write a fictional example, possible impact, and prevention strategy. Use a deliberately vulnerable local app for hands-on practice.
+## Deliverable
+Create a one-page risk map with at least five categories, plain-language explanations, and a defensive control for each.
 
-## Finding template
-- **Category:**
-- **Affected lab component:**
-- **Expected behavior:**
-- **Observed behavior:**
-- **Impact:**
-- **Recommended remediation:**
-- **Evidence with secrets removed:**
+## Self-check
+- How are authentication and authorization different?
+- Why is a vulnerability category not enough to assign severity?
+- Why should remediation be included in a report?
 
 ## Completion checklist
-- [ ] I can explain authentication versus authorization.
-- [ ] I can describe three common risk categories.
-- [ ] I can recommend remediation as well as explain risk.
+- [ ] I can explain five risk categories in plain language.
+- [ ] I linked each example to impact and prevention.
+- [ ] I used fictional examples or an authorized training lab.
+- [ ] I can find the official OWASP reference.
+
+## Further reading
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
