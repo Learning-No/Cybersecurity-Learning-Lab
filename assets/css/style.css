@@ -13,3 +13,68 @@
 
 .page-actions{display:flex;justify-content:flex-end;padding-top:14px}.page-actions button{background:#14121a;border:1px solid #713541;border-radius:4px;color:#ff9ba5;padding:9px 12px;font:10px var(--mono);cursor:pointer}.page-actions button:hover{background:#24151c;border-color:var(--red)}
 @media print{body{background:#fff!important;color:#171717!important;font:11pt/1.55 Arial,sans-serif}.topbar,footer,.page-actions,.back-link,.resource-links,.ethics{display:none!important}main{max-width:none!important;padding:0!important}.learning-page,.note{max-width:none!important;padding:0!important}.learning-page h1,.learning-page h2,.learning-page h3,.prose h2,.prose h3{color:#111!important;break-after:avoid}.learning-page p,.learning-page li,.prose,.prose p,.prose li{color:#222!important}.diagram-panel,.hub-card,.mini-tool-grid article,.definition-list details,.process-cards article{background:#fff!important;border:1px solid #bbb!important;break-inside:avoid}.flow-node,.network-cloud,.device-pair span,.packet-row,.sequence-message,.port-branch{background:#fff!important;color:#111!important;border-color:#888!important}.flow-node small,.network-cloud small,.diagram-caption,.mini-tool-grid p{color:#444!important}.learning-page a,.prose a{color:#111!important;text-decoration:underline}.learning-page pre,.mini-tool-grid pre{background:#f5f5f5!important;color:#111!important;white-space:pre-wrap}.hub-hero{padding:0}.hub-grid{grid-template-columns:1fr 1fr}.hub-card{color:#111!important}.hub-card p,.hub-card li{color:#222!important}}
+
+
+/* Brand refresh: ocean blue, teal, violet and warm amber */
+:root{--bg:#071426;--panel:#0d2038;--line:#244363;--text:#edf7ff;--muted:#a9bfd3;--red:#38bdf8;--green:#5eead4;--mono:'DM Mono',monospace;--sans:'Manrope',system-ui,sans-serif;--blue:#38bdf8;--teal:#2dd4bf;--violet:#a78bfa;--amber:#fbbf24}
+body{background:radial-gradient(ellipse at 15% 0%,#12345a 0,transparent 35%),var(--bg)}
+.topbar{background:#071426ed;border-color:#1e4264;box-shadow:0 8px 32px #02081755}
+.brand{display:flex;align-items:center;gap:10px;letter-spacing:0}
+.brand img{width:39px;height:39px;filter:drop-shadow(0 0 10px #38bdf833)}
+.brand-copy{display:grid;line-height:1.25;gap:2px}
+.brand-copy strong{font:700 13px var(--sans);color:#f0f9ff}
+.brand-copy b{font:800 13px var(--sans);background:linear-gradient(90deg,#38bdf8,#2dd4bf);background-clip:text;color:transparent}
+.brand-copy small{font:8px var(--mono);letter-spacing:1.1px;color:#8daecc}
+.topbar nav{gap:clamp(10px,1.6vw,22px);color:#bdd0e3}
+.topbar nav a{transition:color .18s ease}
+.topbar nav a:hover,footer a:hover{color:var(--teal)}
+.github,.portal-link{border:1px solid #2d597b;background:#0e2744;border-radius:9px;color:#dff7ff;padding:8px 12px}
+.portal-link{color:#b9f7ed;border-color:#287e83}
+.hero h1 em{background:linear-gradient(90deg,#38bdf8,#2dd4bf 55%,#a78bfa);background-clip:text;color:transparent}
+.eyebrow{color:#67dff0}
+.primary{background:linear-gradient(105deg,#38bdf8,#2dd4bf);color:#052035;border:0;box-shadow:0 8px 25px #22d3ee22}
+.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.secondary{border-color:#39729a;background:#0b1e34;color:#e3f5ff}
+.terminal{border-color:#326083;background:linear-gradient(145deg,#102844,#0a1729);box-shadow:0 24px 80px #02081788}
+.terminal-head{border-color:#254766}.terminal-head span{color:var(--amber)}.terminal-body p span{color:var(--teal)}.terminal-body em{color:var(--violet)}
+.bar div{background:linear-gradient(90deg,#38bdf8,#2dd4bf)}
+.section{border-top-color:#1b3a59}
+.panel,.stages article,.weeks article,.note-card{background:linear-gradient(145deg,#102640,#0b1c31);border-color:#24496c}
+.featured{border-color:#2d7f91;background:linear-gradient(145deg,#103c50,#10243b 75%)}
+.tag{border-color:#326184;background:#102b46;color:#bdeeff}
+.tag.red{color:#a5f3fc;border-color:#2c8c9b;background:#103844}
+.checks input,.weeks input{accent-color:#2dd4bf}
+.stages article>b,.weeks article>b{color:#67e8f9}
+.note-card:hover,.panel:hover,.hub-card:hover{border-color:#4aa9cb;box-shadow:0 12px 34px #02081755}
+.toolbar input{background:#0b1c31;border-color:#2b5274}
+.toolbar input:focus{border-color:#38bdf8;box-shadow:0 0 0 3px #38bdf822}
+code{color:#fbbf24}
+.ethics{border-color:#347c87;background:linear-gradient(110deg,#0d3440,#10233a)}
+.note .eyebrow{color:#67e8f9}.prose a{color:#67e8f9}.note aside{border-color:#367a8d;background:#102b3a}.note aside strong{color:#99f6e4}
+.hub-card{background:linear-gradient(145deg,#102b49,#0c1d33)!important;border-color:#2b5274!important}
+.hub-card:nth-child(4n+1){--card-accent:#38bdf8}.hub-card:nth-child(4n+2){--card-accent:#2dd4bf}.hub-card:nth-child(4n+3){--card-accent:#a78bfa}.hub-card:nth-child(4n){--card-accent:#fbbf24}
+.hub-card .tag{color:var(--card-accent);border-color:color-mix(in srgb,var(--card-accent) 42%,transparent);background:color-mix(in srgb,var(--card-accent) 10%,#0b1c31)}
+.hub-card h2,.hub-card h3{color:#f0f9ff}.hub-card .card-link{color:var(--card-accent)}
+.page-actions button{border-color:#2b6b8c;background:#0d2a44;color:#dff8ff;border-radius:9px}
+footer{border-color:#1b3a59;color:#9ab3ca}
+.footer-brand{display:flex;align-items:center;gap:8px;color:#d7edff}
+.footer-brand img{vertical-align:middle}
+@media(max-width:1050px){.topbar nav{gap:10px}.topbar nav a{font-size:10px}.brand-copy small{display:none}}
+@media(max-width:800px){.topbar{gap:10px}.brand-copy strong,.brand-copy b{font-size:12px}.portal-link{font-size:10px}}
+/* Student portal illustration and honest static-site access state */
+.portal-shell{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch;padding:52px 0 72px}
+.portal-art{position:relative;min-height:480px;overflow:hidden;border:1px solid #28577c;border-radius:24px;background:#0b1b31}
+.portal-art img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
+.portal-art-copy{position:absolute;left:28px;right:28px;bottom:24px;padding:18px 20px;border:1px solid #376789;border-radius:16px;background:#071426d9;backdrop-filter:blur(12px)}
+.portal-art-copy h2{margin:5px 0 8px;font-size:24px}.portal-art-copy p{margin:0;color:#b8cce0;font-size:13px}
+.portal-card{padding:clamp(22px,4vw,40px);border:1px solid #2d5c7d;border-radius:24px;background:linear-gradient(150deg,#102a46,#0b1b30);box-shadow:0 24px 70px #02081755}
+.portal-card .brand-mark{width:54px;height:54px}
+.portal-card h1{font-size:clamp(30px,4vw,42px);letter-spacing:-1.8px;line-height:1.15;margin:18px 0 10px}
+.portal-card .portal-subtitle{color:#b5c9dc;font-size:13px}
+.portal-actions{display:grid;gap:12px;margin:24px 0}
+.portal-actions a{display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 15px;border-radius:12px;font-weight:800;font-size:12px}
+.portal-note{border:1px solid #8b6c2a;background:#2d2616;color:#ffedbd;border-radius:12px;padding:13px;font-size:11px;line-height:1.7}
+.portal-feature-list{display:grid;gap:10px;margin:22px 0 0;padding:0;list-style:none}
+.portal-feature-list li{display:flex;gap:10px;color:#d1e4f4;font-size:12px}
+.portal-feature-list li:before{content:'✓';display:grid;place-items:center;flex:0 0 22px;height:22px;border-radius:7px;background:#103e43;color:#5eead4;font-weight:900}
+@media(max-width:760px){.portal-shell{grid-template-columns:1fr;padding:30px 0 48px}.portal-art{min-height:310px;order:2}.portal-card{order:1}.topbar nav{display:none}}
