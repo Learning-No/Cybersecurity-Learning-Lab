@@ -12,7 +12,7 @@ permalink: /labs/
 <div class="callout"><strong>Safety rule:</strong> use fictional data and intentionally vulnerable training targets. Do not expose vulnerable apps to the public internet, bridge them into a college/work network, or test third-party systems without written permission.</div>
 </section>
 
-<section class="section prose">
+<section class="section prose" markdown="1">
 <h2>1. Choose your lab path</h2>
 <ul>
 <li><strong>Beginner — browser-only:</strong> use official guided lessons and their built-in practice environments. No local service is exposed.</li>
