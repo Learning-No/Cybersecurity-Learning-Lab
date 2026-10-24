@@ -3,34 +3,47 @@ title: "Week 01 — Lab Setup & Networking Basics"
 week: "WEEK 01"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Prepare a safe practice environment and learn the networking concepts used in security testing."
+summary: "Build a safe lab, understand basic network addressing, and document exactly which systems are in scope."
 date: 2026-10-24
 ---
+
+## Week overview
+This week builds the foundation for every later VAPT topic. Your goal is to understand the environment before using security tools. No scanning of public addresses or networks is needed.
+
 ## Learning objectives
-- Explain IP addresses, ports, TCP/UDP, DNS, and HTTP at a beginner level.
-- Set up a local virtual machine or use an approved guided training lab.
-- Record lab scope and observations in a notebook.
+- Explain IP addresses, subnets, ports, TCP/UDP, DNS, HTTP and HTTPS.
+- Identify the host, guest virtual machine, and virtual network in a lab diagram.
+- Write a clear scope statement and keep practice isolated from systems you do not own.
 
-## Concepts
-- **IP address:** identifies a network interface on an IP network.
-- **Port:** a numbered endpoint used by a transport-layer service.
-- **DNS:** maps domain names to records such as IP addresses.
-- **HTTP/S:** protocols used by web clients and servers.
+## Concepts to learn
+- **IP address:** identifies a network interface; private addresses are commonly used inside home and lab networks.
+- **Subnet and gateway:** a subnet groups addresses; a gateway forwards traffic to other networks.
+- **TCP vs UDP:** TCP provides an ordered connection; UDP sends datagrams without the same connection guarantees.
+- **Port:** a transport-layer endpoint used by a service. A port number alone does not prove a service is vulnerable.
+- **DNS:** translates names into records such as IP addresses.
+- **HTTP/HTTPS:** web communication; HTTPS uses TLS to protect traffic in transit.
 
-## Safe exercise
-1. Draw a diagram of your own lab: host, virtual machine, and virtual network.
-2. Inspect the network configuration of your own machine with built-in tools.
-3. Record the IP ranges you control and systems explicitly in scope.
-4. Restrict any scanning to your lab or a target with explicit authorization.
+## Guided safe exercise
+1. Draw your lab: host computer, optional virtual machine, and virtual network.
+2. Use your operating system's network settings to identify your own IP address, gateway, and DNS resolver.
+3. Look up the private IPv4 ranges and mark which addresses your lab is allowed to use.
+4. Write a scope statement: owner, target, permitted actions, excluded systems, and stop conditions.
+5. Explain in your own words what happens after entering a website name in a browser.
 
-## My notes
-- **What I learned:**
-- **Tools used:**
-- **Observations:**
-- **Questions to revisit:**
-- **Scope confirmed:** Yes / No
+## Deliverable
+Save a one-page network diagram, a glossary of ten terms, and your written lab scope. Do not publish public IPs, credentials, or personal network details.
+
+## Self-check
+- What is the difference between an IP address and a port?
+- Why is DNS not the same thing as HTTP?
+- Why must you confirm authorization before testing a target?
 
 ## Completion checklist
-- [ ] I can explain the difference between an IP address and a port.
-- [ ] I can describe DNS and HTTP/S in my own words.
-- [ ] I documented my authorized lab scope.
+- [ ] I can explain IP, subnet, gateway, DNS, TCP/UDP and ports.
+- [ ] I can describe HTTP vs HTTPS.
+- [ ] I documented an isolated lab and its scope.
+- [ ] I know to stop if a target or permission is unclear.
+
+## Further reading
+- [Cloudflare Learning Center — What is an IP address?](https://www.cloudflare.com/learning/network-layer/what-is-an-ip-address/)
+- [MDN — How the Web works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
