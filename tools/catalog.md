@@ -6,7 +6,7 @@ permalink: /tools/catalog/
 ---
 
 <section class="hub-hero"><p class="eyebrow">REFERENCE LIBRARY · OPEN-SOURCE FIRST</p><h1>Find a tool. <em>Know what it is for.</em></h1><p class="lead">This is a curated starter catalog, not a claim to list every project in existence. Check the license, official documentation, supported platform, and maintenance status before adopting a tool. Run testing tools only against systems you own or are explicitly authorized to assess.</p></section>
-<section class="section prose">
+<section class="section prose" markdown="1">
 <h2>How to choose responsibly</h2>
 <ol><li>Define the question and scope before selecting a tool.</li><li>Prefer official packages/releases and read the license.</li><li>Use a local sample, training dataset, or isolated lab first.</li><li>Understand what the output proves—and what it cannot prove.</li><li>Record versions, configuration, limitations, and cleanup.</li></ol>
 <h2>Networking, DNS, and connectivity</h2>
