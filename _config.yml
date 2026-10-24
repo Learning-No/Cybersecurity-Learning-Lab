@@ -1,0 +1,17 @@
+title: Cybersecurity Learning Lab
+description: A structured, ethical cybersecurity learning roadmap.
+url: "https://learning-no.github.io"
+baseurl: "/Cybersecurity-Learning-Lab"
+markdown: kramdown
+permalink: pretty
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+exclude: [README.md, LICENSE]

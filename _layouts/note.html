@@ -1,0 +1,4 @@
+---
+layout: default
+---
+<article class="note"><a href="{{ '/' | relative_url }}#notes">← All notes</a><p class="eyebrow">{{ page.week | default: "LEARNING NOTE" }} · {{ page.track | default: "FOUNDATIONS" }}</p><h1>{{ page.title | escape }}</h1><p class="lead">{{ page.summary | escape }}</p><div class="prose">{{ content }}</div><aside><strong>Safety reminder</strong><p>Practice only on systems you own or have explicit permission to test. Never publish credentials, tokens, or sensitive logs.</p></aside></article>
