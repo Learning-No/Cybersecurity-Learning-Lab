@@ -2,46 +2,76 @@
 title: "Week 12 — Final Report & Portfolio"
 week: "WEEK 12"
 track: "VAPT ROADMAP"
-level: "Beginner"
-summary: "Create a clear report and portfolio showing process, judgment, and remediation."
+level: "Beginner → Intermediate"
+summary: "Turn lab work into a clear assessment report and a safe public portfolio that demonstrates process, judgment, and remediation."
 date: 2026-10-24
 ---
 
-## Learning objectives
-- Explain scope, methodology, findings, impact, and remediation.
-- Write for both technical and non-technical readers.
-- Share only work you have permission to publish.
+## Mission
+Finish with a professional artifact, not just a list of tools used. A strong portfolio shows how you defined scope, reasoned about evidence, explained risk, recommended a fix, and learned from retesting.
 
-## Report structure
-1. Title, date, and lab context.
-2. Executive summary in plain language.
-3. Scope and authorization.
-4. Methodology and limitations.
-5. Findings with severity, affected component, steps, proof, impact, and fix.
-6. Prioritized recommendations.
-7. Retest summary and remaining issues.
-8. Sanitized appendix and references.
+## Report architecture
+```text
+Executive summary
+   ↓
+Scope + rules of engagement
+   ↓
+Methodology + limitations
+   ↓
+Findings (evidence → impact → remediation)
+   ↓
+Prioritized remediation plan
+   ↓
+Retest status + appendices
+```
 
-## Guided exercise
-1. Choose a fictional or lab-only finding.
-2. Write an executive summary and explain the impact.
-3. Add sanitized proof and a practical fix.
-4. Define a retest criterion.
-5. Review your report before sharing; remove sensitive details.
-6. Add a README describing your lab and learning goals.
+## Report sections
+1. **Title and handling label:** clearly identify this as a training-lab report.
+2. **Executive summary:** explain the overall situation in plain language, the main risks, and the most important next actions.
+3. **Scope and authorization:** targets, date/time, test window, permitted techniques, exclusions, and data-handling boundaries.
+4. **Methodology:** phases and tools used, versions, high-level settings, and why each method was appropriate.
+5. **Limitations:** unavailable areas, assumptions, test-account limitations, and what was not assessed.
+6. **Findings:** title, affected component, prerequisites, sanitized reproducible steps, expected/observed behavior, evidence, impact, severity rationale, root cause, remediation, and retest.
+7. **Remediation plan:** priority, owner role, due date, dependencies, and acceptance criteria.
+8. **Appendix:** glossary, sanitized evidence references, and source links.
+
+## Guided capstone
+1. Choose one local training application or a fictional case study. Write the scope and authorization first.
+2. Reuse a finding from your lab notes; do not invent a real-world claim.
+3. Ask a peer to reproduce it using only the documented steps and the same safe lab.
+4. Revise the report to address gaps in evidence, impact, and remediation.
+5. Include a “what I would do differently” section and list the concepts/tools you still need to learn.
+6. Create a public version that contains no real IPs, credentials, tokens, cookies, personal data, private logs, or third-party target details.
+7. Add a README explaining setup, prerequisites, safety boundaries, screenshots, known limitations, and cleanup instructions.
+8. Check every link, spelling, heading, and code sample. Do not claim certifications or production experience you do not have.
+
+## What to track and identify
+Scope; report version; finding IDs; evidence references; severity rationale; remediation owners; retest status; limitations; peer-review comments; links and license; redactions; cleanup status; next learning goals.
+
+## Portfolio rubric (score 0–2 each)
+- Scope and safety are explicit.
+- Evidence is reproducible and sanitized.
+- Findings distinguish facts from assumptions.
+- Impact and severity are justified.
+- Remediation is practical and testable.
+- Writing is clear to technical and non-technical readers.
+- Repository is organized, licensed appropriately, and contains no secrets.
+
+## Deliverable
+Publish a sanitized report, a lab diagram, a remediation register, a README, and a short reflection. Label the work as an educational lab. Include only artifacts you have permission to publish.
 
 ## Self-check
-- Can a non-technical reader understand the risk?
-- Can another authorized learner reproduce the observation?
-- Does the finding include a practical fix?
-- Is the work yours to share?
+- Can a reviewer reproduce the finding without asking you for missing steps?
+- Does the report say what was not tested?
+- Can a manager understand why the fix matters?
+- Does the public repository contain secrets or personal data?
 
 ## Completion checklist
-- [ ] I completed a report with core sections.
-- [ ] I prioritized recommendations and defined retest criteria.
-- [ ] I reviewed the portfolio for sensitive details.
-- [ ] I recorded what I will study next.
+- [ ] Scope, methodology, and limitations are explicit.
+- [ ] Evidence is sanitized and reproducible.
+- [ ] Remediation has owners and retest criteria.
+- [ ] Public artifacts contain no secrets or unauthorized data.
+- [ ] I can explain every result honestly in an interview.
 
-## Further reading
-- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+## Next steps
+Choose a specialization: SOC and detection, application security, cloud security, digital forensics, governance/risk/compliance, or security architecture. Continue learning with the [career roadmaps]({{ '/roadmaps/' | relative_url }}) and [open-source tool catalog]({{ '/tools/catalog/' | relative_url }}).
