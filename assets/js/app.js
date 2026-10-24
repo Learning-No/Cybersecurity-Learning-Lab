@@ -83,13 +83,27 @@
     filterTools();
   }
 
-  const moreMenus = [...document.querySelectorAll('.nav-more')];
-  document.addEventListener('click', event => {
-    moreMenus.forEach(menu => {
-      if (!menu.contains(event.target)) menu.open = false;
+  // Treat the dropdowns as one exclusive menu: opening one closes the others.
+  const navMenus = [...document.querySelectorAll('.nav-group')];
+  const closeNavMenus = except => {
+    navMenus.forEach(menu => {
+      if (menu !== except) menu.open = false;
+    });
+  };
+  navMenus.forEach(menu => {
+    menu.addEventListener('toggle', () => {
+      if (menu.open) closeNavMenus(menu);
     });
   });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.primary-nav')) closeNavMenus(null);
+    if (event.target.closest('.nav-menu a')) closeNavMenus(null);
+  });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') moreMenus.forEach(menu => { menu.open = false; });
+    if (event.key === 'Escape') {
+      closeNavMenus(null);
+      const activeSummary = document.activeElement;
+      if (activeSummary && activeSummary.matches('.nav-group > summary')) activeSummary.focus();
+    }
   });
 })();
