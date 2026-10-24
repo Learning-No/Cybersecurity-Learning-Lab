@@ -4,6 +4,8 @@ A GitHub Pages-compatible knowledge base for learning cybersecurity responsibly.
 
 ## Included
 - Cybersecurity career roadmap and 12-week VAPT learning plan.
+- Twelve week-by-week VAPT guides with learning objectives, diagrams, safe exercises, observation checklists, deliverables, self-checks, and completion criteria.
+- A step-by-step isolated lab setup guide and a curated open-source tool catalog with license/service distinctions.
 - Markdown notes in `_notes/`, automatically listed by Jekyll.
 - Browser-local progress tracking and note search.
 - Responsive dark interface and responsible-use reminders.
@@ -49,3 +51,12 @@ The existing MIT license is retained.
 Most learning pages include a **Print / Save as PDF** button. Choose “Save as PDF” in your browser's print dialog to keep a personal copy. Respect each source's license and do not redistribute copyrighted material without permission.
 
 The tool directory prioritizes open-source tools. Only use discovery or testing features on systems you own or have explicit authorization to assess.
+
+
+## Curriculum quality and safe lab setup
+
+- Start with [the lab setup guide](https://learning-no.github.io/Cybersecurity-Learning-Lab/labs/) before running vulnerable training software.
+- Each weekly guide should state the learning goal, safe scope, step-by-step activity, what to observe, a deliverable, self-check, and completion checklist.
+- The tool directory is a curated catalog, not an exhaustive list of all projects. Verify current licenses, maintenance, and official documentation before classroom adoption.
+- Online services such as Have I Been Pwned and WHOIS lookups are clearly labelled as services rather than open-source software. Use personal data only with ownership or consent.
+- For a college cohort, instructors should review lab boundaries, network isolation, data-handling rules, accessibility, and the exact software versions before a class session.

@@ -2,48 +2,67 @@
 title: "Week 11 — Risk Rating & Remediation"
 week: "WEEK 11"
 track: "VAPT ROADMAP"
-level: "Beginner"
-summary: "Translate technical findings into business risk, practical fixes, clear ownership, and measurable retesting."
+level: "Beginner → Intermediate"
+summary: "Translate technical findings into contextual business risk, practical fixes, clear ownership, and measurable retesting."
 date: 2026-10-24
 ---
 
-## Week overview
-A useful report helps a team decide what to fix first. Ratings should be explainable and based on evidence, technical severity, exposure, and business impact.
+## Mission
+A useful report helps a system owner make a decision. Risk is not just a scanner score: it depends on impact, likelihood, exposure, existing controls, affected assets, and business context.
 
-## Learning objectives
-- Explain severity, likelihood, impact, and asset criticality.
-- Recommend fixes that address root causes rather than symptoms.
-- Track ownership, deadlines, exceptions, and retest results.
+## Decision flow
+```text
+Validated finding
+      ↓
+Affected asset + business process
+      ↓
+Impact × likelihood + exposure + controls
+      ↓
+Priority + owner + due date
+      ↓
+Fix / mitigate / accept with approval
+      ↓
+Retest evidence + residual risk
+```
 
-## Concepts to learn
-- **Severity:** a structured estimate of technical seriousness.
-- **Likelihood:** how plausible it is that a weakness will occur in context.
-- **Impact:** consequences for confidentiality, integrity, availability, or business operations.
-- **Business context:** data sensitivity, exposure, controls, and asset importance.
-- **Remediation:** address the root cause, improve validation or access control, update dependencies, or harden configuration.
-- **Retest:** confirm the issue is resolved and expected behavior still works.
+## Concepts
+- **Severity:** technical seriousness of a weakness under defined assumptions.
+- **Risk:** potential loss in a particular context; business impact and likelihood matter.
+- **Remediation:** correcting the root cause.
+- **Mitigation:** reducing risk without fully removing the root cause.
+- **Risk acceptance:** a documented decision by an authorized owner, not an informal decision by the tester.
+- **Residual risk:** risk remaining after controls or fixes.
+- **Retest:** repeat the relevant safe verification after a change.
 
-## Guided safe exercise
-1. Use three fictional findings with different technical and business impacts.
-2. Assign provisional severity and explain the evidence behind each rating.
-3. Suggest a root-cause fix, owner role, and target date.
-4. Identify a temporary control if the permanent fix cannot be applied immediately.
-5. Write a retest plan with a pass/fail condition.
+## Guided lab
+1. Select three validated findings from your earlier lab report or a provided sample dataset.
+2. For each, identify the asset, data/process affected, reachable users, prerequisites, and likely consequences.
+3. Use CVSS when appropriate, record the vector/source, and explain environmental factors separately. Do not invent a score if evidence is missing.
+4. Assign priority using your course's agreed scale. Explain why each item sits above or below another.
+5. Recommend a root-cause fix, a temporary mitigation if necessary, and an owner role.
+6. Define objective retest criteria before the fix is applied.
+7. After the sample fix or simulated change, record pass/fail and remaining limitations.
+8. For any accepted risk, document who approved it, why, expiration/review date, and compensating controls.
+
+## What to track and identify
+Finding ID; affected asset; business owner; data sensitivity; exposure; impact; likelihood assumptions; severity source/vector; priority rationale; root cause; fix/mitigation; owner; due date; dependencies; retest steps/result; residual risk; approval.
 
 ## Deliverable
-Create a tracker with finding ID, severity, business impact, owner, recommendation, due date, status, exception rationale, and retest result.
+Create a remediation register with three findings, a ranked queue, owner roles, target dates, retest criteria, and a short explanation of the trade-offs.
 
 ## Self-check
-- Why is a scanner score not the entire business risk?
-- What makes remediation advice actionable?
-- Who should approve an exception to a permanent fix?
+- Why is CVSS not identical to business risk?
+- Why should a tester not silently accept risk on behalf of the owner?
+- What makes a retest meaningful?
+- When might temporary isolation be useful while a patch is prepared?
 
 ## Completion checklist
-- [ ] I explained each risk rating.
-- [ ] I linked the fix to the root cause.
-- [ ] I named an owner role and retest criteria.
-- [ ] I documented residual risk or exceptions.
+- [ ] Priority includes context and explicit assumptions.
+- [ ] Fix addresses root cause where possible.
+- [ ] Each item has an owner and due date.
+- [ ] Retest criteria and residual risk are recorded.
 
 ## Further reading
-- [FIRST — CVSS](https://www.first.org/cvss/)
-- [NIST Risk Management Framework](https://csrc.nist.gov/projects/risk-management)
+- [FIRST CVSS](https://www.first.org/cvss/)
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)

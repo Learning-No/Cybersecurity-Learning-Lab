@@ -3,59 +3,76 @@ title: "Week 04 — Web Testing in an Authorized Lab"
 week: "WEEK 04"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Follow a structured web testing workflow: confirm scope, map normal behavior, validate safely, and report findings."
+summary: "Use a scoped, repeatable web assessment workflow and learn to validate findings without damaging systems or exposing data."
 date: 2026-10-24
 ---
 
-## Week overview
-Turn the first three weeks into a repeatable process. Work only in a local deliberately vulnerable application or a training lab that explicitly permits the activity.
+## Mission and outcomes
+Practice the process used in a responsible assessment: define scope, understand normal behavior, form a testable hypothesis, validate safely, record evidence, and explain remediation. Tools do not grant permission.
 
-## Learning objectives
-- Confirm scope, rules of engagement, and stop conditions before testing.
-- Map normal pages, features, and user roles.
-- Capture sanitized evidence and explain impact and remediation.
+## Assessment workflow
 
-## Testing workflow
-1. **Confirm scope:** record approved hosts, application areas, allowed techniques, test window, and contacts.
-2. **Map the app:** list pages, forms, roles, and important workflows.
-3. **Establish a baseline:** note normal behavior using a lab account and dummy data.
-4. **Form a hypothesis:** state one security question and expected secure behavior.
-5. **Validate safely:** use the lab's intended exercises; avoid destructive tests, real personal data, and denial-of-service activity.
-6. **Document:** record reproducible steps, expected vs observed results, impact, and a practical fix.
-7. **Retest:** repeat the same safe steps after a fix.
+```text
+Written authorization + scope
+          ↓
+Map app and user roles
+          ↓
+Record baseline behavior
+          ↓
+Question / hypothesis
+          ↓
+Safe lab validation
+          ↓
+Evidence → impact → remediation
+          ↓
+Retest and close out
+```
+
+## Before touching the application
+Write down the owner, exact target, permitted test window, allowed methods, excluded systems, test accounts, rate/volume limits, data-handling rules, emergency contact, and stop conditions. If any detail is unclear, pause and ask the instructor or owner.
+
+## Step-by-step guided lab
+1. Launch a local deliberately vulnerable training application using the [lab setup guide]({{ '/labs/' | relative_url }}), or use a training platform that explicitly authorizes the exercise.
+2. Create a map of pages, forms, user roles, and key workflows using dummy data.
+3. Record normal behavior for each workflow before testing anything.
+4. Pick one lesson built into the training application. Write the question you are testing and the expected secure behavior.
+5. Follow the lab's guided instructions. Avoid destructive tests, denial-of-service actions, persistence, real accounts, and real personal data.
+6. Capture the smallest evidence needed to demonstrate the behavior. Redact cookies, tokens, email addresses, and other identifiers.
+7. Explain impact in terms of affected role/data/workflow, not dramatic speculation.
+8. Recommend a fix that addresses the root cause, then describe how a retest would verify it.
+9. Stop and report if real sensitive data appears or the target differs from the approved scope.
 
 ## Evidence template
-- **Finding title:**
-- **Affected lab component:**
-- **Scope/permission reference:**
-- **Preconditions:**
-- **Steps to reproduce:**
-- **Expected behavior:**
-- **Observed behavior:**
+- **Finding title and affected component:**
+- **Scope / authorization reference:**
+- **Preconditions and test account role:**
+- **Reproduction steps (lab only):**
+- **Expected vs observed result:**
+- **Sanitized evidence:**
 - **Impact and affected users:**
-- **Severity rationale:**
-- **Remediation:**
-- **Retest result:**
+- **Severity rationale and uncertainty:**
+- **Root cause / remediation:**
+- **Retest criteria and result:**
 
-## Guided safe exercise
-Use a guided lab with a fictional application and test accounts. Document two normal workflows and one lesson from the lab's built-in challenge. Remove cookies, tokens, personal data, and unrelated headers from screenshots.
+## What to track and identify
+Track the date/time and timezone, lab version, browser/tool versions, target identifier, account role, relevant configuration, steps taken, exact observed behavior, and test limitations. Never store secrets just to make a report reproducible.
 
 ## Deliverable
-Write a practice report with executive summary, scope, methodology, observations, and recommended fixes. Label simulated findings as lab findings.
+Write a short lab report with an executive summary, scope, methodology, two normal workflows, one simulated finding, evidence, impact, remediation, and retest criteria. Label all simulated findings clearly as training-lab results.
 
 ## Self-check
-- Why do scope and authorization come before tool selection?
-- What makes evidence useful and reproducible?
-- What should you do if sensitive real data appears unexpectedly?
+- Why must scope precede tool selection?
+- What makes evidence reproducible but still safe to share?
+- How do you distinguish impact from exploitability?
+- What do you do when a real secret appears unexpectedly?
 
 ## Completion checklist
-- [ ] I wrote down the permitted scope.
-- [ ] I separated observed facts from assumptions.
-- [ ] I included impact and remediation.
-- [ ] I sanitized evidence and recorded a retest plan.
+- [ ] I wrote scope and stop conditions first.
+- [ ] I mapped normal behavior before validation.
+- [ ] I sanitized evidence and explained uncertainty.
+- [ ] I included root-cause remediation and a retest plan.
 
 ## Further reading
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-
-**Safety rule:** never test public or third-party systems without explicit authorization.
+- [OWASP ZAP Getting Started](https://www.zaproxy.org/getting-started/)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)

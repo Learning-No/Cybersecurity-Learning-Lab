@@ -3,46 +3,62 @@ title: "Week 05 — Network Discovery & Service Review"
 week: "WEEK 05"
 track: "VAPT ROADMAP"
 level: "Beginner"
-summary: "Learn asset inventories, service exposure, and safe discovery using a small lab you own."
+summary: "Build an asset inventory, interpret service exposure, and distinguish observations from security conclusions."
 date: 2026-10-24
 ---
 
-## Week overview
-Discovery means understanding which assets exist and what they are intended to do. Professional work always uses written authorization and a defined scope.
+## Mission and outcomes
+Discovery is the disciplined process of learning what assets exist and what they are intended to do. This module uses your own host, a local VM, or a supplied training dataset—not public scanning.
 
-## Learning objectives
-- Explain asset inventory, service, port, and exposure.
-- Distinguish expected services from services needing owner review.
-- Document scope, timestamps, and limitations without probing unknown systems.
+## Concept diagram
 
-## Concepts to learn
-- **Asset inventory:** systems, owners, purpose, environment, and criticality.
-- **Service exposure:** a service reachable from a network boundary.
-- **Attack surface:** interfaces and components that may need security review.
-- **False positive:** an observation that looks concerning but needs context.
-- **Least exposure:** disable or restrict services that are not needed.
+```text
+Approved scope
+   ↓
+Asset inventory → Expected services → Observed services
+                                          ↓
+                               Owner / purpose check
+                                          ↓
+                          Keep · restrict · patch · investigate
+```
 
-## Guided safe exercise
-1. Create an inventory for your own lab: asset name, private lab address, owner, purpose, expected services, and permitted tests.
-2. Review a service list from your own virtual machine or a training dataset.
-3. For each service, record why it exists, who needs it, and what access restriction is appropriate.
-4. Compare the inventory with lab documentation.
-5. Do not scan public IP ranges or systems you do not own or have permission to assess.
+A port is a transport endpoint, not a vulnerability verdict. An unexpected service is a question to investigate with the owner; it is not proof of compromise.
+
+## Step-by-step lab
+1. Write a scope statement: lab VM names/private addresses, owner, allowed observation, excluded networks, and stop conditions.
+2. Record each asset's hostname, role, operating system/version if known, owner, environment, criticality, and expected services.
+3. On your own Linux lab VM, inspect interfaces and routes using the read-only commands `ip address show` and `ip route show`.
+4. Review local listening sockets with `ss -lnt` (TCP) and `ss -lnu` (UDP). These show local listening sockets, not every service reachable from other machines.
+5. Compare each observed listener with the lab's intended configuration. Ask what process owns it and why it is needed; don't assume the port number proves the service identity.
+6. If the course explicitly provides an isolated target and permission to use Nmap, follow the official beginner guide and use only that target. Never expand a target range or scan a public address without written authorization.
+7. Record gaps and recommendations: disable unnecessary services, bind to loopback where appropriate, restrict access with firewall rules, patch, or request owner confirmation.
+
+## What to track and identify
+Asset ID, owner, purpose, environment, private lab address, expected vs observed service, protocol, listening interface, exposure boundary, software/version confidence, evidence source, date, uncertainty, and recommended next step.
+
+## Open-source tools
+- `iproute2`: local interfaces and routes.
+- `ss`: local socket inventory on Linux.
+- `Nmap`: authorized asset/service inventory in an isolated lab.
+- `Wireshark` / `tcpdump`: inspect only your own lab traffic or approved captures.
+- `dig` / `host`: understand DNS records.
 
 ## Deliverable
-Create an asset-and-service inventory and a list of questions for the system owner. Unknown services are items to investigate—not proof of a vulnerability.
+Create an asset inventory with at least three lab assets or three rows from a supplied dataset. Include expected services, observations, and an owner question for anything unexpected.
 
 ## Self-check
-- Why is an open port not automatically a security issue?
-- What belongs in an asset inventory?
-- How does limiting exposure reduce risk?
+- Why is an open port not automatically a vulnerability?
+- Why can a host-based socket list differ from what another host can reach?
+- What information belongs in an asset inventory?
+- What is the safe next step when an unknown service appears?
 
 ## Completion checklist
-- [ ] I defined the lab scope first.
-- [ ] I recorded owners and expected services.
-- [ ] I separated observations from conclusions.
-- [ ] I suggested reasonable restrictions for unnecessary services.
+- [ ] I defined scope and owner before discovery.
+- [ ] I separated expected from observed services.
+- [ ] I documented evidence and confidence.
+- [ ] I recommended least exposure without making unsupported claims.
 
 ## Further reading
+- [Nmap Reference Guide](https://nmap.org/book/man.html)
+- [iproute2 manual](https://man7.org/linux/man-pages/man8/ip.8.html)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [CISA — Secure by Design](https://www.cisa.gov/securebydesign)
