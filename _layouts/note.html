@@ -1,4 +1,18 @@
 ---
 layout: default
 ---
-<article class="note"><a href="{{ '/' | relative_url }}#notes">← All notes</a><p class="eyebrow">{{ page.week | default: "LEARNING NOTE" }} · {{ page.track | default: "FOUNDATIONS" }}</p><h1>{{ page.title | escape }}</h1><p class="lead">{{ page.summary | escape }}</p><div class="prose">{{ content }}</div><aside><strong>Safety reminder</strong><p>Practice only on systems you own or have explicit permission to test. Never publish credentials, tokens, or sensitive logs.</p></aside></article>
+<article class="note">
+  <a class="back-link" href="{{ '/' | relative_url }}#notes">← All notes</a>
+  <p class="eyebrow">{{ page.week | default: "Learning note" }} · {{ page.track | default: "Foundations" }}</p>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="lead">{{ page.summary | escape }}</p>
+  <div class="note-meta">
+    <span class="tag">{{ page.level | default: "Beginner" }}</span>
+    <span class="dot" aria-hidden="true"></span>
+    <span>{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+    <span class="dot" aria-hidden="true"></span>
+    <span>Lab-safe, fictional data only</span>
+  </div>
+  <div class="prose">{{ content }}</div>
+  <aside><strong>Safety reminder</strong><p>Practice only on systems you own or have explicit permission to test. Never publish credentials, tokens, or sensitive logs.</p></aside>
+</article>

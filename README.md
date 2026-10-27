@@ -8,7 +8,7 @@ A GitHub Pages-compatible knowledge base for learning cybersecurity responsibly.
 - A step-by-step isolated lab setup guide and a curated open-source tool catalog with license/service distinctions.
 - Markdown notes in `_notes/`, automatically listed by Jekyll.
 - Browser-local progress tracking and note search.
-- Responsive dark interface and responsible-use reminders.
+- Responsive executive-style interface (single stylesheet, print-friendly) and responsible-use reminders.
 
 ## Add a note
 Create a Markdown file in `_notes/`, such as `_notes/week-04-lab-practice.md`, and add front matter at the top:

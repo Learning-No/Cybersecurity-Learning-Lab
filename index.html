@@ -1,12 +1,197 @@
 ---
 layout: default
 title: Home
-description: Cybersecurity career roadmap, VAPT learning plan, and Markdown notes.
+description: A structured, authorization-first cybersecurity learning program - a 12-week VAPT curriculum, safe lab practice, concept library, and career roadmaps.
 ---
-<section class="hero"><div><p class="eyebrow">● PERSONAL CYBERSECURITY KNOWLEDGE BASE</p><h1>Learn the craft.<br><em>Defend what matters.</em></h1><p class="lead">A structured learning space for security fundamentals, ethical testing, and practical notes — built one week at a time.</p><p class="actions"><a class="primary" href="#roadmap">Explore roadmap ↘</a><a class="secondary" href="#notes">Browse notes</a><a class="secondary" href="{{ '/student-portal/' | relative_url }}">Student portal ↗</a></p><div class="stats"><div><b>12</b><small>WEEK VAPT PLAN</small></div><div><b>07</b><small>LEARNING AREAS</small></div><div><b>100%</b><small>PERMISSION FIRST</small></div></div></div><div class="terminal"><div class="terminal-head"><span>● ● ●</span> learning-status.sh <i>ACTIVE</i></div><div class="terminal-body"><p class="dim"># your learning environment</p><p><span>learner@lab</span>:~$ cat mission.txt</p><p>Build strong foundations.<br>Practice in safe labs.<br>Write clear reports.</p><p><span>learner@lab</span>:~$ <em>_</em></p><hr><small>LEARNING PROGRESS <b id="progress-label">0% COMPLETE</b></small><div class="bar"><div id="progress-fill"></div></div><small>Progress is saved in this browser.</small></div></div></section>
-<section id="roadmap" class="section"><div class="section-head"><div><p class="eyebrow">01 / YOUR PATH</p><h2>Choose your learning track</h2></div><p>Build the fundamentals first, then move into a specialty. Check off milestones as you go.</p></div><div class="tracks"><article class="panel"><p class="tag">CAREER PATH</p><h3>Cybersecurity Foundations</h3><p>Understand how systems, networks, identity, and defensive security fit together.</p><div class="checks"><label><input type="checkbox" data-progress="networking"> Networking & protocols</label><label><input type="checkbox" data-progress="linux"> Linux and Windows basics</label><label><input type="checkbox" data-progress="security"> Security principles & IAM</label><label><input type="checkbox" data-progress="logs"> Logs and monitoring</label><label><input type="checkbox" data-progress="lab"> Safe lab setup</label></div></article><article class="panel featured"><p class="tag red">12-WEEK CHECKLIST</p><h3>Vulnerability Assessment & Penetration Testing</h3><p>Learn a repeatable workflow for authorized discovery, validation, and reporting.</p><div class="checks"><label><input type="checkbox" data-progress="v1"> Week 01 · Lab setup & networking</label><label><input type="checkbox" data-progress="v2"> Week 02 · HTTP fundamentals</label><label><input type="checkbox" data-progress="v3"> Week 03 · OWASP concepts</label><label><input type="checkbox" data-progress="v4"> Week 04 · Authorized web testing</label><label><input type="checkbox" data-progress="v5"> Weeks 05–12 · Continue roadmap</label></div></article></div></section>
-<section id="learning-library" class="section"><div class="section-head"><div><p class="eyebrow">01 / LEARNING LIBRARY</p><h2>One place to learn, practice, and grow</h2></div><p>Open a subject to get diagrams, guided steps, tool recommendations, roadmaps, and reliable reading resources.</p></div><div class="hub-grid home-hub-grid"><a class="hub-card" href="{{ '/concepts/' | relative_url }}"><p class="tag">LEARN THE WHY</p><h2>Concept library</h2><p>IP addressing, subnets, TCP/UDP, DNS, HTTP/HTTPS, ports, and more—with diagrams and practice steps.</p><span class="card-link">Explore concepts ↗</span></a><a class="hub-card" href="{{ '/tools/' | relative_url }}"><p class="tag">OPEN SOURCE FIRST</p><h2>Tool directory</h2><p>Discover open-source networking, packet analysis, web security, and defensive tools with safe starter examples.</p><span class="card-link">Find a tool ↗</span></a><a class="hub-card" href="{{ '/labs/' | relative_url }}"><p class="tag">SET UP SAFELY</p><h2>Lab setup guide</h2><p>Build a local, isolated practice environment with verification, reset steps, and troubleshooting.</p><span class="card-link">Build your lab ↗</span></a><a class="hub-card" href="{{ '/instructors/' | relative_url }}"><p class="tag">FOR EDUCATORS</p><h2>College training guide</h2><p>Use the weekly delivery plan, safety pre-flight checklist, and assessment rubric to run a supervised cohort.</p><span class="card-link">Open instructor guide ↗</span></a><a class="hub-card" href="{{ '/roadmaps/' | relative_url }}"><p class="tag">PLAN YOUR PATH</p><h2>Career roadmaps</h2><p>Choose foundations, VAPT, SOC, application security, cloud, or architecture and see the next steps.</p><span class="card-link">Choose a roadmap ↗</span></a><a class="hub-card" href="{{ '/architecture/' | relative_url }}"><p class="tag">THINK LIKE A DESIGNER</p><h2>Security architecture</h2><p>Draw data flows, mark trust boundaries, reason about threats, select controls, and document trade-offs.</p><span class="card-link">Learn the process ↗</span></a><a class="hub-card" href="{{ '/practice/' | relative_url }}"><p class="tag">BUILD EXPERIENCE</p><h2>Free practice lab</h2><p>Small exercises, guided platforms, weekly projects, and a repeatable learning-log template.</p><span class="card-link">Start practicing ↗</span></a><a class="hub-card" href="{{ '/resources/' | relative_url }}"><p class="tag">READ & STAY CURRENT</p><h2>Resources, PDFs & news</h2><p>Official guides, free publications, security advisories, vulnerability databases, and technology reading.</p><span class="card-link">Open learning shelf ↗</span></a></div></section>
-<section id="career-roadmap" class="section"><div class="section-head"><div><p class="eyebrow">02 / CAREER ROADMAP</p><h2>Build skills in layers</h2></div><p>Understanding and documenting the basics is more valuable than rushing through tools.</p></div><div class="stages">{% assign stages = "01|IT & networking fundamentals|TCP/IP, DNS, HTTP/S, ports, routing, operating systems, command line, and virtualization.|FOUNDATION~02|Security essentials|CIA triad, authentication, authorization, encryption, vulnerabilities, and threat modelling.|CORE SKILLS~03|Practice safely|Use intentionally vulnerable applications, local virtual machines, and guided labs. Keep targets isolated.|HANDS-ON~04|Choose a specialization|Explore VAPT, SOC & detection, digital forensics, cloud security, AppSec, or governance and risk.|SPECIALIZE~05|Document & demonstrate|Write reproducible lab notes, explain impact and remediation, and build a portfolio.|PORTFOLIO" | split: "~" %}{% for item in stages %}{% assign s = item | split: "|" %}<article><b>{{ s[0] }}</b><div><h3>{{ s[1] }}</h3><p>{{ s[2] }}</p><span class="tag">{{ s[3] }}</span></div></article>{% endfor %}</div></section>
-<section id="vapt-sprint" class="section"><div class="section-head"><div><p class="eyebrow">03 / VAPT SPRINT</p><h2>Your 12-week learning plan</h2></div><p>Open any week for its detailed guide, safe exercise, learning deliverable, self-check, and completion checklist.</p></div><div class="weeks">{% assign weeks = "01|Lab setup & networking basics|Build a contained practice environment and explain IP addressing DNS ports and network boundaries.~02|HTTP and web fundamentals|Trace requests and responses then document status codes cookies sessions and TLS safely.~03|OWASP Top 10 concepts|Map common risk scenarios to assets impact evidence and defensive controls.~04|Web testing in an authorized lab|Define scope establish a baseline validate one guided lab finding and write remediation.~05|Network discovery and service review|Inventory lab assets and compare expected services with observed listeners.~06|Vulnerability assessment|Verify advisory applicability triage false positives and prioritize fixes using context.~07|Linux security and permissions|Review users groups permissions processes services and logs on a disposable VM.~08|Windows security fundamentals|Record a safe baseline for updates firewall profiles Defender ACLs and event logs.~09|Active Directory concepts in a lab|Model domains groups delegated rights and identity lifecycle using fictional data.~10|Validation and evidence collection|Collect minimal reproducible evidence sanitize it and record its limitations.~11|Risk rating and remediation|Rank findings with explicit assumptions then define owners fixes and retest criteria.~12|Final report and portfolio|Publish a sanitized training report remediation register and honest reflection." | split: "~" %}{% for item in weeks %}{% assign w = item | split: "|" %}{% assign week_label = "WEEK " | append: w[0] %}{% assign week_notes = site.notes | where: "week", week_label %}{% assign week_note = week_notes | first %}<article class="week-card"><b>W{{ w[0] }}</b><div><h3>{% if week_note %}<a class="week-title-link" href="{{ week_note.url | relative_url }}">{{ w[1] | escape }} ↗</a>{% else %}{{ w[1] | escape }}{% endif %}</h3><p>{{ w[2] | escape }}</p><label><input type="checkbox" data-progress="week{{ w[0] }}"> Mark complete</label>{% if week_note %}<a class="week-open-link" href="{{ week_note.url | relative_url }}">Open week guide <span>→</span></a>{% else %}<p class="week-note-link">Guide coming soon.</p>{% endif %}</div></article>{% endfor %}</div></section>
-<section id="notes" class="section"><div class="section-head"><div><p class="eyebrow">04 / KNOWLEDGE BASE</p><h2>Notes from the lab</h2></div><p>Markdown notes in <code>_notes/</code> are listed automatically after the site rebuilds.</p></div><div class="toolbar"><input id="note-search" type="search" placeholder="Search notes, topics, tools…" aria-label="Search notes"><span>{{ site.notes.size }} NOTES</span></div><div id="notes-grid" class="notes">{% assign sorted_notes = site.notes | sort: "date" | reverse %}{% for note in sorted_notes %}<a class="note-card" href="{{ note.url | relative_url }}" data-search="{{ note.title | downcase | escape }} {{ note.summary | downcase | escape }} {{ note.week | downcase | escape }} {{ note.track | downcase | escape }}"><span class="tag">{{ note.week | default: "NOTE" }}</span><h3>{{ note.title | escape }}</h3><p>{{ note.summary | escape }}</p><small>{{ note.level | default: "Beginner" }} · READ NOTE ↗</small></a>{% endfor %}</div><p id="empty-state" hidden>No notes match that search. Try another keyword.</p><p class="hint">＋ Add a Markdown file to <code>_notes/</code> with a front matter block; it will appear here after rebuild.</p></section>
-<section id="ethics" class="ethics"><div><p class="eyebrow">NON-NEGOTIABLE</p><h2>Permission first. Always.</h2><p>Only assess systems you own or have explicit authorization to test. Follow written scope, avoid disruption, and keep credentials and private data out of public notes.</p></div><a class="secondary" href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">Read testing guide ↗</a></section>
+{% assign concept_pages = site.pages | where_exp: "p", "p.url contains '/concepts/'" | where_exp: "p", "p.url != '/concepts/'" %}
+
+<section class="hero" aria-labelledby="hero-title">
+  <div>
+    <p class="eyebrow">Cybersecurity Learning Lab · Program overview</p>
+    <h1 id="hero-title">Build security capability, <em>one disciplined week at a time.</em></h1>
+    <p class="lead">A structured, authorization-first program that takes learners from networking fundamentals to a professional, sanitized assessment report in twelve weeks, entirely in an isolated lab.</p>
+    <p class="actions">
+      <a class="primary" href="#vapt-sprint">View the 12-week plan <span aria-hidden="true">→</span></a>
+      <a class="secondary" href="#summary">Executive summary</a>
+      <a class="secondary" href="{{ '/student-portal/' | relative_url }}">Student portal</a>
+    </p>
+  </div>
+
+  <aside class="snapshot" aria-labelledby="snapshot-title">
+    <h2 id="snapshot-title">Program snapshot</h2>
+    <dl>
+      <div class="row"><dt>Duration</dt><dd>12 weeks</dd></div>
+      <div class="row"><dt>Delivery</dt><dd>Self-paced or instructor-led</dd></div>
+      <div class="row"><dt>Environment</dt><dd>Isolated local lab</dd></div>
+      <div class="row"><dt>Final output</dt><dd>Sanitized assessment report</dd></div>
+      <div class="row"><dt>Governance</dt><dd>Written scope, authorization first</dd></div>
+    </dl>
+    <div class="progress">
+      <div class="progress-head"><span>Your progress</span><b id="progress-label">0% complete</b></div>
+      <div class="bar" role="presentation"><div id="progress-fill"></div></div>
+      <small>Saved privately in this browser only.</small>
+    </div>
+  </aside>
+</section>
+
+<section class="kpis" aria-label="Program at a glance">
+  <div><b>12</b><span>Weekly guides, each with a deliverable and self-check</span></div>
+  <div><b>{{ site.notes.size }}</b><span>Reference notes and lab write-ups</span></div>
+  <div><b>{{ concept_pages.size }}</b><span>Illustrated concept explainers</span></div>
+  <div><b>8</b><span>Program components, from labs to architecture</span></div>
+</section>
+
+<section id="summary" class="section" aria-labelledby="summary-title">
+  <div class="section-head">
+    <div><p class="eyebrow">01 · Executive summary</p><h2 id="summary-title">What the program delivers</h2></div>
+    <p>Fundamentals before tools, evidence before conclusions, and permission before everything.</p>
+  </div>
+  <div class="summary-grid">
+    <article class="summary-card"><h3>Objective</h3><p>Develop practical, defensible security skills grounded in networking, web technology, operating systems, identity, and risk, rather than a collection of tool commands.</p></article>
+    <article class="summary-card"><h3>Approach</h3><p>Every weekly guide states a learning goal, a safe scope, a guided exercise, a deliverable, a self-check, and a completion checklist, all run in an isolated lab with fictional data.</p></article>
+    <article class="summary-card"><h3>Outcome</h3><p>A sanitized assessment report, a remediation register, and an honest reflection: portfolio evidence that a learner can scope, test responsibly, rate risk, and communicate findings.</p></article>
+  </div>
+</section>
+
+<section id="vapt-sprint" class="section" aria-labelledby="plan-title">
+  <div class="section-head">
+    <div><p class="eyebrow">02 · The 12-week plan</p><h2 id="plan-title">Three phases, one clear path</h2></div>
+    <p>Open any week for its guide, safe exercise, deliverable, self-check, and completion checklist. Mark weeks complete to track progress.</p>
+  </div>
+  {% assign phases = "Phase 1|Foundations & web testing|Weeks 1–4|Lab setup, networking, HTTP and OWASP concepts, and a first authorized web test.~Phase 2|Assessment & platform security|Weeks 5–8|Network discovery, vulnerability triage, and Linux and Windows security baselines.~Phase 3|Identity, risk & reporting|Weeks 9–12|Active Directory concepts, evidence handling, risk rating, and the final report." | split: "~" %}
+  {% assign weeks = "01|Lab setup & networking basics|Build a contained practice environment and explain IP addressing, DNS, ports, and network boundaries.~02|HTTP and web fundamentals|Trace requests and responses, then document status codes, cookies, sessions, and TLS safely.~03|OWASP Top 10 concepts|Map common risk scenarios to assets, impact, evidence, and defensive controls.~04|Web testing in an authorized lab|Define scope, establish a baseline, validate one guided lab finding, and write remediation.~05|Network discovery & service review|Inventory lab assets and compare expected services with observed listeners.~06|Vulnerability assessment|Verify advisory applicability, triage false positives, and prioritize fixes using context.~07|Linux security & permissions|Review users, groups, permissions, processes, services, and logs on a disposable VM.~08|Windows security fundamentals|Record a safe baseline for updates, firewall profiles, Defender, ACLs, and event logs.~09|Active Directory concepts in a lab|Model domains, groups, delegated rights, and identity lifecycle using fictional data.~10|Validation & evidence collection|Collect minimal reproducible evidence, sanitize it, and record its limitations.~11|Risk rating & remediation|Rank findings with explicit assumptions, then define owners, fixes, and retest criteria.~12|Final report & portfolio|Publish a sanitized training report, a remediation register, and an honest reflection." | split: "~" %}
+  <div class="phases">
+    {% for p in phases %}
+    {% assign ph = p | split: "|" %}
+    {% assign start = forloop.index0 | times: 4 %}
+    {% assign stop = start | plus: 4 %}
+    <section class="phase" aria-label="{{ ph[0] }}: {{ ph[1] | escape }}">
+      <header class="phase-head">
+        <span class="tag">{{ ph[0] }} · {{ ph[2] }}</span>
+        <h3>{{ ph[1] | escape }}</h3>
+        <p>{{ ph[3] | escape }}</p>
+      </header>
+      <div class="weeks-list">
+        {% for item in weeks %}{% if forloop.index0 >= start and forloop.index0 < stop %}
+        {% assign w = item | split: "|" %}
+        {% assign week_label = "WEEK " | append: w[0] %}
+        {% assign week_notes = site.notes | where: "week", week_label %}
+        {% assign week_note = week_notes | first %}
+        <article class="week-card">
+          <span class="week-num" aria-hidden="true">{{ w[0] }}</span>
+          <div>
+            <h4>{% if week_note %}<a class="week-title-link" href="{{ week_note.url | relative_url }}">{{ w[1] | escape }}</a>{% else %}{{ w[1] | escape }}{% endif %}</h4>
+            <p>{{ w[2] | escape }}</p>
+            <div class="week-meta">
+              <label class="check"><input type="checkbox" data-progress="week{{ w[0] }}"> Mark complete</label>
+              {% if week_note %}<a class="week-open-link" href="{{ week_note.url | relative_url }}">Open guide →</a>{% else %}<span class="week-note-link">Guide coming soon</span>{% endif %}
+            </div>
+          </div>
+        </article>
+        {% endif %}{% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="learning-library" class="section" aria-labelledby="library-title">
+  <div class="section-head">
+    <div><p class="eyebrow">03 · Program components</p><h2 id="library-title">Everything in one place</h2></div>
+    <p>Each component supports the weekly plan with diagrams, guided steps, tool recommendations, and reliable reading.</p>
+  </div>
+  <div class="hub-grid home-hub-grid">
+    <a class="hub-card" href="{{ '/concepts/' | relative_url }}"><p class="tag">Learn the why</p><h2>Concept library</h2><p>IP addressing, subnets, TCP/UDP, DNS, HTTP/HTTPS, and ports, with diagrams and practice steps.</p><span class="card-link">Explore concepts →</span></a>
+    <a class="hub-card" href="{{ '/tools/' | relative_url }}"><p class="tag">Open source first</p><h2>Tool directory</h2><p>Open-source networking, packet analysis, web security, and defensive tools with safe starter examples.</p><span class="card-link">Find a tool →</span></a>
+    <a class="hub-card" href="{{ '/labs/' | relative_url }}"><p class="tag">Set up safely</p><h2>Lab setup guide</h2><p>Build a local, isolated practice environment with verification, reset steps, and troubleshooting.</p><span class="card-link">Build your lab →</span></a>
+    <a class="hub-card" href="{{ '/instructors/' | relative_url }}"><p class="tag">For educators</p><h2>College training guide</h2><p>A weekly delivery plan, safety pre-flight checklist, and assessment rubric for a supervised cohort.</p><span class="card-link">Open instructor guide →</span></a>
+    <a class="hub-card" href="{{ '/roadmaps/' | relative_url }}"><p class="tag">Plan your path</p><h2>Career roadmaps</h2><p>Foundations, VAPT, SOC, application security, cloud, and architecture, with next steps for each.</p><span class="card-link">Choose a roadmap →</span></a>
+    <a class="hub-card" href="{{ '/architecture/' | relative_url }}"><p class="tag">Think like a designer</p><h2>Security architecture</h2><p>Draw data flows, mark trust boundaries, reason about threats, select controls, and document trade-offs.</p><span class="card-link">Learn the process →</span></a>
+    <a class="hub-card" href="{{ '/practice/' | relative_url }}"><p class="tag">Build experience</p><h2>Free practice lab</h2><p>Small exercises, guided platforms, weekly projects, and a repeatable learning-log template.</p><span class="card-link">Start practicing →</span></a>
+    <a class="hub-card" href="{{ '/resources/' | relative_url }}"><p class="tag">Read &amp; stay current</p><h2>Resources &amp; news</h2><p>Official guides, free publications, security advisories, vulnerability databases, and technology reading.</p><span class="card-link">Open the learning shelf →</span></a>
+  </div>
+</section>
+
+<section id="career-roadmap" class="section" aria-labelledby="skills-title">
+  <div class="section-head">
+    <div><p class="eyebrow">04 · Skills progression</p><h2 id="skills-title">Build skills in layers</h2></div>
+    <p>Understanding and documenting the basics is more valuable than rushing through tools.</p>
+  </div>
+  <div class="stages">
+    {% assign stages = "01|IT & networking fundamentals|TCP/IP, DNS, HTTP/S, ports, routing, operating systems, command line, and virtualization.|Foundation~02|Security essentials|CIA triad, authentication, authorization, encryption, vulnerabilities, and threat modelling.|Core skills~03|Practice safely|Use intentionally vulnerable applications, local virtual machines, and guided labs. Keep targets isolated.|Hands-on~04|Choose a specialization|Explore VAPT, SOC and detection, digital forensics, cloud security, AppSec, or governance and risk.|Specialize~05|Document & demonstrate|Write reproducible lab notes, explain impact and remediation, and build a portfolio.|Portfolio" | split: "~" %}
+    {% for item in stages %}{% assign s = item | split: "|" %}
+    <article><b>{{ s[0] }}</b><h3>{{ s[1] | escape }}</h3><p>{{ s[2] | escape }}</p><span class="tag">{{ s[3] }}</span></article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="roadmap" class="section" aria-labelledby="tracks-title">
+  <div class="section-head">
+    <div><p class="eyebrow">05 · Learning tracks</p><h2 id="tracks-title">Milestone checklists</h2></div>
+    <p>Build the fundamentals first, then move into a specialty. Check off milestones as they are reached.</p>
+  </div>
+  <div class="tracks">
+    <article class="panel">
+      <p class="tag">Career path</p>
+      <h3>Cybersecurity foundations</h3>
+      <p>Understand how systems, networks, identity, and defensive security fit together.</p>
+      <div class="checks">
+        <label><input type="checkbox" data-progress="networking"> Networking &amp; protocols</label>
+        <label><input type="checkbox" data-progress="linux"> Linux and Windows basics</label>
+        <label><input type="checkbox" data-progress="security"> Security principles &amp; IAM</label>
+        <label><input type="checkbox" data-progress="logs"> Logs and monitoring</label>
+        <label><input type="checkbox" data-progress="lab"> Safe lab setup</label>
+      </div>
+    </article>
+    <article class="panel featured">
+      <p class="tag red">12-week checklist</p>
+      <h3>Vulnerability assessment &amp; penetration testing</h3>
+      <p>Learn a repeatable workflow for authorized discovery, validation, and reporting.</p>
+      <div class="checks">
+        <label><input type="checkbox" data-progress="v1"> Week 01 · Lab setup &amp; networking</label>
+        <label><input type="checkbox" data-progress="v2"> Week 02 · HTTP fundamentals</label>
+        <label><input type="checkbox" data-progress="v3"> Week 03 · OWASP concepts</label>
+        <label><input type="checkbox" data-progress="v4"> Week 04 · Authorized web testing</label>
+        <label><input type="checkbox" data-progress="v5"> Weeks 05–12 · Continue roadmap</label>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="notes" class="section" aria-labelledby="notes-title">
+  <div class="section-head">
+    <div><p class="eyebrow">06 · Knowledge base</p><h2 id="notes-title">Notes from the lab</h2></div>
+    <p>Search weekly guides and reference notes by topic, tool, or week.</p>
+  </div>
+  <div class="toolbar">
+    <input id="note-search" type="search" placeholder="Search notes, topics, tools…" aria-label="Search notes">
+    <span>{{ site.notes.size }} NOTES</span>
+  </div>
+  <div id="notes-grid" class="notes">
+    {% assign sorted_notes = site.notes | sort: "week" %}
+    {% for note in sorted_notes %}
+    <a class="note-card" href="{{ note.url | relative_url }}" data-search="{{ note.title | downcase | escape }} {{ note.summary | downcase | escape }} {{ note.week | downcase | escape }} {{ note.track | downcase | escape }}">
+      <span class="tag">{{ note.week | default: "Note" }}</span>
+      <h3>{{ note.title | escape }}</h3>
+      <p>{{ note.summary | escape }}</p>
+      <small>{{ note.level | default: "Beginner" }} · Read note →</small>
+    </a>
+    {% endfor %}
+  </div>
+  <p id="empty-state" hidden>No notes match that search. Try another keyword.</p>
+</section>
+
+<section id="ethics" class="ethics ethics--home" aria-labelledby="ethics-title">
+  <div>
+    <p class="eyebrow">Governance &amp; safeguards</p>
+    <h2 id="ethics-title">Permission first. Always.</h2>
+    <p>Only assess systems you own or have explicit authorization to test. Follow written scope, avoid disruption, and keep credentials and private data out of public notes.</p>
+    <ul class="principles">
+      <li>Written scope</li>
+      <li>Isolated labs</li>
+      <li>Fictional data</li>
+      <li>No secrets in notes</li>
+    </ul>
+  </div>
+  <a class="secondary" href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">Read the testing guide ↗</a>
+</section>

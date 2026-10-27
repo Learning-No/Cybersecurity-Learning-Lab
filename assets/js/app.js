@@ -8,7 +8,7 @@
     const percent = boxes.length ? Math.round(done / boxes.length * 100) : 0;
     const label = document.getElementById('progress-label');
     const fill = document.getElementById('progress-fill');
-    if (label) label.textContent = percent + '% COMPLETE';
+    if (label) label.textContent = percent + '% complete';
     if (fill) fill.style.width = percent + '%';
   }
   boxes.forEach(box => {
