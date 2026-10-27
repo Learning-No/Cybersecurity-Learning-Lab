@@ -1,0 +1,46 @@
+---
+layout: default
+title: Novel Library
+description: Browse novels by title and open individual episodes in the CSLL reading area.
+permalink: /novels/
+---
+<link rel="stylesheet" href="{{ '/assets/css/novel.css' | relative_url }}">
+<section class="novel-page">
+  <p class="eyebrow">CSLL / READING LIBRARY</p>
+  <h1>Novel library</h1>
+  <p class="novel-intro">Choose a title, then select an episode to read. This first version sets up the reading structure; replace the sample title and episode labels with your chosen novels and add text you own or are authorized to publish.</p>
+  <div class="novel-notice"><strong>Reading shelf setup:</strong> The titles and episode panels below are editable placeholders. No complete copyrighted books have been copied into the site.</div>
+
+  <h2>Choose a novel</h2>
+  <div class="novel-tablist" role="tablist" aria-label="Novel titles" data-tablist data-tab-scope>
+    <button class="novel-tab" id="title-tab-one" type="button" role="tab" aria-selected="true" aria-controls="title-panel-one">Novel Title 1</button>
+    <button class="novel-tab" id="title-tab-two" type="button" role="tab" aria-selected="false" aria-controls="title-panel-two" tabindex="-1">Novel Title 2</button>
+  </div>
+
+  <section class="novel-panel" id="title-panel-one" role="tabpanel" aria-labelledby="title-tab-one" data-tab-scope>
+    <h2>Novel Title 1</h2>
+    <p>Use this title section for a short introduction or synopsis.</p>
+    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Novel Title 1" data-tablist data-tab-scope>
+      <button class="novel-tab" id="one-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="one-episode-panel-1">Episode 1</button>
+      <button class="novel-tab" id="one-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-2" tabindex="-1">Episode 2</button>
+      <button class="novel-tab" id="one-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-3" tabindex="-1">Episode 3</button>
+    </div>
+    <article class="episode-panel" id="one-episode-panel-1" role="tabpanel" aria-labelledby="one-episode-tab-1"><h3>Episode 1</h3><div class="episode-placeholder">Add the first episode text here.</div></article>
+    <article class="episode-panel" id="one-episode-panel-2" role="tabpanel" aria-labelledby="one-episode-tab-2" hidden><h3>Episode 2</h3><div class="episode-placeholder">Add the second episode text here.</div></article>
+    <article class="episode-panel" id="one-episode-panel-3" role="tabpanel" aria-labelledby="one-episode-tab-3" hidden><h3>Episode 3</h3><div class="episode-placeholder">Add the third episode text here.</div></article>
+  </section>
+
+  <section class="novel-panel" id="title-panel-two" role="tabpanel" aria-labelledby="title-tab-two" data-tab-scope hidden>
+    <h2>Novel Title 2</h2>
+    <p>Use this title section for a short introduction or synopsis.</p>
+    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Novel Title 2" data-tablist data-tab-scope>
+      <button class="novel-tab" id="two-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="two-episode-panel-1">Episode 1</button>
+      <button class="novel-tab" id="two-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="two-episode-panel-2" tabindex="-1">Episode 2</button>
+      <button class="novel-tab" id="two-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="two-episode-panel-3" tabindex="-1">Episode 3</button>
+    </div>
+    <article class="episode-panel" id="two-episode-panel-1" role="tabpanel" aria-labelledby="two-episode-tab-1"><h3>Episode 1</h3><div class="episode-placeholder">Add the first episode text here.</div></article>
+    <article class="episode-panel" id="two-episode-panel-2" role="tabpanel" aria-labelledby="two-episode-tab-2" hidden><h3>Episode 2</h3><div class="episode-placeholder">Add the second episode text here.</div></article>
+    <article class="episode-panel" id="two-episode-panel-3" role="tabpanel" aria-labelledby="two-episode-tab-3" hidden><h3>Episode 3</h3><div class="episode-placeholder">Add the third episode text here.</div></article>
+  </section>
+</section>
+<script src="{{ '/assets/js/novel.js' | relative_url }}" defer></script>
