@@ -1,0 +1,18 @@
+/* Novel library: accessible title and episode tabs */
+.novel-page{padding:30px 0 64px}
+.novel-page h1,.novel-page h2,.novel-page h3{color:#123d5a}
+.novel-intro{max-width:760px;color:#40596d}
+.novel-notice{margin:22px 0;padding:14px 17px;border-left:4px solid #087e8b;background:#f0f7fb;color:#30495e;font-size:14px}
+.novel-tablist{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.novel-tab{appearance:none;border:1px solid #9db0bf;background:#fff;color:#124f7a;padding:10px 15px;border-radius:3px;font:700 14px Arial,Helvetica,sans-serif;cursor:pointer}
+.novel-tab:hover{background:#edf6fb;border-color:#1267a5}
+.novel-tab[aria-selected="true"]{background:#123d5a;border-color:#123d5a;color:#fff}
+.novel-tab:focus-visible{outline:3px solid #75d3ed;outline-offset:2px}
+.novel-panel{border:1px solid #c9d6e0;background:#fff;padding:22px;margin-top:10px}
+.novel-panel[hidden],.episode-panel[hidden]{display:none}
+.episode-tabs{padding-bottom:14px;border-bottom:1px solid #d5dee8}
+.episode-panel{max-width:780px;padding-top:10px;color:#30495e}
+.episode-panel h3{margin-top:0}
+.episode-placeholder{padding:18px;background:#f5f8fb;border:1px dashed #b8c8d6;color:#526b7d}
+.novel-page .eyebrow{font:700 11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:1px;color:#315a75}
+@media(max-width:600px){.novel-page{padding-top:22px}.novel-panel{padding:15px}.novel-tab{padding:9px 11px;font-size:13px}}
