@@ -1,46 +1,237 @@
 ---
 layout: default
 title: Novel Library
-description: Browse novels by title and open individual episodes in the CSLL reading area.
+description: Read Cybersecurity Learning Novel Vol 1, a manhwa-inspired technical story with diagrams, practical examples, and interactive learning.
 permalink: /novels/
 ---
 <link rel="stylesheet" href="{{ '/assets/css/novel.css' | relative_url }}">
 <section class="novel-page">
   <p class="eyebrow">CSLL / READING LIBRARY</p>
-  <h1>Novel library</h1>
-  <p class="novel-intro">Choose a title, then select an episode to read. This first version sets up the reading structure; replace the sample title and episode labels with your chosen novels and add text you own or are authorized to publish.</p>
-  <div class="novel-notice"><strong>Reading shelf setup:</strong> The titles and episode panels below are editable placeholders. No complete copyrighted books have been copied into the site.</div>
+  <h1>Novel Library</h1>
+  <p class="novel-intro">A manhwa-inspired cybersecurity learning experience: realistic characters, deep technical concepts, diagrams, practical examples, and knowledge checks. Story is the doorway; understanding is the destination.</p>
+  <div class="novel-notice"><strong>Learning and safety:</strong> All scenarios are fictional. Real-world security testing requires explicit authorization and a defined scope. This independent educational project is not an official government publication.</div>
 
   <h2>Choose a novel</h2>
   <div class="novel-tablist" role="tablist" aria-label="Novel titles" data-tablist data-tab-scope>
-    <button class="novel-tab" id="title-tab-one" type="button" role="tab" aria-selected="true" aria-controls="title-panel-one">Novel Title 1</button>
-    <button class="novel-tab" id="title-tab-two" type="button" role="tab" aria-selected="false" aria-controls="title-panel-two" tabindex="-1">Novel Title 2</button>
+    <button class="novel-tab" id="title-tab-one" type="button" role="tab" aria-selected="true" aria-controls="title-panel-one">Volume 1</button>
+    <button class="novel-tab" id="title-tab-two" type="button" role="tab" aria-selected="false" aria-controls="title-panel-two" tabindex="-1">Coming soon</button>
   </div>
 
   <section class="novel-panel" id="title-panel-one" role="tabpanel" aria-labelledby="title-tab-one" data-tab-scope>
-    <h2>Novel Title 1</h2>
-    <p>Use this title section for a short introduction or synopsis.</p>
-    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Novel Title 1" data-tablist data-tab-scope>
-      <button class="novel-tab" id="one-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="one-episode-panel-1">Episode 1</button>
-      <button class="novel-tab" id="one-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-2" tabindex="-1">Episode 2</button>
-      <button class="novel-tab" id="one-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-3" tabindex="-1">Episode 3</button>
+    <p class="eyebrow">VOLUME 01 · DEEP CORE BASED</p>
+    <h2>Cybersecurity Learning Novel Vol 1 (Deep Core Based)</h2>
+    <p>A first-year B.Tech student's journey from curious beginner to disciplined security learner. Every episode pairs a grounded campus story with computer science and cybersecurity fundamentals.</p>
+    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Cybersecurity Learning Novel Vol 1" data-tablist data-tab-scope>
+      <button class="novel-tab" id="one-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="one-episode-panel-1">Episode 01</button>
+      <button class="novel-tab" id="one-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-2" tabindex="-1">Episode 02</button>
+      <button class="novel-tab" id="one-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-3" tabindex="-1">Episode 03</button>
     </div>
-    <article class="episode-panel" id="one-episode-panel-1" role="tabpanel" aria-labelledby="one-episode-tab-1"><h3>Episode 1</h3><div class="episode-placeholder">Add the first episode text here.</div></article>
-    <article class="episode-panel" id="one-episode-panel-2" role="tabpanel" aria-labelledby="one-episode-tab-2" hidden><h3>Episode 2</h3><div class="episode-placeholder">Add the second episode text here.</div></article>
-    <article class="episode-panel" id="one-episode-panel-3" role="tabpanel" aria-labelledby="one-episode-tab-3" hidden><h3>Episode 3</h3><div class="episode-placeholder">Add the third episode text here.</div></article>
+    <article class="episode-panel" id="one-episode-panel-1" role="tabpanel" aria-labelledby="one-episode-tab-1">
+      <p class="eyebrow">EPISODE 01 · FOUNDATIONS</p>
+      <h3>The First Packet</h3>
+      <p><strong>Episode focus:</strong> The CIA triad, computer architecture, network communication, threat modelling, risk, and authorization.</p>
+      <hr>
+      <h3>Prologue — The Screen That Lied</h3>
+      <p>At 8:42 a.m. on a Monday morning, Aarav Rao entered the computer science laboratory at Vardhan Institute of Technology. He was a first-year B.Tech student. His backpack contained two notebooks, a budget laptop, and a phone with a cracked screen.</p>
+      <p>Aarav had watched videos about ethical hacking and imagined that cybersecurity professionals spent their days finding secret weaknesses with a few clever commands. He was about to discover how incomplete that picture was.</p>
+      <p>On the laboratory projector, a message appeared: <strong>SYSTEM STATUS: ALL SERVICES OPERATIONAL.</strong></p>
+      <p>Professor Meera Sen, who taught introductory computing, looked at the class. “If a system says it is working, does that mean it is secure?”</p>
+      <p>“Not necessarily, ma’am,” Aarav said. “It could be working while someone is stealing information.”</p>
+      <p>“Good. And if nobody is stealing information, is it secure?”</p>
+      <p>Aarav hesitated.</p>
+      <p>“A system might expose private information without anyone noticing. It might accept unauthorized changes. It might fail when many people use it. It might store passwords carelessly and still appear to work perfectly.” She changed the slide. Three words appeared: <strong>CONFIDENTIALITY. INTEGRITY. AVAILABILITY.</strong></p>
+      <p>“Welcome,” she said, “to the first principles of cybersecurity.” Aarav opened his notebook. For the first time that morning, he stopped thinking about tools and started thinking about systems.</p>
+
+      <h3>Concept 01 — What Is Cybersecurity?</h3>
+      <p><strong>Cybersecurity</strong> is the discipline of protecting computers, networks, applications, identities, and information from unauthorized access, misuse, modification, disruption, and destruction. It includes secure design, monitoring, incident response, recovery, risk management, and the human decisions around technology.</p>
+      <ul>
+        <li><strong>Computer science:</strong> explains how software, operating systems, memory, and processors work.</li>
+        <li><strong>Networking:</strong> explains how devices exchange information.</li>
+        <li><strong>Security engineering:</strong> designs systems to remain protected under realistic conditions.</li>
+        <li><strong>Risk management:</strong> identifies possible harm and prioritizes controls.</li>
+        <li><strong>Incident response:</strong> detects, investigates, contains, and helps recover from security incidents.</li>
+      </ul>
+      <p>Cybersecurity is not simply breaking into a computer. It is the continuous process of designing, operating, monitoring, testing, and improving systems so they can be trusted.</p>
+
+      <div class="episode-diagram" role="img" aria-label="Cybersecurity lifecycle: assets to protect, prevent, detect, respond, and recover">
+        <p><strong>DIAGRAM 1 · THE DEFENSIVE SECURITY LIFECYCLE</strong></p>
+        <div class="diagram-node">ASSETS TO PROTECT<br><small>Data · Accounts · Devices · Applications · Services</small></div>
+        <div class="diagram-arrow">↓</div>
+        <div class="diagram-grid">
+          <div class="diagram-node">PREVENT<br><small>Secure design, updates, access controls</small></div>
+          <div class="diagram-node">DETECT<br><small>Logs, alerts, monitoring</small></div>
+          <div class="diagram-node">RESPOND<br><small>Investigate, contain, communicate</small></div>
+          <div class="diagram-node">RECOVER<br><small>Restore, validate, improve</small></div>
+        </div>
+        <p class="diagram-caption">The four activities reinforce one another. No single product guarantees security.</p>
+      </div>
+
+      <h3>Concept 02 — The CIA Triad</h3>
+      <p>Imagine that the college runs a student portal containing examination results, attendance records, and course registrations. Before securing it, the team must define what “secure” means.</p>
+      <p><strong>1. Confidentiality — Who can see the information?</strong> Confidentiality means that information is accessible only to authorized people and systems. A student should normally see their own results, while a faculty member may see records for an assigned class. Unauthorized disclosure of another student's record is a confidentiality failure.</p>
+      <p>Controls include authentication, authorization, encryption, least-privilege access, and careful handling of sensitive data in logs and backups.</p>
+      <p><strong>2. Integrity — Can the information be trusted?</strong> Integrity protects information and systems against unauthorized or improper modification. If attendance says 82% and an unauthorized change makes it 98%, the portal may still respond normally, but its information is no longer trustworthy.</p>
+      <p>Controls include server-side permission checks, database constraints, transactions, audit logs, cryptographic hashes, and digital signatures where appropriate. A hash can help detect data changes, but a hash alone does not prove who created the data or prevent someone from replacing both the data and an unprotected hash.</p>
+      <p><strong>3. Availability — Can authorized users access the service?</strong> If the portal becomes unavailable during registration, students may miss an important deadline. Availability measures include redundancy, capacity planning, monitoring, rate limiting, tested backups, and disaster recovery plans.</p>
+      <div class="episode-diagram" role="img" aria-label="CIA triad: confidentiality, integrity, availability">
+        <p><strong>DIAGRAM 2 · THREE SECURITY OBJECTIVES</strong></p>
+        <div class="diagram-grid diagram-grid-three">
+          <div class="diagram-node"><strong>C</strong><br>CONFIDENTIALITY<br><small>Prevent unauthorized disclosure</small></div>
+          <div class="diagram-node"><strong>I</strong><br>INTEGRITY<br><small>Prevent improper changes</small></div>
+          <div class="diagram-node"><strong>A</strong><br>AVAILABILITY<br><small>Keep services accessible</small></div>
+        </div>
+        <p class="diagram-caption">One incident can affect multiple objectives. A compromised account could expose records and allow unauthorized changes.</p>
+      </div>
+      <p><strong>Core principle:</strong> identify which objective is affected, which asset is at risk, what weakness matters, and which controls can reduce the risk.</p>
+
+      <h3>Concept 03 — Inside a Computer</h3>
+      <p>“Before you protect a computer,” Professor Meera said, “understand what it is made of and what manages it.” A computer is a group of hardware and software components that cooperate to process information.</p>
+      <div class="episode-diagram">
+        <p><strong>DIAGRAM 3 · SIMPLIFIED COMPUTER ARCHITECTURE</strong></p>
+        <div class="diagram-node">USER / APPLICATION<br><small>Browser · College portal · Terminal</small></div>
+        <div class="diagram-arrow">↕</div>
+        <div class="diagram-node">OPERATING SYSTEM<br><small>Processes · Memory · Files · Permissions · Networking</small></div>
+        <div class="diagram-arrow">↕</div>
+        <div class="diagram-grid">
+          <div class="diagram-node">CPU<br><small>Executes instructions</small></div>
+          <div class="diagram-node">RAM<br><small>Active working data</small></div>
+          <div class="diagram-node">STORAGE<br><small>Retains files</small></div>
+          <div class="diagram-node">NETWORK<br><small>Exchanges data</small></div>
+        </div>
+      </div>
+      <p><strong>CPU:</strong> executes instructions. If software handles unexpected input incorrectly, it may crash or behave unexpectedly.</p>
+      <p><strong>RAM:</strong> holds data and instructions used by active programs. Operating systems isolate processes and manage memory permissions. Memory-safety errors and incorrect permissions can undermine these protections.</p>
+      <p><strong>Storage:</strong> retains operating systems, applications, documents, and databases. Security questions include who can read or modify a file, whether sensitive information is encrypted, and whether backups are protected.</p>
+      <p><strong>Operating system:</strong> manages processes, memory, files, users, and hardware access. It also provides user accounts, permissions, process isolation, and audit facilities.</p>
+      <p><strong>Authentication</strong> verifies a claimed identity. <strong>Authorization</strong> determines which actions that identity may perform. A user can log in successfully and still be denied access to an administrator-only function; that is secure behavior.</p>
+
+      <h3>Concept 04 — Networks and the Journey of a Packet</h3>
+      <p>At 11:20 a.m., Professor Meera opened the institute's demonstration portal. “Your browser is on your laptop. The server is somewhere else. How does your request reach it?”</p>
+      <p>“Through the internet,” Aarav answered.</p>
+      <p>“That tells me where, not how.”</p>
+      <div class="episode-diagram">
+        <p><strong>DIAGRAM 4 · A BASIC REQUEST FLOW</strong></p>
+        <div class="diagram-node">1. CLIENT DEVICE<br><small>Browser prepares a request</small></div>
+        <div class="diagram-arrow">↓</div>
+        <div class="diagram-node">2. LOCAL NETWORK / ROUTER<br><small>Forwards traffic toward its destination</small></div>
+        <div class="diagram-arrow">↓</div>
+        <div class="diagram-node">3. INTERNET ROUTING<br><small>Networks forward packets between systems</small></div>
+        <div class="diagram-arrow">↓</div>
+        <div class="diagram-node">4. SERVER<br><small>Application processes the request and responds</small></div>
+      </div>
+      <p>A <strong>packet</strong> is a formatted unit of data carried across a network. Its headers contain information that protocols use to deliver and interpret data. Think of it as a labelled delivery envelope, although real protocols have precise structures and behaviors.</p>
+      <ul>
+        <li><strong>IP address:</strong> identifies a network-layer endpoint or interface and helps route traffic.</li>
+        <li><strong>Port:</strong> identifies a transport-layer communication endpoint; exposed services need appropriate restrictions.</li>
+        <li><strong>DNS:</strong> resolves domain names to records, often including IP addresses.</li>
+        <li><strong>TCP:</strong> provides a reliable, ordered byte stream.</li>
+        <li><strong>UDP:</strong> provides datagrams without TCP's delivery guarantees.</li>
+        <li><strong>HTTPS:</strong> HTTP protected with TLS, helping protect data in transit and authenticate the server.</li>
+      </ul>
+      <p>TLS helps provide confidentiality and integrity for protected traffic and supports server authentication through certificates. But HTTPS does not prove that a site is free of vulnerabilities, that the user chose the intended site, or that the service handles data responsibly. Security must be layered.</p>
+
+      <h3>Concept 05 — Threats, Vulnerabilities, and Risk</h3>
+      <p>Professor Meera wrote three terms on the board: <strong>THREAT → VULNERABILITY → RISK</strong>.</p>
+      <ul>
+        <li><strong>Asset:</strong> something valuable that needs protection.</li>
+        <li><strong>Threat:</strong> a potential cause of harm.</li>
+        <li><strong>Vulnerability:</strong> a weakness that could be exploited or otherwise cause harm.</li>
+        <li><strong>Exploit:</strong> a method or action that takes advantage of a vulnerability.</li>
+        <li><strong>Risk:</strong> the possibility and potential impact of an adverse event, considered in context.</li>
+        <li><strong>Control:</strong> a measure that reduces the likelihood or impact of harm.</li>
+      </ul>
+      <p>In the fictional college portal, examination records are the asset. Unauthorized disclosure is the threat scenario. Missing or incorrect server-side authorization checks are the vulnerability. Privacy violations and loss of trust are possible impacts. Correct access checks, automated tests, monitoring, and secure code review are controls.</p>
+      <p>A simple introductory model is:</p>
+      <p><strong>Risk ≈ Likelihood × Impact</strong></p>
+      <p>This is a conceptual model, not a universal numerical formula. Real assessments consider exposure, existing controls, uncertainty, and business context. A minor issue on a public demonstration page may carry a different risk from a flaw exposing confidential records.</p>
+
+      <h3>Scene 02 — The First Ethical Boundary</h3>
+      <p>At lunchtime, Aarav's classmate Kabir showed him a fictional screenshot of a college login page. “Imagine this is a target. Could you test whether its security is weak?”</p>
+      <p>Professor Meera interrupted. “Before you test anything, answer three questions.”</p>
+      <ol>
+        <li>Who owns or operates the system?</li>
+        <li>What written authorization covers the test?</li>
+        <li>Which systems, methods, and time period are in scope?</li>
+      </ol>
+      <p>“But what if I only check something small?” Aarav asked.</p>
+      <p>“Small actions can expose private data, disrupt a service, or violate the owner's rules. Technical curiosity is not permission.”</p>
+      <p>A responsible assessment defines approved systems, permitted methods, testing windows, data-handling rules, emergency contacts, and stop conditions. Learners should use purpose-built practice environments, local virtual machines, intentionally vulnerable applications, and systems for which they have explicit permission.</p>
+      <p><strong>Authorization is part of the technical process, not paperwork to consider afterward.</strong> Aarav wrote the sentence in the margin.</p>
+
+      <h3>Interactive Learning — Make the Security Decision</h3>
+      <div class="episode-quiz" data-episode-quiz>
+        <fieldset>
+          <legend><strong>Scenario:</strong> A student discovers a public login page and wants to test it. What should happen first?</legend>
+          <label><input type="radio" name="episode1-q1" value="wrong"> Start probing because the page is publicly accessible.</label>
+          <label><input type="radio" name="episode1-q1" value="correct"> Obtain explicit authorization and confirm the approved scope.</label>
+          <label><input type="radio" name="episode1-q1" value="wrong"> Try administrator functions to see what happens.</label>
+        </fieldset>
+        <button class="novel-tab quiz-check" type="button">Check answer</button>
+        <p class="quiz-feedback" aria-live="polite"></p>
+      </div>
+      <div class="episode-quiz" data-episode-quiz>
+        <fieldset>
+          <legend><strong>Scenario:</strong> A student can see another student's private examination record. Which objective is directly affected?</legend>
+          <label><input type="radio" name="episode1-q2" value="wrong"> Availability</label>
+          <label><input type="radio" name="episode1-q2" value="correct"> Confidentiality</label>
+          <label><input type="radio" name="episode1-q2" value="wrong"> Performance</label>
+        </fieldset>
+        <button class="novel-tab quiz-check" type="button">Check answer</button>
+        <p class="quiz-feedback" aria-live="polite"></p>
+      </div>
+      <div class="episode-quiz" data-episode-quiz>
+        <fieldset>
+          <legend><strong>Scenario:</strong> The portal becomes unavailable during registration. What is the responsible response?</legend>
+          <label><input type="radio" name="episode1-q3" value="wrong"> Generate more traffic to see whether it recovers.</label>
+          <label><input type="radio" name="episode1-q3" value="wrong"> Ignore it until users complain.</label>
+          <label><input type="radio" name="episode1-q3" value="correct"> Notify the responsible team, inspect approved monitoring data, and follow the recovery plan.</label>
+        </fieldset>
+        <button class="novel-tab quiz-check" type="button">Check answer</button>
+        <p class="quiz-feedback" aria-live="polite"></p>
+      </div>
+
+      <h3>Episode Closing — The First Packet</h3>
+      <p>At 4:35 p.m., Aarav left the laboratory with six pages of notes. He had arrived believing cybersecurity was mainly about discovering weaknesses. He left with a different understanding.</p>
+      <p>A computer was a system of interacting components. A network was a set of cooperating protocols. A vulnerability was a weakness, not an invitation. Security was not one tool or one decision; it was the practice of understanding what matters, identifying what could go wrong, and building defenses that can be tested and improved.</p>
+      <p>His phone vibrated. A message from Professor Meera appeared on the class group: <em>Tomorrow: operating systems, permissions, processes, and the principle of least privilege.</em></p>
+      <p>Aarav opened his notebook and wrote one final line:</p>
+      <blockquote><strong>Before learning how a system can be compromised, learn how it is supposed to work.</strong></blockquote>
+      <p>He closed the book. Volume 1 had begun.</p>
+
+      <h3>Episode 01 — Learning Objectives</h3>
+      <ul>
+        <li>Define cybersecurity and explain its defensive purpose.</li>
+        <li>Explain confidentiality, integrity, and availability using practical examples.</li>
+        <li>Describe the roles of CPU, RAM, storage, operating systems, and network interfaces.</li>
+        <li>Explain the basic journey of a network request and the roles of IP, ports, DNS, TCP, UDP, HTTPS, and TLS.</li>
+        <li>Distinguish assets, threats, vulnerabilities, exploits, risks, and controls.</li>
+        <li>Explain why explicit authorization and a defined testing scope are essential.</li>
+      </ul>
+      <p><strong>Next episode preview:</strong> <em>The Invisible Gatekeeper</em> — operating-system internals, users and groups, file permissions, processes, privilege boundaries, and least privilege.</p>
+    </article>
+    <article class="episode-panel" id="one-episode-panel-2" role="tabpanel" aria-labelledby="one-episode-tab-2" hidden><h3>Episode 02 — The Invisible Gatekeeper</h3><div class="episode-placeholder">Coming next: operating-system internals, users and groups, file permissions, processes, privilege boundaries, and least privilege.</div></article>
+    <article class="episode-panel" id="one-episode-panel-3" role="tabpanel" aria-labelledby="one-episode-tab-3" hidden><h3>Episode 03 — The Language of Networks</h3><div class="episode-placeholder">Coming soon: deeper TCP/IP, DNS, ports, HTTP requests, TLS, and packet analysis in a safe learning environment.</div></article>
   </section>
 
   <section class="novel-panel" id="title-panel-two" role="tabpanel" aria-labelledby="title-tab-two" data-tab-scope hidden>
-    <h2>Novel Title 2</h2>
-    <p>Use this title section for a short introduction or synopsis.</p>
-    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Novel Title 2" data-tablist data-tab-scope>
-      <button class="novel-tab" id="two-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="two-episode-panel-1">Episode 1</button>
-      <button class="novel-tab" id="two-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="two-episode-panel-2" tabindex="-1">Episode 2</button>
-      <button class="novel-tab" id="two-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="two-episode-panel-3" tabindex="-1">Episode 3</button>
-    </div>
-    <article class="episode-panel" id="two-episode-panel-1" role="tabpanel" aria-labelledby="two-episode-tab-1"><h3>Episode 1</h3><div class="episode-placeholder">Add the first episode text here.</div></article>
-    <article class="episode-panel" id="two-episode-panel-2" role="tabpanel" aria-labelledby="two-episode-tab-2" hidden><h3>Episode 2</h3><div class="episode-placeholder">Add the second episode text here.</div></article>
-    <article class="episode-panel" id="two-episode-panel-3" role="tabpanel" aria-labelledby="two-episode-tab-3" hidden><h3>Episode 3</h3><div class="episode-placeholder">Add the third episode text here.</div></article>
+    <h2>Coming soon</h2>
+    <p>Additional titles will be added here after their episode drafts are reviewed.</p>
   </section>
 </section>
 <script src="{{ '/assets/js/novel.js' | relative_url }}" defer></script>
+<script>
+document.querySelectorAll('[data-episode-quiz]').forEach(quiz => {
+  const button = quiz.querySelector('.quiz-check');
+  const feedback = quiz.querySelector('.quiz-feedback');
+  button.addEventListener('click', () => {
+    const selected = quiz.querySelector('input[type="radio"]:checked');
+    if (!selected) {
+      feedback.textContent = 'Choose an answer first.';
+      return;
+    }
+    feedback.textContent = selected.value === 'correct'
+      ? 'Correct. You identified the responsible security decision.'
+      : 'Not quite. Review the principle, then try again.';
+  });
+});
+</script>
