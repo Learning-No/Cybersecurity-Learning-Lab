@@ -2,19 +2,19 @@
   const tablists = [...document.querySelectorAll('[data-tablist]')];
   tablists.forEach(list => {
     const tabs = [...list.querySelectorAll('[role="tab"]')];
-    const scope = list.closest('[data-tab-scope]') || document;
+    const scope = list.classList.contains('episode-tabs')
+      ? list.closest('.novel-panel')
+      : document.querySelector('.novel-page');
     const activate = tab => {
-      const targetId = tab.getAttribute('aria-controls');
       tabs.forEach(item => {
         const active = item === tab;
         item.setAttribute('aria-selected', String(active));
         item.tabIndex = active ? 0 : -1;
       });
       tabs.forEach(item => {
-        const panel = scope.querySelector('#' + CSS.escape(item.getAttribute('aria-controls')));
+        const panel = scope && scope.querySelector('#' + CSS.escape(item.getAttribute('aria-controls')));
         if (panel) panel.hidden = item !== tab;
       });
-      if (targetId) history.replaceState(null, '', '#' + targetId);
     };
     tabs.forEach((tab, index) => {
       tab.addEventListener('click', () => activate(tab));
