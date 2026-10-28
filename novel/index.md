@@ -6,28 +6,28 @@ permalink: /novel/
 ---
 
 <style>
-.novel-page { max-width: 980px; margin: 0 auto; padding: 24px 0 64px; }
-.novel-hero { padding: clamp(24px, 5vw, 52px); border: 1px solid #dce6e2; border-radius: 24px; background: linear-gradient(135deg,#eef8f2,#f5f7ff); color: #172b3a; }
-.novel-hero .eyebrow { color: #28644d; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
-.novel-hero h1, .novel-hero p { color: #172b3a; }
-.novel-hero h1 { font-size: clamp(32px,5vw,48px); line-height: 1.1; margin: 12px 0; }
-.novel-hero .lead { max-width: 68ch; font-size: 17px; }
-.novel-tabs { display: grid; gap: 14px; margin-top: 26px; }
-.novel-title-tab, .novel-episode-tab { border: 1px solid var(--line,#dce6e2); border-radius: 16px; background: var(--surface,#fff); overflow: hidden; }
-.novel-title-tab > summary, .novel-episode-tab > summary { cursor: pointer; padding: 18px 20px; font-weight: 800; color: var(--text,#172b3a); }
-.novel-title-tab > summary { background: #eaf4ef; }
-.novel-episode-tab > summary { background: #f5f7fa; }
-.novel-title-tab[open] > summary, .novel-episode-tab[open] > summary { border-bottom: 1px solid var(--line,#dce6e2); }
-.novel-inside { padding: clamp(18px,3vw,30px); }
-.novel-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 22px; }
-.novel-meta span { border: 1px solid #d7e2de; background: #f7faf8; border-radius: 999px; padding: 6px 10px; color: #304b40; font-size: 12px; font-weight: 700; }
-.novel-episode h2 { color: var(--text,#172b3a); margin-top: 30px; }
-.novel-episode h3 { color: var(--text,#172b3a); margin-top: 24px; }
-.novel-episode p, .novel-episode li { line-height: 1.8; }
-.novel-callout { border-left: 4px solid #2f8061; background: #f0f7f3; color: #173c2d; padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 20px 0; }
-.novel-diagram { overflow-x: auto; border: 1px solid #dce6e2; background: #f8faf9; border-radius: 12px; padding: 16px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; line-height: 1.8; color: #203b30; white-space: pre-wrap; }
-.novel-next { display: inline-flex; margin-top: 16px; padding: 11px 16px; border-radius: 10px; background: #176548; color: white !important; font-weight: 800; text-decoration: none; }
-@media (max-width: 600px) { .novel-page { padding-top: 12px; } .novel-hero { border-radius: 16px; } .novel-inside { padding: 16px; } }
+.novel-page{max-width:980px;margin:0 auto;padding:24px 0 64px}
+.novel-hero{padding:clamp(24px,5vw,52px);border:1px solid #dce6e2;border-radius:24px;background:linear-gradient(135deg,#eef8f2,#f5f7ff);color:#172b3a}
+.novel-hero .eyebrow{color:#28644d;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.novel-hero h1,.novel-hero p{color:#172b3a}
+.novel-hero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:12px 0}
+.novel-hero .lead{max-width:68ch;font-size:17px}
+.novel-tablist{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.novel-tab{appearance:none;border:1px solid #a9beb5;background:#fff;color:#174b38;padding:11px 15px;border-radius:10px;font:700 14px/1.3 inherit;cursor:pointer}
+.novel-tab:hover{background:#edf7f1;border-color:#2f8061}
+.novel-tab[aria-selected=true]{background:#176548;border-color:#176548;color:#fff}
+.novel-tab:focus-visible{outline:3px solid #7bc6a7;outline-offset:3px}
+.novel-panel{border:1px solid #dce6e2;background:#fff;padding:clamp(18px,3vw,30px);border-radius:16px;margin-top:10px}
+.novel-panel[hidden],.episode-panel[hidden]{display:none}
+.novel-intro{max-width:78ch;line-height:1.75}
+.novel-meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.novel-meta span{border:1px solid #d7e2de;background:#f7faf8;border-radius:999px;padding:6px 10px;color:#304b40;font-size:12px;font-weight:700}
+.novel-episode h2,.novel-episode h3{color:#172b3a;margin-top:28px}
+.novel-episode p,.novel-episode li{line-height:1.8}
+.novel-callout{border-left:4px solid #2f8061;background:#f0f7f3;color:#173c2d;padding:14px 18px;border-radius:0 10px 10px 0;margin:20px 0}
+.novel-diagram{overflow-x:auto;border:1px solid #dce6e2;background:#f8faf9;border-radius:12px;padding:16px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;line-height:1.8;color:#203b30;white-space:pre-wrap}
+.novel-notice{margin:18px 0;padding:14px 17px;border-left:4px solid #2f8061;background:#f0f7f3;color:#173c2d}
+@media(max-width:600px){.novel-page{padding-top:12px}.novel-hero{border-radius:16px}.novel-tab{flex:1 1 auto;text-align:center}.novel-panel{padding:16px}}
 </style>
 
 <div class="novel-page">
@@ -38,16 +38,24 @@ permalink: /novel/
     <p><strong>Volume 1:</strong> Deep Core Based · <strong>Start here:</strong> Episode 01 — The First Packet</p>
   </header>
 
-  <div class="novel-tabs">
-    <details class="novel-title-tab" open>
-      <summary>📘 Cybersecurity Learning Novel Vol 1 (Deep Core Based)</summary>
-      <div class="novel-inside">
-        <p><strong>Volume synopsis:</strong> Jayan, a first-year B.Tech student, enters the hidden world beneath everyday apps. Each episode starts with a story moment, then unpacks the technical ideas behind it—with diagrams, real-life analogies, and safe exercises. The goal is not to “hack anything”; it is to understand systems well enough to protect them.</p>
-        <div class="novel-meta"><span>Foundations</span><span>Story + concepts</span><span>Beginner friendly</span><span>Ethical practice</span></div>
+  <h2>Choose a novel</h2>
+  <div class="novel-tablist" role="tablist" aria-label="Novel titles" data-tablist>
+    <button class="novel-tab" id="title-tab-one" type="button" role="tab" aria-selected="true" aria-controls="title-panel-one">Cybersecurity Learning Novel Vol 1</button>
+    <button class="novel-tab" id="title-tab-two" type="button" role="tab" aria-selected="false" aria-controls="title-panel-two" tabindex="-1">More titles</button>
+  </div>
 
-        <details class="novel-episode-tab" open>
-          <summary>Episode 01 · The First Packet</summary>
-          <article class="novel-episode">
+  <section class="novel-panel" id="title-panel-one" role="tabpanel" aria-labelledby="title-tab-one">
+    <h2>Cybersecurity Learning Novel Vol 1 (Deep Core Based)</h2>
+    <p class="novel-intro"><strong>Volume synopsis:</strong> Jayan, a first-year B.Tech student, enters the hidden world beneath everyday apps. Each episode starts with a story moment, then unpacks the technical ideas behind it—with diagrams, real-life analogies, and safe exercises. The goal is not to “hack anything”; it is to understand systems well enough to protect them.</p>
+    <div class="novel-meta"><span>Foundations</span><span>Story + concepts</span><span>Beginner friendly</span><span>Ethical practice</span></div>
+    <h3>Choose an episode</h3>
+    <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes in Volume 1" data-tablist>
+      <button class="novel-tab" id="episode-tab-one" type="button" role="tab" aria-selected="true" aria-controls="episode-panel-one">Episode 01 · The First Packet</button>
+      <button class="novel-tab" id="episode-tab-two" type="button" role="tab" aria-selected="false" aria-controls="episode-panel-two" tabindex="-1">Episode 02 · Names and Routes</button>
+      <button class="novel-tab" id="episode-tab-three" type="button" role="tab" aria-selected="false" aria-controls="episode-panel-three" tabindex="-1">Episode 03 · The Door Called a Port</button>
+    </div>
+    <section class="episode-panel" id="episode-panel-one" role="tabpanel" aria-labelledby="episode-tab-one">
+      <article class="novel-episode">
             <div class="novel-meta"><span>Network fundamentals</span><span>HTTP & DNS</span><span>Approx. 8–10 min read</span></div>
             <h2>The First Packet</h2>
             <p>The computer lab was almost empty when Jayan noticed the tiny Wi-Fi icon glowing in the corner of his laptop. Outside, campus life rushed between lectures, chai stalls, and noisy corridors. On his screen, a browser tab waited for him to open the college learning portal.</p>
@@ -110,23 +118,55 @@ Accept: text/html</div>
             <h3>Episode takeaway</h3>
             <p>A website visit is a coordinated conversation between layers and services. Learn to ask what each layer is responsible for, what evidence actually proves, and what permission is required before investigating. That is the beginning of a defender’s mindset.</p>
           </article>
-        </details>
+    </section>
+    <section class="episode-panel" id="episode-panel-two" role="tabpanel" aria-labelledby="episode-tab-two" hidden>
+      <h2>Episode 02 · Names, Numbers, and Routes</h2>
+      <p class="novel-notice"><strong>Coming next:</strong> Follow a request from DNS resolution to IP routing, learn how private and public addresses differ, and map a small fictional network.</p>
+      <p>This episode will include a routing diagram, a subnetting analogy, and a safe local-only practice task.</p>
+    </section>
+    <section class="episode-panel" id="episode-panel-three" role="tabpanel" aria-labelledby="episode-tab-three" hidden>
+      <h2>Episode 03 · The Door Called a Port</h2>
+      <p class="novel-notice"><strong>Coming next:</strong> Learn TCP, UDP, ports, listening services, and why an open port is evidence—not proof of a vulnerability.</p>
+    </section>
+  </section>
 
-        <details class="novel-episode-tab">
-          <summary>Episode 02 · Names, Numbers, and Routes</summary>
-          <div class="novel-inside">
-            <p><strong>Coming next:</strong> Follow a request from DNS resolution to IP routing, learn how private and public addresses differ, and map a small fictional network.</p>
-            <p>This episode will include a routing diagram, a subnetting analogy, and a safe local-only practice task.</p>
-          </div>
-        </details>
-        <details class="novel-episode-tab">
-          <summary>Episode 03 · The Door Called a Port</summary>
-          <div class="novel-inside">
-            <p><strong>Coming next:</strong> Learn TCP, UDP, ports, listening services, and why an open port is evidence—not proof of a vulnerability.</p>
-          </div>
-        </details>
-      </div>
-    </details>
-  </div>
-  <p><a class="novel-next" href="{{ '/student-portal/' | relative_url }}">Back to Student Portal →</a></p>
+  <section class="novel-panel" id="title-panel-two" role="tabpanel" aria-labelledby="title-tab-two" hidden>
+    <h2>More titles are on the roadmap</h2>
+    <p>Volume 1 is the active title. Additional original stories will be added here when their episode content is ready.</p>
+  </section>
+  <p><a class="novel-tab" href="{{ '/student-portal/' | relative_url }}">← Back to Student Portal</a></p>
 </div>
+
+<script>
+(() => {
+  document.querySelectorAll('[data-tablist]').forEach(list => {
+    const tabs = [...list.querySelectorAll('[role="tab"]')];
+    const activate = (tab, moveFocus = false) => {
+      tabs.forEach(item => {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        const panel = document.getElementById(item.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !active;
+      });
+      if (moveFocus) tab.focus();
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        activate(tabs[next], true);
+      });
+    });
+    const hashTarget = location.hash.slice(1);
+    const initial = tabs.find(tab => tab.getAttribute('aria-controls') === hashTarget) || tabs.find(tab => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+    if (initial) activate(initial);
+  });
+})();
+</script>
