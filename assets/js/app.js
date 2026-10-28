@@ -83,6 +83,31 @@
     filterTools();
   }
 
+  // Accessible responsive navigation: toggle the mobile menu without blocking desktop navigation.
+  const navToggle = document.querySelector('.nav-toggle');
+  const primaryNav = document.querySelector('.primary-nav');
+  if (navToggle && primaryNav) {
+    const setNavOpen = open => {
+      primaryNav.dataset.open = String(open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      const label = navToggle.querySelector('.nav-toggle-label');
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+    };
+    navToggle.addEventListener('click', () => setNavOpen(primaryNav.dataset.open !== 'true'));
+    primaryNav.addEventListener('click', event => {
+      if (event.target.closest('a') && window.matchMedia('(max-width: 1080px)').matches) setNavOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && primaryNav.dataset.open === 'true') {
+        setNavOpen(false);
+        navToggle.focus();
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (!window.matchMedia('(max-width: 1080px)').matches) setNavOpen(false);
+    });
+  }
+
   // Treat the dropdowns as one exclusive menu: opening one closes the others.
   const navMenus = [...document.querySelectorAll('.nav-group')];
   const closeNavMenus = except => {

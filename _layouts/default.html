@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&display=swap">
-<link rel="stylesheet" href="{{ '/assets/css/executive.css' | relative_url }}?v=20261029">
-<link rel="stylesheet" href="{{ '/assets/css/novel.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/executive.css' | relative_url }}?v=20261030">
+<link rel="stylesheet" href="{{ '/assets/css/novel.css' | relative_url }}?v=20261030">
 </head>
 <body id="top">
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -29,7 +29,8 @@
       <img src="{{ '/assets/images/brand-mark.svg' | relative_url }}" alt="" width="42" height="42">
       <span class="brand-copy"><strong>CSLL</strong><small>Cybersecurity Learning Lab</small></span>
     </a>
-    <nav class="primary-nav" aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"><span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="nav-toggle-label">Menu</span></button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Main navigation" data-open="false">
       <div class="nav-inner">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Overview</a>
         <details class="nav-group"><summary>Curriculum <span aria-hidden="true">▾</span></summary><div class="nav-menu">

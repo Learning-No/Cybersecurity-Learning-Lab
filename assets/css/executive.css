@@ -1024,3 +1024,141 @@ main>.ethics .secondary{color:#211a3a;background:#a8eee0;border-color:#a8eee0;bo
  .summary-grid,.phases,.tracks,.notes{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* 12. SITE-WIDE EXPERIENCE POLISH ------------------------------------------
+   Shared editorial system across hubs, curriculum pages, portal, notes and novel.
+   Keeps existing CSLL content and page-specific components intact. */
+:root{
+  --ink:#211a3a;
+  --ink-soft:#3e3658;
+  --text:#302c3e;
+  --muted:#716b80;
+  --paper:#faf8fc;
+  --card:#fff;
+  --line:#e8e2ef;
+  --line-strong:#d2c8e1;
+  --accent:#168b83;
+  --accent-dark:#116c68;
+  --accent-tint:#e3f5f1;
+  --gold:#8a6218;
+  --gold-tint:#fbf2df;
+  --navy-text:#f0ebfa;
+  --shadow-sm:0 4px 16px rgba(33,26,58,.05);
+  --shadow-md:0 16px 44px rgba(33,26,58,.12);
+  --radius:18px;
+  --radius-sm:12px;
+}
+body{background:var(--paper);color:var(--text)}
+a{transition:color .18s ease}
+main{width:100%;max-width:1320px;padding-left:clamp(18px,3.2vw,44px);padding-right:clamp(18px,3.2vw,44px)}
+main>section:not(.hero):not(.kpis):not(.ethics){scroll-margin-top:110px}
+.site-header{box-shadow:0 4px 22px rgba(33,26,58,.035);border-bottom-color:rgba(232,226,239,.9)}
+.header-inner{max-width:1440px;min-height:78px;padding-inline:clamp(18px,3vw,42px);gap:clamp(12px,2vw,28px)}
+.brand img{border-radius:12px}
+.brand-copy strong{font-family:var(--sans);font-size:20px;font-weight:800;letter-spacing:-.045em}
+.brand-copy small{letter-spacing:.075em;font-size:9.5px}
+.nav-inner{gap:4px}
+.nav-inner>a,.nav-group>summary{border-radius:999px;padding:11px 13px;font-size:13px}
+.nav-inner>a[aria-current=page]{background:var(--accent-tint);color:var(--accent-dark)}
+.nav-inner>.nav-github{background:var(--ink);color:#fff;padding-inline:18px}
+.nav-inner>.nav-github:hover{background:var(--accent-dark);color:#fff}
+.nav-menu{border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 18px 40px rgba(33,26,58,.14)}
+.nav-menu a{border-radius:9px;padding:10px 12px}
+.notice-bar{background:#211a3a}
+.notice-inner{max-width:1440px;padding-inline:clamp(18px,3vw,42px)}
+.breadcrumbs{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:26px 0 10px;color:var(--muted);font-size:13px}
+.breadcrumbs a{color:var(--accent-dark);text-decoration:none}
+.breadcrumbs a:hover{text-decoration:underline}
+.page-actions{display:flex;justify-content:flex-end;margin:0 0 18px}
+.page-actions button{border:1px solid var(--line-strong);background:#fff;color:var(--ink-soft);padding:9px 14px;border-radius:999px;font:600 12px var(--sans);cursor:pointer}
+.page-actions button:hover{border-color:var(--accent);background:var(--accent-tint)}
+/* Non-home pages use the same generous editorial rhythm as the landing page. */
+main>section:not(.hero):not(.kpis):not(.ethics):not(.portal-shell):not(.novel-page){
+  border-radius:22px;
+}
+main>section:not(.hero):not(.kpis):not(.ethics):not(.portal-shell):not(.novel-page)>h1{
+  font:700 clamp(2.5rem,5.6vw,4.5rem)/1.03 var(--sans);letter-spacing:-.065em;margin:8px 0 20px;max-width:18ch
+}
+main>section:not(.hero):not(.kpis):not(.ethics):not(.portal-shell):not(.novel-page)>h2{
+  font:700 clamp(1.8rem,3.6vw,2.8rem)/1.1 var(--sans);letter-spacing:-.045em;margin:34px 0 16px
+}
+main>section:not(.hero):not(.kpis):not(.ethics):not(.portal-shell):not(.novel-page)>p{
+  max-width:76ch
+}
+.section,.hub,.page-shell,.resource-page,.concept-page,.roadmap-page,.tool-page{padding-top:clamp(44px,6vw,80px);padding-bottom:clamp(44px,6vw,80px)}
+.section-head h2,.page-title,.hub-title{letter-spacing:-.055em}
+.panel,.summary-card,.phase,.week-card,.note-card,.tool-entry,.hub-card,.resource-card,.concept-card{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease
+}
+.summary-card:hover,.panel:hover,.phase:hover,.note-card:hover,.tool-entry:hover,.resource-card:hover,.concept-card:hover{
+  box-shadow:var(--shadow-md);border-color:#c6e5df
+}
+.tag{letter-spacing:.07em}
+.primary,.secondary,button,.novel-tab{transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+.primary:active,.secondary:active,.novel-tab:active{transform:translateY(1px)}
+/* Content pages */
+.prose,.note-content,.article-content{max-width:78ch;line-height:1.82}
+.prose h2,.note-content h2,.article-content h2{margin-top:2.1em;font-size:clamp(1.55rem,3vw,2.2rem);letter-spacing:-.04em}
+.prose h3,.note-content h3,.article-content h3{margin-top:1.7em;font-size:1.25rem}
+.prose blockquote,.note-content blockquote,.article-content blockquote{border-left:4px solid var(--accent);background:#eef8f5;padding:18px 22px;border-radius:0 14px 14px 0}
+.prose table,.note-content table,.article-content table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
+.prose th,.prose td,.note-content th,.note-content td,.article-content th,.article-content td{padding:12px 14px;border:1px solid var(--line);text-align:left}
+.prose th,.note-content th,.article-content th{background:#f0edf7;color:var(--ink)}
+/* Student portal */
+.portal-shell{gap:clamp(24px,4vw,52px);padding-top:clamp(38px,5vw,70px);padding-bottom:clamp(48px,7vw,90px)}
+.portal-art{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-md)}
+.portal-card{border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow-sm);padding:clamp(26px,4vw,48px)}
+.portal-card h1{letter-spacing:-.06em}
+.portal-note{border-radius:14px}
+/* Novel reading retains its tabs and long-form content, with a calmer reading canvas. */
+.novel-page{max-width:1000px;padding-top:clamp(36px,5vw,70px);padding-bottom:clamp(52px,7vw,90px)}
+.novel-page>h1{font:700 clamp(2.7rem,6vw,5rem)/1.02 var(--sans);letter-spacing:-.065em}
+.novel-intro{font-size:clamp(1.05rem,1.7vw,1.25rem);max-width:70ch}
+.novel-notice{border-radius:14px;border-left-color:var(--accent);background:#eaf7f3;color:#244c49}
+.novel-panel{border-radius:22px;border-color:var(--line);padding:clamp(18px,3.2vw,40px);box-shadow:var(--shadow-sm)}
+.novel-tab[aria-selected=true]{background:var(--ink);border-color:var(--ink)}
+.episode-panel{max-width:78ch;margin-inline:auto}
+.episode-diagram{border-radius:16px;background:linear-gradient(145deg,#f3f0fa,#fff)}
+/* Footer as a deliberate closing section across every route. */
+.csll-footer{background:#211a3a;color:#f2eef9}
+.csll-footer .footer-main{max-width:1440px;gap:clamp(32px,5vw,80px);padding:clamp(44px,6vw,76px) clamp(20px,4vw,56px)}
+.footer-brand strong{font-family:var(--sans);font-size:1.35rem;letter-spacing:-.04em}
+.csll-footer .footer-col h2{font-size:.8rem;letter-spacing:.13em;text-transform:uppercase;color:#b9f0e5}
+.csll-footer .footer-links{gap:10px}
+.csll-footer a{color:#b9f0e5;text-decoration:none}
+.csll-footer a:hover{text-decoration:underline;color:#fff}
+.footer-bottom{max-width:1440px;margin-inline:auto;border-top:1px solid rgba(255,255,255,.16);padding-inline:clamp(20px,4vw,56px)}
+/* Accessible mobile navigation */
+.nav-toggle{display:none;align-items:center;justify-content:center;gap:9px;min-height:42px;padding:10px 14px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;color:var(--ink);font:700 13px var(--sans);cursor:pointer}
+.nav-toggle-icon{display:grid;gap:4px;width:17px}
+.nav-toggle-icon span{display:block;width:17px;height:2px;border-radius:2px;background:currentColor}
+@media(max-width:1080px){
+ .header-inner{flex-wrap:wrap;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+ .nav-toggle{display:inline-flex}
+ .primary-nav{display:none;flex:0 0 100%;width:100%;padding:8px 0 4px}
+ .primary-nav[data-open=true]{display:block}
+ .nav-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:6px}
+ .nav-inner>a,.nav-group>summary{width:100%;justify-content:space-between;border-radius:12px;padding:13px 14px;background:#f7f4fa}
+ .nav-group{min-width:0}
+ .nav-group[open] .nav-menu{position:static;width:100%;box-shadow:none;margin:4px 0 8px}
+ .nav-inner>.nav-github{justify-content:center}
+}
+@media(max-width:700px){
+ .notice-inner{font-size:11px;padding-block:7px}
+ .notice-inner a{margin-left:0}
+ .header-inner{min-height:68px}
+ .brand img{width:38px;height:38px}
+ .brand-copy small{font-size:8px}
+ main{padding-inline:16px}
+ .breadcrumbs{margin-top:18px}
+ .page-actions{justify-content:flex-start}
+ .portal-shell{grid-template-columns:1fr}
+ .portal-art{min-height:260px}
+ .portal-art img{max-height:320px;object-fit:cover}
+ .footer-bottom{gap:10px;align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .summary-card,.panel,.phase,.week-card,.note-card,.tool-entry,.resource-card,.concept-card{transition:none}
+}
