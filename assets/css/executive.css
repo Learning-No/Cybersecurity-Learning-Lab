@@ -1879,3 +1879,61 @@ main {
   .header-get-started { padding:10px 11px; font-size:11px; }
   .hero h1 { font-size:clamp(2.5rem,11.5vw,3.4rem); }
 }
+
+
+/* CSLL monochrome theme: black canvas, white text, white cards */
+:root {
+  --sq-black: #000000;
+  --sq-white: #ffffff;
+  --sq-charcoal: #000000;
+  --sq-gray: #bdbdbd;
+  --sq-border: #ffffff;
+  --sq-green: #ffffff;
+  --sq-page: #000000;
+  --sq-soft: #ffffff;
+  color-scheme: dark;
+}
+html, body { background: #000 !important; color: #fff !important; }
+body, main, .page-shell, .site-main { background-color: #000 !important; color: #fff !important; }
+.site-header, .csll-header, .header-inner { background: #000 !important; color: #fff !important; border-color: #fff !important; }
+.notice-bar, .hero, .hero.hero--visual, .program-overview, .csll-footer {
+  background: #000 !important; color: #fff !important; border-color: #fff !important;
+}
+body :is(h1,h2,h3,h4,h5,h6,p,li,label,small,strong,em,blockquote,dt,dd,summary) { color: inherit; }
+body a { color: #fff; }
+body a:hover, body a:focus-visible { color: #000; background: #fff; outline-color: #fff; }
+:where(.summary-card, .note-card, .week-card, .hub-card, .feature-panel, .snapshot,
+       .kpi, .kpi-card, .phase, .phase-card, .stage, .resource-card, .tool-card,
+       .concept-card, .roadmap-card, .lab-card, .portal-card, .novel-card,
+       .episode-card, .callout, .code-panel, .diagram-card, .search-panel,
+       .toolbar, .notes-carousel, .weeks-carousel, .kpis-carousel) {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+:where(.summary-card, .note-card, .week-card, .hub-card, .feature-panel, .snapshot,
+       .kpi, .kpi-card, .phase, .phase-card, .stage, .resource-card, .tool-card,
+       .concept-card, .roadmap-card, .lab-card, .portal-card, .novel-card,
+       .episode-card, .callout, .code-panel, .diagram-card, .search-panel,
+       .toolbar, .notes-carousel, .weeks-carousel, .kpis-carousel)
+:where(h1,h2,h3,h4,h5,h6,p,li,label,small,strong,em,span,summary,dt,dd) {
+  color: #000 !important;
+}
+:where(.summary-card, .note-card, .week-card, .hub-card, .feature-panel, .snapshot,
+       .kpi, .kpi-card, .phase, .phase-card, .stage, .resource-card, .tool-card,
+       .concept-card, .roadmap-card, .lab-card, .portal-card, .novel-card,
+       .episode-card, .callout, .code-panel, .diagram-card, .search-panel,
+       .toolbar) a { color: #000 !important; text-decoration: underline; }
+button, .button, .btn, input[type="submit"], .header-get-started {
+  background: #fff !important; color: #000 !important; border: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+input, select, textarea {
+  background: #fff !important; color: #000 !important; border: 1px solid #fff !important;
+}
+input::placeholder, textarea::placeholder { color: #555 !important; }
+hr, .footer-bottom, .section, .section-head, .phase-head { border-color: #fff !important; }
+.phase-head { background: #fff !important; color: #000 !important; }
+.csll-footer p, .csll-footer a, .csll-footer h2, .footer-brand strong { color: #fff !important; }
+:focus-visible { outline: 2px solid #fff !important; outline-offset: 3px; }
