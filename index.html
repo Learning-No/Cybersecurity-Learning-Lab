@@ -86,7 +86,14 @@ description: A structured, authorization-first cybersecurity learning program - 
     <input id="note-search" type="search" placeholder="Search notes, topics, tools…" aria-label="Search notes">
     <span>{{ site.notes.size }} NOTES</span>
   </div>
-  <div id="notes-grid" class="notes">
+  <div class="carousel-toolbar" aria-label="Notes carousel controls">
+    <p>Browse the library <span>Scroll or use the arrows to explore each note.</span></p>
+    <div class="carousel-buttons">
+      <button type="button" class="carousel-arrow" data-carousel-prev="notes-grid" aria-label="Previous notes">←</button>
+      <button type="button" class="carousel-arrow" data-carousel-next="notes-grid" aria-label="Next notes">→</button>
+    </div>
+  </div>
+  <div id="notes-grid" class="notes notes-carousel" tabindex="0" aria-label="Learning notes carousel">
     {% assign sorted_notes = site.notes | sort: "week" %}
     {% for note in sorted_notes %}
     <a class="note-card" href="{{ note.url | relative_url }}" data-search="{{ note.title | downcase | escape }} {{ note.summary | downcase | escape }} {{ note.week | downcase | escape }} {{ note.track | downcase | escape }}">
@@ -135,7 +142,14 @@ description: A structured, authorization-first cybersecurity learning program - 
         <h3>{{ ph[1] | escape }}</h3>
         <p>{{ ph[3] | escape }}</p>
       </header>
-      <div class="weeks-list">
+      <div class="carousel-toolbar weeks-toolbar" aria-label="Week carousel controls">
+        <p>Explore the weeks <span>Each card includes the goal, completion tracker, and guide link.</span></p>
+        <div class="carousel-buttons">
+          <button type="button" class="carousel-arrow" data-carousel-prev="weeks-phase-{{ forloop.index }}" aria-label="Previous weeks in {{ ph[0] }}">←</button>
+          <button type="button" class="carousel-arrow" data-carousel-next="weeks-phase-{{ forloop.index }}" aria-label="Next weeks in {{ ph[0] }}">→</button>
+        </div>
+      </div>
+      <div class="weeks-list weeks-carousel" id="weeks-phase-{{ forloop.index }}" tabindex="0" aria-label="{{ ph[0] }} weekly labs">
         {% for item in weeks %}{% if forloop.index0 >= start and forloop.index0 < stop %}
         {% assign w = item | split: "|" %}
         {% assign week_label = "WEEK " | append: w[0] %}
