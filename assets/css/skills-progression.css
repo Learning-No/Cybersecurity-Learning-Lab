@@ -36,3 +36,17 @@
   #career-roadmap .stages article { padding:18px; }
   #career-roadmap .stages article h3 { font-size:20px; }
 }
+
+/* Skills progression heading: black text on a pale panel for easy reading. */
+#career-roadmap .section-head {
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  background: #eef4f8 !important;
+  border: 1px solid #cbd9e6;
+  border-radius: 12px;
+}
+#career-roadmap .section-head h2,
+#career-roadmap .section-head .eyebrow,
+#career-roadmap .section-head > p {
+  color: #172b3a !important;
+}
