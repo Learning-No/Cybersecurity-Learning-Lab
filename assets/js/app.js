@@ -146,7 +146,7 @@
     });
   };
   const carouselStep = track => {
-    const item = track.querySelector(':scope > .note-card, :scope > .week-card');
+    const item = track.querySelector(':scope > .note-card, :scope > .week-card, :scope > .kpi-slide');
     if (!item) return Math.max(240, track.clientWidth * .8);
     const styles = window.getComputedStyle(track);
     const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;

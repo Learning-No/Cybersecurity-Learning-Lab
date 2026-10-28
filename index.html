@@ -60,11 +60,20 @@ description: A structured, authorization-first cybersecurity learning program - 
   </div>
 </section>
 
-<section class="kpis" aria-label="Program at a glance">
-  <div><b>12</b><span>Weekly guides, each with a deliverable and self-check</span></div>
-  <div><b>{{ site.notes.size }}</b><span>Reference notes and lab write-ups</span></div>
-  <div><b>{{ concept_pages.size }}</b><span>Illustrated concept explainers</span></div>
-  <div><b>8</b><span>Program components, from labs to architecture</span></div>
+<section class="program-overview" aria-label="Program components">
+  <div class="program-heading">
+    <div><p class="eyebrow">A closer look</p><h2>Program components</h2><p>Everything you need to learn, practice, and show your work.</p></div>
+    <div class="carousel-buttons">
+      <button type="button" class="carousel-arrow" data-carousel-prev="program-components" aria-label="Previous program components">←</button>
+      <button type="button" class="carousel-arrow" data-carousel-next="program-components" aria-label="Next program components">→</button>
+    </div>
+  </div>
+  <div id="program-components" class="kpis kpis-carousel" tabindex="0" aria-label="Program components carousel">
+    <div class="kpi-slide"><b>12</b><span>Weekly guides, each with a deliverable and self-check</span><small>01 / CURRICULUM</small></div>
+    <div class="kpi-slide"><b>{{ site.notes.size }}</b><span>Reference notes and lab write-ups</span><small>02 / KNOWLEDGE</small></div>
+    <div class="kpi-slide"><b>{{ concept_pages.size }}</b><span>Illustrated concept explainers</span><small>03 / VISUAL LEARNING</small></div>
+    <div class="kpi-slide"><b>8</b><span>Program components, from labs to architecture</span><small>04 / PRACTICE</small></div>
+  </div>
 </section>
 
 <nav class="homepage-nav" aria-label="Explore CSLL">
