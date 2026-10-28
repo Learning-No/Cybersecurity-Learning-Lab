@@ -794,3 +794,109 @@ body {
     break-inside: avoid;
   }
 }
+
+
+/* Squarespace-inspired visual pass: image-led hero, generous spacing, and responsive cards. */
+.hero--visual {
+  gap: clamp(28px, 5vw, 68px);
+  align-items: stretch;
+  padding-top: clamp(48px, 7vw, 88px);
+  padding-bottom: clamp(48px, 6vw, 76px);
+}
+.hero--visual > div {
+  align-self: center;
+}
+.hero--visual h1 {
+  max-width: 13ch;
+  font-size: clamp(2.8rem, 5.6vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+.hero--visual .lead {
+  max-width: 56ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+}
+.hero--visual .snapshot {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 440px;
+  padding: clamp(24px, 3vw, 38px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 26px;
+  background:
+    linear-gradient(145deg, rgba(6, 25, 44, .88) 0%, rgba(6, 25, 44, .68) 48%, rgba(6, 25, 44, .32) 100%),
+    url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85") center / cover;
+  box-shadow: 0 24px 60px rgba(11, 34, 57, .20);
+}
+.hero--visual .snapshot h2,
+.hero--visual .snapshot dt,
+.hero--visual .snapshot dd,
+.hero--visual .snapshot small,
+.hero--visual .snapshot .progress-head,
+.hero--visual .snapshot .progress-head b {
+  color: #fff;
+}
+.hero--visual .snapshot h2 {
+  font-size: 12px;
+  letter-spacing: .16em;
+}
+.hero--visual .snapshot .row {
+  border-color: rgba(255,255,255,.2);
+}
+.hero--visual .snapshot dt { color: #d2e5ef; }
+.hero--visual .snapshot .bar { background: rgba(255,255,255,.24); }
+.hero--visual .snapshot #progress-fill { background: #8de3ce; }
+.hero--visual .snapshot small { color: #e0edf4; }
+.home-hub-grid .hub-card {
+  min-height: 250px;
+  padding: 26px;
+  border-radius: 20px;
+}
+.section {
+  padding-top: clamp(44px, 6vw, 72px);
+  padding-bottom: clamp(44px, 6vw, 72px);
+}
+.section-head {
+  margin-bottom: 28px;
+}
+.summary-card,
+.phase,
+.panel,
+.note-card {
+  border-radius: 18px;
+}
+@media (max-width: 900px) {
+  .hero--visual {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .hero--visual h1 { max-width: 16ch; }
+  .hero--visual .snapshot { min-height: 340px; }
+}
+@media (max-width: 560px) {
+  .hero--visual { padding-top: 38px; padding-bottom: 38px; }
+  .hero--visual h1 { font-size: clamp(2.45rem, 11vw, 3.5rem); }
+  .hero--visual .snapshot { min-height: 0; padding: 22px; border-radius: 20px; }
+  .hero--visual .snapshot .row { gap: 12px; font-size: 13px; }
+  .home-hub-grid .hub-card { min-height: 220px; padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero--visual *, .home-hub-grid .hub-card { transition: none !important; }
+}
+@media print {
+  .hero--visual .snapshot {
+    background: #fff !important;
+    color: #000;
+    min-height: 0;
+  }
+  .hero--visual .snapshot h2,
+  .hero--visual .snapshot dt,
+  .hero--visual .snapshot dd,
+  .hero--visual .snapshot small,
+  .hero--visual .snapshot .progress-head,
+  .hero--visual .snapshot .progress-head b { color: #000; }
+}
