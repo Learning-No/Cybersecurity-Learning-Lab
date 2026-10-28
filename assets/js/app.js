@@ -116,6 +116,11 @@
     });
   };
   navMenus.forEach(menu => {
+    // Close sibling dropdowns before the clicked summary toggles, so only one can remain open.
+    const summary = menu.querySelector(':scope > summary');
+    if (summary) {
+      summary.addEventListener('click', () => closeNavMenus(menu), true);
+    }
     menu.addEventListener('toggle', () => {
       if (menu.open) closeNavMenus(menu);
     });
