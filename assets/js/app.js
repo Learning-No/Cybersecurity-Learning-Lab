@@ -131,4 +131,38 @@
       if (activeSummary && activeSummary.matches('.nav-group > summary')) activeSummary.focus();
     }
   });
+
+  // Accessible horizontal card carousels for notes and weekly lab cards.
+  const carouselButtons = [...document.querySelectorAll('[data-carousel-prev], [data-carousel-next]')];
+  const updateCarouselControls = id => {
+    const track = document.getElementById(id);
+    if (!track) return;
+    const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+    document.querySelectorAll('[data-carousel-prev="' + id + '"]').forEach(button => {
+      button.disabled = track.scrollLeft <= 2;
+    });
+    document.querySelectorAll('[data-carousel-next="' + id + '"]').forEach(button => {
+      button.disabled = track.scrollLeft >= maxScroll - 2;
+    });
+  };
+  const carouselStep = track => {
+    const item = track.querySelector(':scope > .note-card, :scope > .week-card');
+    if (!item) return Math.max(240, track.clientWidth * .8);
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+    return item.getBoundingClientRect().width + gap;
+  };
+  carouselButtons.forEach(button => {
+    const id = button.dataset.carouselPrev || button.dataset.carouselNext;
+    const track = document.getElementById(id);
+    if (!track) return;
+    button.addEventListener('click', () => {
+      const direction = button.hasAttribute('data-carousel-next') ? 1 : -1;
+      track.scrollBy({ left: direction * carouselStep(track), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+    track.addEventListener('scroll', () => updateCarouselControls(id), { passive: true });
+    window.addEventListener('resize', () => updateCarouselControls(id));
+    updateCarouselControls(id);
+  });
+
 })();
