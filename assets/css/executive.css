@@ -2063,3 +2063,81 @@ hr, .footer-bottom, .section, .section-head, .phase-head { border-color: #fff !i
     width: min(290px, calc(100vw - 36px)) !important;
   }
 }
+
+
+/* Site-wide contrast recovery: readable white-on-black canvas, black-on-white surfaces.
+   Keep these rules last so older component styles cannot override accessible text colors. */
+:root { color-scheme: dark; }
+html, body, main, #main-content, .page-shell, .site-main {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+body :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,figcaption,legend,label,summary,small,span,strong,em) {
+  color: inherit;
+}
+body :is(.site-header,.csll-header,.inner-site-nav,.primary-nav,.nav-inner,.notice-bar) {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+.inner-site-nav .nav-inner > a,
+.inner-site-nav .nav-group > summary,
+.inner-site-nav .nav-inner > a[aria-current="page"] {
+  color: #fff !important;
+  background: #000 !important;
+}
+.inner-site-nav .nav-inner > a:hover,
+.inner-site-nav .nav-group > summary:hover,
+.inner-site-nav .nav-group[open] > summary,
+.inner-site-nav .nav-inner > a:focus-visible {
+  color: #000 !important;
+  background: #fff !important;
+}
+body a { color: #fff; }
+body a:focus-visible { outline: 2px solid #fff !important; outline-offset: 3px; }
+:where(.summary-card,.note-card,.week-card,.hub-card,.feature-panel,.snapshot,
+.kpi,.kpi-card,.phase,.phase-card,.stage,.resource-card,.tool-card,.concept-card,
+.roadmap-card,.lab-card,.portal-card,.novel-card,.episode-card,.callout,.code-panel,
+.diagram-card,.search-panel,.toolbar,.notes-carousel,.weeks-carousel,.kpis-carousel,
+.panel,.ethics,.filter-chip,.episode-placeholder,.episode-quiz,.episode-diagram,
+.novel-tab,.novel-panel,.episode-panel,.diagram-node,.comparison-table,.diagram-panel,
+.arch-zone,.network-cloud,.concept-facts,.phase-head) {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+:where(.summary-card,.note-card,.week-card,.hub-card,.feature-panel,.snapshot,
+.kpi,.kpi-card,.phase,.phase-card,.stage,.resource-card,.tool-card,.concept-card,
+.roadmap-card,.lab-card,.portal-card,.novel-card,.episode-card,.callout,.code-panel,
+.diagram-card,.search-panel,.toolbar,.notes-carousel,.weeks-carousel,.kpis-carousel,
+.panel,.filter-chip,.episode-placeholder,.episode-quiz,.episode-diagram,.novel-tab,
+.novel-panel,.episode-panel,.diagram-node,.comparison-table,.diagram-panel,.arch-zone,
+.network-cloud,.concept-facts,.phase-head) :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,blockquote,
+figcaption,legend,label,small,span,strong,em,summary,a,code,pre,th,td) {
+  color: #000 !important;
+}
+:where(.summary-card,.note-card,.week-card,.hub-card,.feature-panel,.snapshot,
+.kpi,.kpi-card,.phase,.phase-card,.stage,.resource-card,.tool-card,.concept-card,
+.roadmap-card,.lab-card,.portal-card,.novel-card,.episode-card,.callout,.code-panel,
+.diagram-card,.search-panel,.toolbar,.panel,.filter-chip,.episode-placeholder,
+.episode-quiz,.episode-diagram,.novel-tab,.novel-panel,.episode-panel) a {
+  color: #000 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+:where(input,select,textarea,button,.button,.btn) {
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+}
+input::placeholder, textarea::placeholder { color: #555 !important; opacity: 1; }
+:where(.hero,.program-overview,.csll-footer,.ethics) {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+:where(.hero,.program-overview,.csll-footer,.ethics) :is(h1,h2,h3,h4,p,li,span,strong,small,a,em) {
+  color: #fff !important;
+}
+.breadcrumbs, .breadcrumbs a, .page-actions { color: #fff !important; }
