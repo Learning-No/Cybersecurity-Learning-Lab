@@ -756,3 +756,41 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .note-card:hover, a.hub-card:hover { transform: none; }
 }
+
+
+/* Final QA: keep the visual refresh accessible and print-friendly. */
+:focus-visible {
+  outline: 3px solid #087f8c;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@media print {
+  .hero {
+    display: block;
+    margin: 0;
+    padding: 0 0 12pt;
+    border-radius: 0;
+    background: #fff;
+    overflow: visible;
+  }
+  .hero::after { display: none; }
+  .snapshot {
+    background: #fff !important;
+    color: #000;
+    border: 1px solid #999;
+    box-shadow: none;
+  }
+  .snapshot h2, .snapshot dt, .snapshot dd, .snapshot small,
+  .snapshot .progress-head, .snapshot .progress-head b { color: #000; }
+  .ethics {
+    background: #fff;
+    color: #000;
+    border: 1px solid #999;
+    box-shadow: none;
+  }
+  .ethics h2, .ethics p, .principles li { color: #000; }
+  .summary-card, .phase, .panel, .hub-card, .note-card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
