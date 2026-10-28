@@ -2764,3 +2764,65 @@ pre code { padding: 0; background: transparent !important; color: inherit !impor
   .stats-grid strong { color: #000 !important; }
   a { text-decoration: underline; }
 }
+
+
+/* Homepage layout fixes: keep the hero centered and prevent the responsible-use
+   band from extending beyond the viewport at desktop and mobile widths. */
+.hero.hero--visual {
+  width: auto;
+  max-width: none;
+  box-sizing: border-box;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+.hero.hero--visual .hero-copy {
+  width: min(820px, 100%);
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  justify-self: center;
+  text-align: center;
+}
+.hero.hero--visual h1 {
+  width: 100%;
+  max-width: 15ch;
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+}
+.hero.hero--visual .lead {
+  width: 100%;
+  max-width: 62ch;
+  margin-inline: auto;
+  overflow-wrap: break-word;
+}
+.ethics.ethics--home {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ethics.ethics--home > div {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+}
+.ethics.ethics--home h2,
+.ethics.ethics--home p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+@media (max-width: 700px) {
+  .hero.hero--visual {
+    width: auto;
+    margin-inline: -18px;
+  }
+  .hero.hero--visual h1 {
+    max-width: 13ch;
+    font-size: clamp(2.25rem, 8vw, 3rem);
+  }
+  .ethics.ethics--home {
+    gap: 14px;
+    padding: 18px;
+  }
+}
