@@ -1162,3 +1162,124 @@ main>section:not(.hero):not(.kpis):not(.ethics):not(.portal-shell):not(.novel-pa
  html{scroll-behavior:auto}
  .summary-card,.panel,.phase,.week-card,.note-card,.tool-entry,.resource-card,.concept-card{transition:none}
 }
+
+
+/* 13. Squarespace-inspired homepage composition for CSLL */
+.header-inner{max-width:1500px;min-height:88px;padding:12px clamp(18px,4vw,56px);gap:24px}
+.header-actions{display:flex;align-items:center;justify-content:space-between;gap:clamp(16px,3vw,42px);flex:1;min-width:0}
+.header-actions a{text-decoration:none;font-size:13px;font-weight:650;color:var(--ink);white-space:nowrap}
+.header-actions-primary,.header-actions-account{display:flex;align-items:center;gap:clamp(12px,2vw,28px)}
+.header-actions-primary{margin-left:auto}
+.header-actions-primary a:hover,.header-login:hover{color:var(--accent)}
+.header-actions-account{margin-left:auto}
+.header-actions-account .header-get-started{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;padding:14px 20px;border-radius:999px}
+.header-actions-account .header-get-started:hover{background:var(--accent-dark);color:#fff}
+.inner-site-nav{background:#fff;border-bottom:1px solid var(--line)}
+.inner-site-nav .primary-nav{max-width:1440px;margin:auto;padding:8px clamp(18px,3vw,42px)}
+.inner-site-nav .nav-inner{justify-content:flex-start}
+.hero--visual{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(32px,7vw,100px);padding-top:clamp(72px,10vw,142px);padding-bottom:clamp(72px,9vw,120px);min-height:610px}
+.hero--visual h1{font:600 clamp(3.6rem,8vw,7.4rem)/.96 var(--sans);letter-spacing:-.085em;max-width:9ch}
+.hero--visual h1 em{font-style:normal;color:var(--accent)}
+.hero--visual .eyebrow{margin-bottom:24px}
+.hero--visual .lead{font-size:clamp(1.08rem,1.45vw,1.28rem);max-width:49ch;line-height:1.65;margin-top:28px}
+.hero--visual .actions{align-items:center;gap:20px;margin-top:32px}
+.hero--visual .actions .primary{text-transform:uppercase;letter-spacing:.08em;padding:17px 26px}
+.hero-assurance{display:block;color:var(--muted);font-size:13px}
+.hero--visual .snapshot{min-height:500px;border-radius:4px 100px 4px 4px;background:linear-gradient(160deg,rgba(21,18,48,.84),rgba(14,92,89,.55)),url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85") center/cover}
+.hero--visual .snapshot h2{font-size:12px;letter-spacing:.16em}
+.hero--visual .snapshot .row{padding:16px 0}
+.hero--visual .snapshot .progress{background:rgba(255,255,255,.1);border-radius:14px;padding:18px;margin-top:26px}
+.hero--visual .snapshot .bar{background:rgba(255,255,255,.24)}
+.section{padding:clamp(76px,9vw,132px) 0 0}
+.section-head{gap:clamp(24px,5vw,72px);margin-bottom:clamp(28px,4vw,48px)}
+.section-head h2,.ethics h2{font:600 clamp(2.3rem,5vw,4.4rem)/1.02 var(--sans);letter-spacing:-.07em}
+.section-head>p{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7}
+#summary .section-head{align-items:start}
+.summary-grid{gap:18px}
+.summary-card{border:0;border-top:1px solid var(--line-strong);border-radius:0;background:transparent;box-shadow:none;padding:26px 12px 20px 0}
+.summary-card h3{font:650 1.4rem var(--sans);letter-spacing:-.04em}
+.summary-card p{font-size:15.5px;line-height:1.8}
+#career-roadmap .stages{gap:16px}
+#career-roadmap .stages article{padding:22px 18px;background:#fff;border:1px solid var(--line);border-radius:4px 34px 4px 4px}
+#career-roadmap .stages article::before{display:none}
+#career-roadmap .stages article>b{background:var(--accent);width:44px;height:44px}
+#career-roadmap .stages h3{font:650 1.15rem/1.3 var(--sans);letter-spacing:-.035em}
+#career-roadmap .stages p{line-height:1.65}
+.kpis{margin-top:clamp(64px,8vw,110px);border:0;border-radius:0;box-shadow:none;background:#211a3a;color:#fff;grid-template-columns:repeat(4,minmax(0,1fr))}
+.kpis>div{padding:clamp(24px,3.5vw,48px);border-right:1px solid rgba(255,255,255,.2)}
+.kpis b{font:600 clamp(2.7rem,5vw,4.6rem)/1 var(--sans);letter-spacing:-.07em;color:#fff}
+.kpis span{color:#e4deef;font-size:13px;line-height:1.6}
+.homepage-nav{position:relative;z-index:5;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:clamp(8px,1.4vw,22px);margin:clamp(60px,8vw,112px) 0 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.homepage-nav>a,.homepage-nav summary{display:inline-flex;align-items:center;gap:7px;padding:10px 12px;border-radius:999px;color:var(--ink);font-size:13px;font-weight:650;text-decoration:none;list-style:none;cursor:pointer;white-space:nowrap}
+.homepage-nav summary::-webkit-details-marker{display:none}
+.homepage-nav>a:hover,.homepage-nav summary:hover{background:var(--accent-tint);color:var(--accent-dark)}
+.homepage-nav details{position:relative}
+.homepage-nav details>div{position:absolute;top:calc(100% + 7px);left:0;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow-md);display:none;z-index:20}
+.homepage-nav details[open]>div{display:grid}
+.homepage-nav details>div a{padding:10px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:13px}
+.homepage-nav details>div a:hover{background:var(--accent-tint)}
+#notes{padding-top:clamp(60px,7vw,100px)}
+#notes .section-head h2{max-width:11ch}
+#notes .toolbar{max-width:700px;margin-bottom:26px}
+#notes .notes{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+#notes .note-card{min-height:300px;border:0;border-radius:3px;background:#fff;padding:0 0 24px;overflow:hidden;box-shadow:none}
+#notes .note-card::before{content:"";display:block;height:190px;margin-bottom:22px;background:linear-gradient(135deg,rgba(23,22,54,.08),rgba(22,139,131,.28)),url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80") center/cover}
+#notes .note-card:nth-child(3n + 2)::before{background-image:linear-gradient(135deg,rgba(23,22,54,.1),rgba(22,139,131,.28)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80")}
+#notes .note-card:nth-child(3n)::before{background-image:linear-gradient(135deg,rgba(23,22,54,.1),rgba(22,139,131,.28)),url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80")}
+#notes .note-card .tag,#notes .note-card h3,#notes .note-card p,#notes .note-card small{margin-left:22px;margin-right:22px}
+#notes .note-card .tag{align-self:flex-start}
+#notes .note-card h3{font:650 1.35rem/1.25 var(--sans);letter-spacing:-.045em;margin-top:14px}
+#notes .note-card p{line-height:1.7}
+#learning-library .home-hub-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+#learning-library .hub-card{min-height:275px;border-radius:4px 30px 4px 4px;padding:24px;border:1px solid var(--line);background:#fff}
+#learning-library .hub-card h2{font:650 1.25rem/1.2 var(--sans);letter-spacing:-.045em}
+#learning-library .hub-card:nth-child(3n + 1){background:#e7f4f1}
+#learning-library .hub-card:nth-child(3n + 2){background:#f0ecf7}
+#vapt-sprint .phases{gap:14px}
+#vapt-sprint .phase{border-radius:4px 28px 4px 4px}
+#vapt-sprint .phase-head{padding:clamp(22px,2.8vw,34px);background:#f0ecf7}
+#vapt-sprint .phase:nth-child(2) .phase-head{background:#e7f4f1}
+#vapt-sprint .phase:nth-child(3) .phase-head{background:#fbf1df}
+#vapt-sprint .phase-head h3{font:650 1.35rem/1.2 var(--sans);letter-spacing:-.04em}
+#roadmap .tracks{gap:18px}
+#roadmap .panel{border-radius:4px 30px 4px 4px}
+.ethics--home{border-radius:4px 46px 4px 4px;margin-top:clamp(70px,9vw,120px)}
+.feature-pair-section{padding-bottom:clamp(72px,9vw,128px)}
+.feature-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.feature-panel{min-height:390px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:clamp(28px,4vw,52px);color:#fff;background:linear-gradient(180deg,rgba(25,22,48,.05),rgba(25,22,48,.86)),url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85") center/cover;border-radius:4px 60px 4px 4px;overflow:hidden}
+.feature-panel--portfolio{background-image:linear-gradient(180deg,rgba(25,22,48,.05),rgba(25,22,48,.88)),url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85")}
+.feature-panel .eyebrow{color:#baf0e4}
+.feature-panel h3{font:650 clamp(2rem,4vw,3.4rem)/1.02 var(--sans);letter-spacing:-.06em;color:#fff;max-width:13ch;margin-bottom:16px}
+.feature-panel p:not(.eyebrow){max-width:55ch;color:#f3effa;line-height:1.7}
+.feature-panel .primary{margin-top:10px;background:#fff;color:var(--ink);border-color:#fff}
+.feature-panel .primary:hover{background:#baf0e4;border-color:#baf0e4;color:var(--ink)}
+@media(max-width:1000px){
+ .header-inner{flex-wrap:wrap;min-height:unset;padding-block:14px}
+ .header-actions{flex-wrap:wrap;gap:12px}
+ .header-actions-primary{margin-left:auto}
+ .header-actions-account{margin-left:auto}
+ #learning-library .home-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #career-roadmap .stages{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+ .homepage-nav{justify-content:flex-start}
+}
+@media(max-width:700px){
+ .header-inner{align-items:flex-start;gap:14px}
+ .header-actions{flex:1 1 100%;display:flex;align-items:stretch;flex-direction:column}
+ .header-actions-primary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+ .header-actions-primary a{white-space:normal;padding:10px 12px;background:#f1edf7;border-radius:10px}
+ .header-actions-account{margin:0;justify-content:flex-end}
+ .hero--visual{grid-template-columns:1fr;min-height:0;padding-top:52px;gap:30px}
+ .hero--visual h1{font-size:clamp(3.2rem,15vw,5.4rem);max-width:10ch}
+ .hero--visual .snapshot{min-height:380px}
+ .summary-grid{grid-template-columns:1fr;gap:8px}
+ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kpis>div:nth-child(2){border-right:0}
+ .kpis>div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.2)}
+ .homepage-nav{gap:3px;justify-content:flex-start}
+ .homepage-nav>a,.homepage-nav summary{font-size:12px;padding:9px}
+ #career-roadmap .stages{grid-template-columns:1fr}
+ #notes .notes{grid-template-columns:1fr}
+ #notes .note-card::before{height:220px}
+ #learning-library .home-hub-grid,.feature-pair{grid-template-columns:1fr}
+ .feature-panel{min-height:350px}
+}

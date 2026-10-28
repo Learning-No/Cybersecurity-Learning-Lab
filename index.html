@@ -8,17 +8,17 @@ description: A structured, authorization-first cybersecurity learning program - 
 <section class="hero hero--visual" aria-labelledby="hero-title">
   <div>
     <p class="eyebrow">Cybersecurity Learning Lab · Program overview</p>
-    <h1 id="hero-title">Learn cybersecurity by doing. <em>Build skills that matter.</em></h1>
-    <p class="lead">Explore cybersecurity through clear visual guides, hands-on practice, and a 12-week learning path—from networking fundamentals to a responsible, evidence-based security report.</p>
+    <h1 id="hero-title">Cybersecurity skills. <em>Made real.</em></h1>
+    <p class="lead">Build practical cybersecurity skills with clear visual guides, safe hands-on practice, and a guided 12-week path—from networking fundamentals to an evidence-based security report.</p>
     <p class="actions">
-      <a class="primary" href="#vapt-sprint">Explore the 12-week path <span aria-hidden="true">→</span></a>
-      <a class="secondary" href="#learning-library">Explore learning resources</a>
+      <a class="primary" href="{{ '/student-portal/' | relative_url }}">Get started <span aria-hidden="true">→</span></a>
+      <span class="hero-assurance">Start learning for free. No credit card required.</span>
       <a class="secondary" href="{{ '/student-portal/' | relative_url }}">Student portal</a>
     </p>
   </div>
 
   <aside class="snapshot" aria-labelledby="snapshot-title">
-    <h2 id="snapshot-title">Program snapshot</h2>
+    <h2 id="snapshot-title">Your learning path</h2>
     <dl>
       <div class="row"><dt>Duration</dt><dd>12 weeks</dd></div>
       <div class="row"><dt>Delivery</dt><dd>Self-paced or instructor-led</dd></div>
@@ -34,12 +34,7 @@ description: A structured, authorization-first cybersecurity learning program - 
   </aside>
 </section>
 
-<section class="kpis" aria-label="Program at a glance">
-  <div><b>12</b><span>Weekly guides, each with a deliverable and self-check</span></div>
-  <div><b>{{ site.notes.size }}</b><span>Reference notes and lab write-ups</span></div>
-  <div><b>{{ concept_pages.size }}</b><span>Illustrated concept explainers</span></div>
-  <div><b>8</b><span>Program components, from labs to architecture</span></div>
-</section>
+
 
 <section id="summary" class="section" aria-labelledby="summary-title">
   <div class="section-head">
@@ -50,6 +45,76 @@ description: A structured, authorization-first cybersecurity learning program - 
     <article class="summary-card"><h3>Objective</h3><p>Develop practical, defensible security skills grounded in networking, web technology, operating systems, identity, and risk, rather than a collection of tool commands.</p></article>
     <article class="summary-card"><h3>Approach</h3><p>Every weekly guide states a learning goal, a safe scope, a guided exercise, a deliverable, a self-check, and a completion checklist, all run in an isolated lab with fictional data.</p></article>
     <article class="summary-card"><h3>Outcome</h3><p>A sanitized assessment report, a remediation register, and an honest reflection: portfolio evidence that a learner can scope, test responsibly, rate risk, and communicate findings.</p></article>
+  </div>
+</section>
+
+<section id="career-roadmap" class="section" aria-labelledby="skills-title">
+  <div class="section-head">
+    <div><p class="eyebrow">04 · Skills progression</p><h2 id="skills-title">Build skills in layers</h2></div>
+    <p>Understanding and documenting the basics is more valuable than rushing through tools.</p>
+  </div>
+  <div class="stages">
+    {% assign stages = "01|IT & networking fundamentals|TCP/IP, DNS, HTTP/S, ports, routing, operating systems, command line, and virtualization.|Foundation~02|Security essentials|CIA triad, authentication, authorization, encryption, vulnerabilities, and threat modelling.|Core skills~03|Practice safely|Use intentionally vulnerable applications, local virtual machines, and guided labs. Keep targets isolated.|Hands-on~04|Choose a specialization|Explore VAPT, SOC and detection, digital forensics, cloud security, AppSec, or governance and risk.|Specialize~05|Document & demonstrate|Write reproducible lab notes, explain impact and remediation, and build a portfolio.|Portfolio" | split: "~" %}
+    {% for item in stages %}{% assign s = item | split: "|" %}
+    <article><b>{{ s[0] }}</b><h3>{{ s[1] | escape }}</h3><p>{{ s[2] | escape }}</p><span class="tag">{{ s[3] }}</span></article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="kpis" aria-label="Program at a glance">
+  <div><b>12</b><span>Weekly guides, each with a deliverable and self-check</span></div>
+  <div><b>{{ site.notes.size }}</b><span>Reference notes and lab write-ups</span></div>
+  <div><b>{{ concept_pages.size }}</b><span>Illustrated concept explainers</span></div>
+  <div><b>8</b><span>Program components, from labs to architecture</span></div>
+</section>
+
+<nav class="homepage-nav" aria-label="Explore CSLL">
+  <a href="{{ '/' | relative_url }}" aria-current="page">Overview</a>
+  <details><summary>Curriculum <span aria-hidden="true">▾</span></summary><div><a href="{{ '/concepts/' | relative_url }}">Cybersecurity concepts</a><a href="{{ '/architecture/' | relative_url }}">Security architecture</a><a href="{{ '/practice/' | relative_url }}">Practice exercises</a></div></details>
+  <details><summary>Learning paths <span aria-hidden="true">▾</span></summary><div><a href="{{ '/roadmaps/' | relative_url }}">Career roadmaps</a><a href="{{ '/labs/' | relative_url }}">Safe lab setup</a><a href="{{ '/instructors/' | relative_url }}">Educator guide</a></div></details>
+  <details><summary>Tools &amp; resources <span aria-hidden="true">▾</span></summary><div><a href="{{ '/tools/' | relative_url }}">Tool directory</a><a href="{{ '/tools/catalog/' | relative_url }}">Tool catalog</a><a href="{{ '/resources/' | relative_url }}">Guides, PDFs &amp; resources</a></div></details>
+  <a href="{{ '/student-portal/' | relative_url }}">Student portal</a>
+  <a href="{{ '/novels/' | relative_url }}">Novel</a>
+  <a href="https://github.com/Learning-No/Cybersecurity-Learning-Lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</nav>
+
+<section id="notes" class="section" aria-labelledby="notes-title">
+  <div class="section-head">
+    <div><p class="eyebrow">06 · Knowledge base</p><h2 id="notes-title">Notes from the lab</h2></div>
+    <p>Search weekly guides and reference notes by topic, tool, or week.</p>
+  </div>
+  <div class="toolbar">
+    <input id="note-search" type="search" placeholder="Search notes, topics, tools…" aria-label="Search notes">
+    <span>{{ site.notes.size }} NOTES</span>
+  </div>
+  <div id="notes-grid" class="notes">
+    {% assign sorted_notes = site.notes | sort: "week" %}
+    {% for note in sorted_notes %}
+    <a class="note-card" href="{{ note.url | relative_url }}" data-search="{{ note.title | downcase | escape }} {{ note.summary | downcase | escape }} {{ note.week | downcase | escape }} {{ note.track | downcase | escape }}">
+      <span class="tag">{{ note.week | default: "Note" }}</span>
+      <h3>{{ note.title | escape }}</h3>
+      <p>{{ note.summary | escape }}</p>
+      <small>{{ note.level | default: "Beginner" }} · Read note →</small>
+    </a>
+    {% endfor %}
+  </div>
+  <p id="empty-state" hidden>No notes match that search. Try another keyword.</p>
+</section>
+
+<section id="learning-library" class="section" aria-labelledby="library-title">
+  <div class="section-head">
+    <div><p class="eyebrow">03 · Program components</p><h2 id="library-title">Everything in one place</h2></div>
+    <p>Each component supports the weekly plan with diagrams, guided steps, tool recommendations, and reliable reading.</p>
+  </div>
+  <div class="hub-grid home-hub-grid">
+    <a class="hub-card" href="{{ '/concepts/' | relative_url }}"><p class="tag">Learn the why</p><h2>Concept library</h2><p>IP addressing, subnets, TCP/UDP, DNS, HTTP/HTTPS, and ports, with diagrams and practice steps.</p><span class="card-link">Explore concepts →</span></a>
+    <a class="hub-card" href="{{ '/tools/' | relative_url }}"><p class="tag">Open source first</p><h2>Tool directory</h2><p>Open-source networking, packet analysis, web security, and defensive tools with safe starter examples.</p><span class="card-link">Find a tool →</span></a>
+    <a class="hub-card" href="{{ '/labs/' | relative_url }}"><p class="tag">Set up safely</p><h2>Lab setup guide</h2><p>Build a local, isolated practice environment with verification, reset steps, and troubleshooting.</p><span class="card-link">Build your lab →</span></a>
+    <a class="hub-card" href="{{ '/instructors/' | relative_url }}"><p class="tag">For educators</p><h2>College training guide</h2><p>A weekly delivery plan, safety pre-flight checklist, and assessment rubric for a supervised cohort.</p><span class="card-link">Open instructor guide →</span></a>
+    <a class="hub-card" href="{{ '/roadmaps/' | relative_url }}"><p class="tag">Plan your path</p><h2>Career roadmaps</h2><p>Foundations, VAPT, SOC, application security, cloud, and architecture, with next steps for each.</p><span class="card-link">Choose a roadmap →</span></a>
+    <a class="hub-card" href="{{ '/architecture/' | relative_url }}"><p class="tag">Think like a designer</p><h2>Security architecture</h2><p>Draw data flows, mark trust boundaries, reason about threats, select controls, and document trade-offs.</p><span class="card-link">Learn the process →</span></a>
+    <a class="hub-card" href="{{ '/practice/' | relative_url }}"><p class="tag">Build experience</p><h2>Free practice lab</h2><p>Small exercises, guided platforms, weekly projects, and a repeatable learning-log template.</p><span class="card-link">Start practicing →</span></a>
+    <a class="hub-card" href="{{ '/resources/' | relative_url }}"><p class="tag">Read &amp; stay current</p><h2>Resources &amp; news</h2><p>Official guides, free publications, security advisories, vulnerability databases, and technology reading.</p><span class="card-link">Open the learning shelf →</span></a>
   </div>
 </section>
 
@@ -95,36 +160,6 @@ description: A structured, authorization-first cybersecurity learning program - 
   </div>
 </section>
 
-<section id="learning-library" class="section" aria-labelledby="library-title">
-  <div class="section-head">
-    <div><p class="eyebrow">03 · Program components</p><h2 id="library-title">Everything in one place</h2></div>
-    <p>Each component supports the weekly plan with diagrams, guided steps, tool recommendations, and reliable reading.</p>
-  </div>
-  <div class="hub-grid home-hub-grid">
-    <a class="hub-card" href="{{ '/concepts/' | relative_url }}"><p class="tag">Learn the why</p><h2>Concept library</h2><p>IP addressing, subnets, TCP/UDP, DNS, HTTP/HTTPS, and ports, with diagrams and practice steps.</p><span class="card-link">Explore concepts →</span></a>
-    <a class="hub-card" href="{{ '/tools/' | relative_url }}"><p class="tag">Open source first</p><h2>Tool directory</h2><p>Open-source networking, packet analysis, web security, and defensive tools with safe starter examples.</p><span class="card-link">Find a tool →</span></a>
-    <a class="hub-card" href="{{ '/labs/' | relative_url }}"><p class="tag">Set up safely</p><h2>Lab setup guide</h2><p>Build a local, isolated practice environment with verification, reset steps, and troubleshooting.</p><span class="card-link">Build your lab →</span></a>
-    <a class="hub-card" href="{{ '/instructors/' | relative_url }}"><p class="tag">For educators</p><h2>College training guide</h2><p>A weekly delivery plan, safety pre-flight checklist, and assessment rubric for a supervised cohort.</p><span class="card-link">Open instructor guide →</span></a>
-    <a class="hub-card" href="{{ '/roadmaps/' | relative_url }}"><p class="tag">Plan your path</p><h2>Career roadmaps</h2><p>Foundations, VAPT, SOC, application security, cloud, and architecture, with next steps for each.</p><span class="card-link">Choose a roadmap →</span></a>
-    <a class="hub-card" href="{{ '/architecture/' | relative_url }}"><p class="tag">Think like a designer</p><h2>Security architecture</h2><p>Draw data flows, mark trust boundaries, reason about threats, select controls, and document trade-offs.</p><span class="card-link">Learn the process →</span></a>
-    <a class="hub-card" href="{{ '/practice/' | relative_url }}"><p class="tag">Build experience</p><h2>Free practice lab</h2><p>Small exercises, guided platforms, weekly projects, and a repeatable learning-log template.</p><span class="card-link">Start practicing →</span></a>
-    <a class="hub-card" href="{{ '/resources/' | relative_url }}"><p class="tag">Read &amp; stay current</p><h2>Resources &amp; news</h2><p>Official guides, free publications, security advisories, vulnerability databases, and technology reading.</p><span class="card-link">Open the learning shelf →</span></a>
-  </div>
-</section>
-
-<section id="career-roadmap" class="section" aria-labelledby="skills-title">
-  <div class="section-head">
-    <div><p class="eyebrow">04 · Skills progression</p><h2 id="skills-title">Build skills in layers</h2></div>
-    <p>Understanding and documenting the basics is more valuable than rushing through tools.</p>
-  </div>
-  <div class="stages">
-    {% assign stages = "01|IT & networking fundamentals|TCP/IP, DNS, HTTP/S, ports, routing, operating systems, command line, and virtualization.|Foundation~02|Security essentials|CIA triad, authentication, authorization, encryption, vulnerabilities, and threat modelling.|Core skills~03|Practice safely|Use intentionally vulnerable applications, local virtual machines, and guided labs. Keep targets isolated.|Hands-on~04|Choose a specialization|Explore VAPT, SOC and detection, digital forensics, cloud security, AppSec, or governance and risk.|Specialize~05|Document & demonstrate|Write reproducible lab notes, explain impact and remediation, and build a portfolio.|Portfolio" | split: "~" %}
-    {% for item in stages %}{% assign s = item | split: "|" %}
-    <article><b>{{ s[0] }}</b><h3>{{ s[1] | escape }}</h3><p>{{ s[2] | escape }}</p><span class="tag">{{ s[3] }}</span></article>
-    {% endfor %}
-  </div>
-</section>
-
 <section id="roadmap" class="section" aria-labelledby="tracks-title">
   <div class="section-head">
     <div><p class="eyebrow">05 · Learning tracks</p><h2 id="tracks-title">Milestone checklists</h2></div>
@@ -158,29 +193,6 @@ description: A structured, authorization-first cybersecurity learning program - 
   </div>
 </section>
 
-<section id="notes" class="section" aria-labelledby="notes-title">
-  <div class="section-head">
-    <div><p class="eyebrow">06 · Knowledge base</p><h2 id="notes-title">Notes from the lab</h2></div>
-    <p>Search weekly guides and reference notes by topic, tool, or week.</p>
-  </div>
-  <div class="toolbar">
-    <input id="note-search" type="search" placeholder="Search notes, topics, tools…" aria-label="Search notes">
-    <span>{{ site.notes.size }} NOTES</span>
-  </div>
-  <div id="notes-grid" class="notes">
-    {% assign sorted_notes = site.notes | sort: "week" %}
-    {% for note in sorted_notes %}
-    <a class="note-card" href="{{ note.url | relative_url }}" data-search="{{ note.title | downcase | escape }} {{ note.summary | downcase | escape }} {{ note.week | downcase | escape }} {{ note.track | downcase | escape }}">
-      <span class="tag">{{ note.week | default: "Note" }}</span>
-      <h3>{{ note.title | escape }}</h3>
-      <p>{{ note.summary | escape }}</p>
-      <small>{{ note.level | default: "Beginner" }} · Read note →</small>
-    </a>
-    {% endfor %}
-  </div>
-  <p id="empty-state" hidden>No notes match that search. Try another keyword.</p>
-</section>
-
 <section id="ethics" class="ethics ethics--home" aria-labelledby="ethics-title">
   <div>
     <p class="eyebrow">Governance &amp; safeguards</p>
@@ -194,4 +206,20 @@ description: A structured, authorization-first cybersecurity learning program - 
     </ul>
   </div>
   <a class="secondary" href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener">Read the testing guide ↗</a>
+</section>
+
+<section id="next-steps" class="section feature-pair-section" aria-labelledby="next-steps-title">
+  <div class="section-head"><div><p class="eyebrow">Keep building</p><h2 id="next-steps-title">Your next step starts here</h2></div><p>Use guided prompts to deepen understanding, then turn your practice into evidence you can explain.</p></div>
+  <div class="feature-pair">
+    <article class="feature-panel feature-panel--ai">
+      <p class="eyebrow">Study smarter</p><h3>Learn with AI. Think for yourself.</h3>
+      <p>Use AI responsibly to clarify concepts, quiz yourself, review sanitized notes, and improve report structure. Verify every claim and never share secrets or private evidence.</p>
+      <a class="primary" href="{{ '/resources/' | relative_url }}">Explore learning resources <span aria-hidden="true">→</span></a>
+    </article>
+    <article class="feature-panel feature-panel--portfolio">
+      <p class="eyebrow">Make your work visible</p><h3>Build your security portfolio.</h3>
+      <p>Turn safe lab exercises into a clear project page with scope, methodology, sanitized evidence, risk ratings, remediation, and lessons learned.</p>
+      <a class="primary" href="{{ '/student-portal/' | relative_url }}">Open student portal <span aria-hidden="true">→</span></a>
+    </article>
+  </div>
 </section>
