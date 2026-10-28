@@ -68,3 +68,14 @@
 .novel-tab[aria-selected="true"] { border: 2px solid #000 !important; }
 .diagram-node { background: #fff !important; color: #000 !important; border-color: #000 !important; }
 .diagram-arrow, .diagram-caption, .episode-diagram > p:first-child { color: #000 !important; }
+
+
+/* Novel readability patch: keep reading panels and diagrams high contrast. */
+.novel-page { background: #000 !important; color: #fff !important; }
+.novel-page :is(h1,h2,h3,h4,p,li,strong,em,span,small) { color: #fff; }
+.novel-page :is(.novel-panel,.episode-panel,.episode-quiz,.episode-diagram,.episode-placeholder,.novel-tab,.diagram-node) {
+  background: #fff !important; color: #000 !important; border-color: #000 !important;
+}
+.novel-page :is(.novel-panel,.episode-panel,.episode-quiz,.episode-diagram,.episode-placeholder,.novel-tab,.diagram-node)
+:is(h1,h2,h3,h4,p,li,strong,em,span,small,label,legend,blockquote,a) { color: #000 !important; }
+.novel-page .novel-intro { color: #fff !important; }
