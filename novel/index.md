@@ -13,7 +13,7 @@ permalink: /novel/
 .novel-hero h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:12px 0}
 .novel-hero .lead{max-width:68ch;font-size:17px}
 .novel-tablist{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
-.novel-tab{appearance:none;border:1px solid #a9beb5;background:#fff;color:#174b38;padding:11px 15px;border-radius:10px;font:700 14px/1.3 inherit;cursor:pointer}
+.novel-tab{appearance:none;border:1px solid #a9beb5;background:#fff;color:#174b38;padding:11px 15px;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;line-height:1.3;cursor:pointer}
 .novel-tab:hover{background:#edf7f1;border-color:#2f8061}
 .novel-tab[aria-selected=true]{background:#176548;border-color:#176548;color:#fff}
 .novel-tab:focus-visible{outline:3px solid #7bc6a7;outline-offset:3px}
