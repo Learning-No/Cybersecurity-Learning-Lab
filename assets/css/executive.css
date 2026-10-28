@@ -2826,3 +2826,61 @@ pre code { padding: 0; background: transparent !important; color: inherit !impor
     padding: 18px;
   }
 }
+
+
+/* Final centering + responsive sizing for the homepage hero and safety banner. */
+.hero.hero--visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  padding-inline: clamp(18px, 5vw, 64px);
+  text-align: center;
+}
+.hero.hero--visual .hero-copy {
+  flex: 0 1 820px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero.hero--visual .eyebrow,
+.hero.hero--visual h1,
+.hero.hero--visual .lead,
+.hero.hero--visual .actions,
+.hero.hero--visual .hero-assurance {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ethics.ethics--home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(20px, 5vw, 72px);
+  padding: clamp(24px, 5vw, 64px);
+  margin-inline: auto;
+}
+.ethics.ethics--home > * {
+  flex: 0 1 420px;
+  min-width: 0;
+}
+.ethics.ethics--home > div {
+  width: 100%;
+  flex: 0 1 560px;
+}
+@media (max-width: 700px) {
+  .hero.hero--visual {
+    padding-inline: 18px;
+  }
+  .ethics.ethics--home {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 18px;
+  }
+  .ethics.ethics--home > * {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
