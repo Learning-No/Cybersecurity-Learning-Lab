@@ -14,7 +14,6 @@ permalink: /novels/
   <h2>Choose a novel</h2>
   <div class="novel-tablist" role="tablist" aria-label="Novel titles" data-tablist data-tab-scope>
     <button class="novel-tab" id="title-tab-one" type="button" role="tab" aria-selected="true" aria-controls="title-panel-one">Volume 1</button>
-    <button class="novel-tab" id="title-tab-two" type="button" role="tab" aria-selected="false" aria-controls="title-panel-two" tabindex="-1">Coming soon</button>
   </div>
 
   <section class="novel-panel" id="title-panel-one" role="tabpanel" aria-labelledby="title-tab-one" data-tab-scope>
@@ -23,8 +22,6 @@ permalink: /novels/
     <p>A first-year B.Tech student's journey from curious beginner to disciplined security learner. Every episode pairs a grounded campus story with computer science and cybersecurity fundamentals.</p>
     <div class="novel-tablist episode-tabs" role="tablist" aria-label="Episodes for Cybersecurity Learning Novel Vol 1" data-tablist data-tab-scope>
       <button class="novel-tab" id="one-episode-tab-1" type="button" role="tab" aria-selected="true" aria-controls="one-episode-panel-1">Episode 01</button>
-      <button class="novel-tab" id="one-episode-tab-2" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-2" tabindex="-1">Episode 02</button>
-      <button class="novel-tab" id="one-episode-tab-3" type="button" role="tab" aria-selected="false" aria-controls="one-episode-panel-3" tabindex="-1">Episode 03</button>
     </div>
     <article class="episode-panel" id="one-episode-panel-1" role="tabpanel" aria-labelledby="one-episode-tab-1">
       <p class="eyebrow">EPISODE 01 · FOUNDATIONS</p>
@@ -209,13 +206,6 @@ permalink: /novels/
       </ul>
       <p><strong>Next episode preview:</strong> <em>The Invisible Gatekeeper</em> — operating-system internals, users and groups, file permissions, processes, privilege boundaries, and least privilege.</p>
     </article>
-    <article class="episode-panel" id="one-episode-panel-2" role="tabpanel" aria-labelledby="one-episode-tab-2" hidden><h3>Episode 02 — The Invisible Gatekeeper</h3><div class="episode-placeholder">Coming next: operating-system internals, users and groups, file permissions, processes, privilege boundaries, and least privilege.</div></article>
-    <article class="episode-panel" id="one-episode-panel-3" role="tabpanel" aria-labelledby="one-episode-tab-3" hidden><h3>Episode 03 — The Language of Networks</h3><div class="episode-placeholder">Coming soon: deeper TCP/IP, DNS, ports, HTTP requests, TLS, and packet analysis in a safe learning environment.</div></article>
-  </section>
-
-  <section class="novel-panel" id="title-panel-two" role="tabpanel" aria-labelledby="title-tab-two" data-tab-scope hidden>
-    <h2>Coming soon</h2>
-    <p>Additional titles will be added here after their episode drafts are reviewed.</p>
   </section>
 </section>
 <script src="{{ '/assets/js/novel.js' | relative_url }}" defer></script>
