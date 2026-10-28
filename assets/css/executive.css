@@ -1959,3 +1959,47 @@ hr, .footer-bottom, .section, .section-head, .phase-head { border-color: #fff !i
 .kpis, .kpis > div { background: #fff !important; color: #000 !important; }
 .kpis :is(b,span) { color: #000 !important; }
 .kpis > div { border-color: #000 !important; }
+
+
+/* Navigation dropdowns must float over page content, not expand inside the nav grid */
+.inner-site-nav, .inner-site-nav .primary-nav, .inner-site-nav .nav-inner,
+.site-header, .header-inner, .primary-nav, .nav-inner {
+  overflow: visible;
+}
+.nav-group { position: relative; z-index: 100; }
+.nav-group[open] { z-index: 1000; }
+.nav-menu {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  right: 0;
+  left: auto;
+  z-index: 10000 !important;
+  width: min(320px, calc(100vw - 36px));
+  min-width: 250px;
+  max-height: min(70vh, 520px);
+  overflow-y: auto;
+  background: #fff !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,.3) !important;
+}
+.nav-menu a { color: #000 !important; background: #fff !important; }
+.nav-menu a:hover, .nav-menu a:focus-visible { color: #fff !important; background: #000 !important; }
+@media (max-width: 900px) {
+  .nav-group { position: relative !important; align-self: start; }
+  .nav-group[open] .nav-menu {
+    position: absolute !important;
+    top: calc(100% + 6px) !important;
+    left: 0 !important;
+    right: auto !important;
+    width: min(320px, calc(100vw - 36px)) !important;
+    margin: 0 !important;
+    z-index: 10000 !important;
+    box-shadow: 0 16px 40px rgba(0,0,0,.3) !important;
+  }
+}
+@media (max-width: 480px) {
+  .nav-group[open] .nav-menu {
+    width: min(290px, calc(100vw - 36px)) !important;
+  }
+}
