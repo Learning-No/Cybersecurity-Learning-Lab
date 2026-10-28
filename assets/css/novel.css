@@ -49,3 +49,22 @@
   .episode-panel { max-width: none; }
   .episode-diagram, .episode-quiz { break-inside: avoid; }
 }
+
+
+/* Monochrome theme compatibility: Novel stylesheet loads after the main theme */
+.novel-page, .novel-page :is(h1,h2,h3,p,li,strong,em,span) { color: #fff; }
+.novel-intro { color: #fff !important; }
+.novel-tab, .novel-tab[aria-selected="true"], .novel-panel, .episode-placeholder,
+.episode-quiz, .episode-diagram, .episode-quiz blockquote, .episode-panel blockquote {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
+  box-shadow: none !important;
+}
+.novel-panel :is(h1,h2,h3,h4,p,li,strong,em,span,blockquote),
+.episode-panel, .episode-panel :is(h1,h2,h3,h4,p,li,strong,em,span),
+.episode-quiz :is(legend,label,p), .episode-diagram :is(p,span,small),
+.episode-placeholder { color: #000 !important; }
+.novel-tab[aria-selected="true"] { border: 2px solid #000 !important; }
+.diagram-node { background: #fff !important; color: #000 !important; border-color: #000 !important; }
+.diagram-arrow, .diagram-caption, .episode-diagram > p:first-child { color: #000 !important; }

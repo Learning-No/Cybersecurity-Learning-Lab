@@ -1937,3 +1937,25 @@ hr, .footer-bottom, .section, .section-head, .phase-head { border-color: #fff !i
 .phase-head { background: #fff !important; color: #000 !important; }
 .csll-footer p, .csll-footer a, .csll-footer h2, .footer-brand strong { color: #fff !important; }
 :focus-visible { outline: 2px solid #fff !important; outline-offset: 3px; }
+
+
+/* Monochrome contrast audit: cover secondary components and inner-page widgets */
+.panel, .panel.featured, .ethics, .nav-menu, .filter-chip, .filter-chip.active,
+.episode-placeholder, .episode-quiz, .episode-diagram, .novel-notice {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+.panel :is(h1,h2,h3,h4,p,li,label,small,strong,span,a),
+.filter-chip, .filter-chip.active, .nav-menu a, .episode-placeholder,
+.episode-quiz :is(legend,label,p), .episode-diagram :is(p,span,small),
+.novel-notice { color: #000 !important; }
+.ethics { background: #000 !important; color: #fff !important; border: 1px solid #fff !important; }
+.ethics :is(h1,h2,h3,h4,p,li,a,span,strong,.eyebrow) { color: #fff !important; }
+.tag, .hub-icon, .week-num { background: #fff !important; color: #000 !important; border: 1px solid #000 !important; }
+.stages article h3, .stages article p, .lead, .hint, #empty-state, #tool-empty,
+.section-head > p, .breadcrumbs, .breadcrumbs a { color: #fff !important; }
+.kpis, .kpis > div { background: #fff !important; color: #000 !important; }
+.kpis :is(b,span) { color: #000 !important; }
+.kpis > div { border-color: #000 !important; }
