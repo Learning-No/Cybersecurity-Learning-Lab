@@ -28,6 +28,7 @@ permalink: /student-portal/
     <div class="portal-actions">
       <a class="primary" href="{{ '/' | relative_url }}#vapt-sprint">Continue learning <span aria-hidden="true">→</span></a>
       <a class="secondary" href="{{ '/tools/catalog/' | relative_url }}">Explore the tool catalog <span aria-hidden="true">↗</span></a>
+      <a class="secondary" href="{{ '/novel/' | relative_url }}">Read the cybersecurity novel <span aria-hidden="true">→</span></a>
     </div>
     <div class="portal-note"><strong>Important:</strong> This project is a static GitHub Pages site and does not currently provide real account authentication. Do not enter or send passwords here. Learning progress is stored locally in your browser and is not shared with instructors.</div>
     <p class="portal-help">New here? Start with the <a href="{{ '/labs/' | relative_url }}">safe lab setup guide</a>.</p>
