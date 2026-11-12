@@ -4,15 +4,58 @@ title: Concepts Library
 description: Plain-language cybersecurity concepts with diagrams, workflows, examples, and next steps.
 permalink: /concepts/
 ---
-<section class="hub-hero"><p class="eyebrow">LEARN THE WHY · NOT JUST THE COMMAND</p><h1>Concepts, <em>made clear.</em></h1><p class="lead">Start with a plain-language explanation. Open a concept to see a diagram, a step-by-step process, examples, safe practice, and related open-source tools.</p><div class="hub-search"><input id="library-search" type="search" placeholder="Search concepts: IP, DNS, TCP, HTTPS…" aria-label="Search concepts"></div></section>
-<section class="section"><div class="hub-grid" id="concept-grid">
-<a class="hub-card" href="{{ '/concepts/ip-address/' | relative_url }}" data-search="ip address ipv4 ipv6 local public address interface"><span class="hub-icon">01</span><p class="tag">NETWORKING</p><h2>IP addresses</h2><p>Local vs public IPs, IPv4/IPv6, interfaces, and how names map to addresses.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/concepts/network-basics/' | relative_url }}" data-search="subnet gateway router cidr network mask"><span class="hub-icon">02</span><p class="tag">NETWORKING</p><h2>Subnets & gateways</h2><p>How devices group into networks and how traffic reaches another network.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/concepts/tcp-udp/' | relative_url }}" data-search="tcp udp transport protocol ports packets"><span class="hub-icon">03</span><p class="tag">PROTOCOLS</p><h2>TCP vs UDP</h2><p>Connection setup, ordered delivery, datagrams, ports, and common use cases.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/concepts/dns/' | relative_url }}" data-search="dns domain name system records dig host"><span class="hub-icon">04</span><p class="tag">NAMING</p><h2>DNS</h2><p>How names resolve, what common records mean, and how to inspect a lookup.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/concepts/http-https/' | relative_url }}" data-search="http https tls request response headers cookies browser"><span class="hub-icon">05</span><p class="tag">WEB</p><h2>HTTP & HTTPS</h2><p>Follow a browser request, understand responses, and learn what TLS protects.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/concepts/ports-and-services/' | relative_url }}" data-search="port ports service listening socket tcp udp"><span class="hub-icon">06</span><p class="tag">NETWORKING</p><h2>Ports & services</h2><p>Understand listeners, reachability, TCP/UDP ports, and safe local service review.</p><span class="card-link">Explore concept ↗</span></a>
-<a class="hub-card" href="{{ '/tools/' | relative_url }}" data-search="open source tools wireshark tcpdump nmap dig curl"><span class="hub-icon">06</span><p class="tag">PRACTICAL</p><h2>Open-source tools</h2><p>Find tools by task, understand what they do, and start with safe examples.</p><span class="card-link">Browse tools ↗</span></a>
-</div></section>
-<section class="ethics"><div><p class="eyebrow">LEARN IN LAYERS</p><h2>Concept → diagram → practice → notes</h2><p>For each topic, explain it in your own words, draw the data flow, try a small exercise in your own device or lab, and record what the result does—and does not—prove.</p></div><a class="secondary" href="{{ '/practice/' | relative_url }}">Practice ideas ↗</a></section>
-<script>document.addEventListener('DOMContentLoaded',()=>{const q=document.getElementById('library-search'),cards=[...document.querySelectorAll('#concept-grid [data-search]')];if(q)q.addEventListener('input',()=>{const s=q.value.toLowerCase().trim();cards.forEach(c=>c.hidden=!(c.dataset.search+' '+c.textContent).toLowerCase().includes(s))})});</script>
+<section class="hub-hero"><p class="eyebrow">LEARN THE WHY · NOT JUST THE COMMAND</p><h1>Concepts, <em>made clear.</em></h1><p class="lead">Start with a plain-language explanation. Open a concept to see a diagram, a step-by-step process, examples, safe practice, and related open-source tools.</p><div class="hub-search"><input id="library-search" type="search" placeholder="Search concepts: IP, DNS, TCP, HTTPS…" aria-label="Search concepts"></div><p id="library-search-status" class="search-status" role="status" aria-live="polite">Showing all 6 concepts.</p></section>
+
+<section class="section" aria-label="Cybersecurity concepts">
+  <div class="hub-grid" id="concept-grid">
+    <a class="hub-card" href="{{ '/concepts/ip-address/' | relative_url }}" data-search="ip address ipv4 ipv6 local public address interface"><span class="hub-icon">01</span><p class="tag">NETWORKING</p><h2>IP addresses</h2><p>Local vs public IPs, IPv4/IPv6, interfaces, and how names map to addresses.</p><span class="card-link">Explore concept ↗</span></a>
+    <a class="hub-card" href="{{ '/concepts/network-basics/' | relative_url }}" data-search="subnet gateway router cidr network mask"><span class="hub-icon">02</span><p class="tag">NETWORKING</p><h2>Subnets &amp; gateways</h2><p>How devices group into networks and how traffic reaches another network.</p><span class="card-link">Explore concept ↗</span></a>
+    <a class="hub-card" href="{{ '/concepts/tcp-udp/' | relative_url }}" data-search="tcp udp transport protocol ports packets"><span class="hub-icon">03</span><p class="tag">PROTOCOLS</p><h2>TCP vs UDP</h2><p>Connection setup, ordered delivery, datagrams, ports, and common use cases.</p><span class="card-link">Explore concept ↗</span></a>
+    <a class="hub-card" href="{{ '/concepts/dns/' | relative_url }}" data-search="dns domain name system records dig host"><span class="hub-icon">04</span><p class="tag">NAMING</p><h2>DNS</h2><p>How names resolve, what common records mean, and how to inspect a lookup.</p><span class="card-link">Explore concept ↗</span></a>
+    <a class="hub-card" href="{{ '/concepts/http-https/' | relative_url }}" data-search="http https tls request response headers cookies browser"><span class="hub-icon">05</span><p class="tag">WEB</p><h2>HTTP &amp; HTTPS</h2><p>Follow a browser request, understand responses, and learn what TLS protects.</p><span class="card-link">Explore concept ↗</span></a>
+    <a class="hub-card" href="{{ '/concepts/ports-and-services/' | relative_url }}" data-search="port ports service listening socket tcp udp"><span class="hub-icon">06</span><p class="tag">NETWORKING</p><h2>Ports &amp; services</h2><p>Understand listeners, reachability, TCP/UDP ports, and safe local service review.</p><span class="card-link">Explore concept ↗</span></a>
+  </div>
+  <p id="concept-no-results" class="empty-state" hidden>No concepts match your search. Try a different term, such as DNS, IPv6, or TCP.</p>
+</section>
+
+<section class="ethics">
+  <div><p class="eyebrow">LEARN IN LAYERS</p><h2>Concept → diagram → practice → notes</h2><p>For each topic, explain it in your own words, draw the data flow, try a small exercise in your own device or lab, and record what the result does—and does not—prove.</p></div>
+  <a class="secondary" href="{{ '/practice/' | relative_url }}">Practice ideas ↗</a>
+</section>
+
+<section class="section tools-promo" aria-labelledby="tools-promo-title">
+  <div class="ethics">
+    <div><p class="eyebrow">PRACTICAL REFERENCE</p><h2 id="tools-promo-title">Ready to explore the tools?</h2><p>The tool directory is a separate practical resource, not a numbered concept. Browse tools by task and check their official documentation before use.</p></div>
+    <a class="secondary" href="{{ '/tools/' | relative_url }}">Browse open-source tools ↗</a>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const search = document.getElementById('library-search');
+  const cards = [...document.querySelectorAll('#concept-grid [data-search]')];
+  const status = document.getElementById('library-search-status');
+  const emptyState = document.getElementById('concept-no-results');
+
+  if (!search) return;
+
+  const updateResults = () => {
+    const term = search.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const matches = (card.dataset.search + ' ' + card.textContent).toLowerCase().includes(term);
+      card.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    status.textContent = term
+      ? `Showing ${visibleCount} of ${cards.length} concepts.`
+      : `Showing all ${cards.length} concepts.`;
+    emptyState.hidden = visibleCount !== 0;
+  };
+
+  search.addEventListener('input', updateResults);
+  updateResults();
+});
+</script>
